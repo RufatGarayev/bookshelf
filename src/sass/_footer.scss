@@ -1,0 +1,23 @@
+footer {
+    // background-color: #FFFFFF;
+  background-color: yellowgreen;
+
+  .footer-left,
+  .footer-right {
+    height: 60px;
+    align-items: center;
+  }
+
+  .footer-left {
+    .copywriter {
+      padding-left: 15px;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .footer-right {
+    justify-content: flex-end;
+  }
+}

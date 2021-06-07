@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Hind", sans-serif;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.brand {
+  a {
+    color: rgb(98, 162, 208);
+    text-decoration: none;
+    &:hover {
+      color: rgb(98, 162, 208);
+    }
+    h4 {
+      margin-bottom: 1px;
+    }
+  }
+}
+
+.section-title {
+  h5{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+  }
+}
