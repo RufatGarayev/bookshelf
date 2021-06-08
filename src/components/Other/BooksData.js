@@ -143,7 +143,9 @@ export const BestSellerBooks = [
         img: lesMiserables,
         author: "Victor Hugo",
         title: "Les Miserables",
+        previousPrice: 20.00,
         price: 17.00,
+        sale: "Sale 15%",
         rating: "★★★★★",
         category: "Best Seller"
     },
@@ -161,7 +163,9 @@ export const BestSellerBooks = [
         img: donQuijote,
         author: "Miguel de Cervantes",
         title: "Don Quijote",
+        previousPrice: 16.00,
         price: 14.00,
+        sale: "Sale 12.5%",
         rating: "★★★★★",
         category: "Best Seller"
     }
