@@ -11,11 +11,12 @@ import theCast from '../../assets/img/books/other/the-cast.jpg';
 import theDuchess from '../../assets/img/books/other/the-duchess.jpg';
 import theHillWeClimb from '../../assets/img/books/other/the-hill-we-climb.jpg';
 import donQuijote from '../../assets/img/books/other/don-quijote.jpg';
+import theInvincibleSummerOfJuniperJones from '../../assets/img/books/other/the-invincible-summer-of-juniper-jones.jpg';
 
 // importing icons
 import { RiStarHalfSFill, RiStarSFill, RiStarLine } from 'react-icons/ri';
 
-export const Books = [
+export const AllBooks = [
     {
         id: 1,
         img: artificialIntelligence,
@@ -46,7 +47,8 @@ export const Books = [
         author: "Jonathan Swift",
         title: "Gullivers Travels",
         price: 4.00,
-        rating: { fullStar: <RiStarSFill />, halfStar: <RiStarHalfSFill /> }
+        rating: "★★★★★",
+        category: "Best Seller"
     },
     {
         id: 5,
@@ -54,7 +56,8 @@ export const Books = [
         author: "Victor Hugo",
         title: "Les Miserables",
         price: 17.00,
-        rating: { fullStar: <RiStarSFill /> }
+        rating: "★★★★★",
+        category: "Best Seller"
     },
     {
         id: 6,
@@ -62,7 +65,8 @@ export const Books = [
         author: "George Orwell",
         title: "1984",
         price: 9.00,
-        rating: { fullStar: <RiStarSFill />, halfStar: <RiStarHalfSFill /> }
+        rating: "★★★★★",
+        category: "Best Seller"
     },
     {
         id: 7,
@@ -110,6 +114,55 @@ export const Books = [
         author: "Miguel de Cervantes",
         title: "Don Quijote",
         price: 14.00,
-        rating: { fullStar: <RiStarSFill />, halfStar: <RiStarHalfSFill /> }
+        rating: "★★★★★",
+        category: "Best Seller"
+    },
+    {
+        id: 13,
+        img: theInvincibleSummerOfJuniperJones,
+        author: "Daven Mcqueen",
+        title: "The Invincible Summer of Juniper Jones",
+        price: 15.00,
+        rating: { fullStar: <RiStarSFill />, halfStar: <RiStarLine /> }
+    }
+];
+
+
+export const BestSellerBooks = [
+    {
+        id: 4,
+        img: gulliversTravels,
+        author: "Jonathan Swift",
+        title: "Gullivers Travels",
+        price: 4.00,
+        rating: "★★★★★",
+        category: "Best Seller"
+    },
+    {
+        id: 5,
+        img: lesMiserables,
+        author: "Victor Hugo",
+        title: "Les Miserables",
+        price: 17.00,
+        rating: "★★★★★",
+        category: "Best Seller"
+    },
+    {
+        id: 6,
+        img: nineteenEightyFour,
+        author: "George Orwell",
+        title: "1984",
+        price: 9.00,
+        rating: "★★★★★",
+        category: "Best Seller"
+    },
+    {
+        id: 12,
+        img: donQuijote,
+        author: "Miguel de Cervantes",
+        title: "Don Quijote",
+        price: 14.00,
+        rating: "★★★★★",
+        category: "Best Seller"
     }
 ];

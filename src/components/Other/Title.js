@@ -1,7 +1,8 @@
-const Title = ({ title, description }) => {
+const Title = ({ title, bottomTitle, description }) => {
     return (
         <div className="section-title text-center">
-            <h5>{title}</h5>
+            <h1>{title}</h1>
+            <h6>{bottomTitle}</h6>
             <p>{description}</p>
         </div>
     )
