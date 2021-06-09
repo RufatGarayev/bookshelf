@@ -1,6 +1,12 @@
 footer {
-    // background-color: #FFFFFF;
-  background-color: yellowgreen;
+  // background-color: #ffffff;
+  background-color: rgb(98, 162, 208);
+
+  .brand {
+    h4 {
+      color: white;
+    }
+  }
 
   .footer-left,
   .footer-right {
@@ -13,6 +19,11 @@ footer {
       padding-left: 15px;
       p {
         margin-bottom: 0;
+        color: white;
+        font-weight: 300;
+        a {
+          color: white;
+        }
       }
     }
   }

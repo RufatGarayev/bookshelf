@@ -31,16 +31,19 @@ body {
 
 .section-title {
   padding-bottom: 20px;
-  h1{
+  h1,
+  h6 {
     font-family: "Times New Roman", Times, serif;
-    font-size: 22px;
+  }
+  h1 {
+    font-size: 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
     font-weight: 700;
   }
-  h6{
+  h6 {
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 12px;
     letter-spacing: 1px;
   }
 }

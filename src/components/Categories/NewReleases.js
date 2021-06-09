@@ -8,12 +8,12 @@ import BookCard from '../Other/BookCard';
 
 SwiperCore.use([A11y]);
 
-const BestSeller = () => {
+const NewReleases = () => {
     return (
-        <div className="best-seller-wrapper">
+        <div className="new-releases-wrapper">
             <Title
-                title="Best Seller"
-                bottomTitle="Top View In This Week"
+                title="New Releases"
+                bottomTitle="In This Week"
             />
             <Swiper
                 spaceBetween={50}
@@ -41,10 +41,10 @@ const BestSeller = () => {
                     }
                 }}
             >
-                <div className="best-seller">
+                <div className="new-releases">
                     {
                         BooksData.map((book) => (
-                            book.category === "Best Seller" ?
+                            book.category === "New Releases" ?
                                 <SwiperSlide key={book.id} >
                                     <BookCard book={book} />
                                 </SwiperSlide> : ""
@@ -56,4 +56,4 @@ const BestSeller = () => {
     );
 };
 
-export default BestSeller;
+export default NewReleases;

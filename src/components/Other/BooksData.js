@@ -13,17 +13,19 @@ import theHillWeClimb from '../../assets/img/books/other/the-hill-we-climb.jpg';
 import donQuijote from '../../assets/img/books/other/don-quijote.jpg';
 import theInvincibleSummerOfJuniperJones from '../../assets/img/books/other/the-invincible-summer-of-juniper-jones.jpg';
 
-// importing icons
-import { RiStarHalfSFill, RiStarSFill, RiStarLine } from 'react-icons/ri';
 
-export const AllBooks = [
+export const BooksData = [
     {
         id: 1,
         img: artificialIntelligence,
         author: "Matthew Burgess",
         title: "Artificial Intelligence",
         price: 12.00,
-        rating: { fullStar: <RiStarSFill />, halfStar: <RiStarHalfSFill />, emptyStar: <RiStarLine /> }
+        label: "New",
+        rating: "★★★★★",
+        category: "New Releases",
+        hasDiscount: false,
+        isNew: true
     },
     {
         id: 2,
@@ -31,7 +33,11 @@ export const AllBooks = [
         author: "Danielle Steel",
         title: "Country",
         price: 11.00,
-        rating: { fullStar: <RiStarSFill />, halfStar: <RiStarHalfSFill />, emptyStar: <RiStarLine /> }
+        label: "",
+        rating: "★★★★★",
+        category: "Other",
+        hasDiscount: false,
+        isNew: false
     },
     {
         id: 3,
@@ -39,7 +45,11 @@ export const AllBooks = [
         author: "Sophie Aldred",
         title: "Doctor Who",
         price: 14.00,
-        rating: { fullStar: <RiStarSFill />, emptyStar: <RiStarLine /> }
+        label: "New",
+        rating: "★★★★★",
+        category: "New Releases",
+        hasDiscount: false,
+        isNew: true
     },
     {
         id: 4,
@@ -47,96 +57,11 @@ export const AllBooks = [
         author: "Jonathan Swift",
         title: "Gullivers Travels",
         price: 4.00,
+        label: "",
         rating: "★★★★★",
-        category: "Best Seller"
-    },
-    {
-        id: 5,
-        img: lesMiserables,
-        author: "Victor Hugo",
-        title: "Les Miserables",
-        price: 17.00,
-        rating: "★★★★★",
-        category: "Best Seller"
-    },
-    {
-        id: 6,
-        img: nineteenEightyFour,
-        author: "George Orwell",
-        title: "1984",
-        price: 9.00,
-        rating: "★★★★★",
-        category: "Best Seller"
-    },
-    {
-        id: 7,
-        img: pompeii,
-        author: "Robert Harris",
-        title: "Pompeii",
-        price: 12.00,
-        rating: { fullStar: <RiStarSFill />, emptyStar: <RiStarLine /> }
-    },
-    {
-        id: 8,
-        img: theAdventuresOfSherlockHolmes,
-        author: "Arthur Conan Doyle",
-        title: "The Adventures of Sherlock Holmes",
-        price: 15.00,
-        rating: { fullStar: <RiStarSFill /> }
-    },
-    {
-        id: 9,
-        img: theCast,
-        author: "Danielle Steel",
-        title: "The Cast",
-        price: 9.00,
-        rating: { fullStar: <RiStarSFill />, emptyStar: <RiStarLine /> }
-    },
-    {
-        id: 10,
-        img: theDuchess,
-        author: "Danielle Steel",
-        title: "The Duchess",
-        price: 9.20,
-        rating: { fullStart: <RiStarSFill />, halfStart: <RiStarHalfSFill />, emptyStart: <RiStarLine /> }
-    },
-    {
-        id: 11,
-        img: theHillWeClimb,
-        author: "Amanda Gorman",
-        title: "The Hill We Climb",
-        price: 39.99,
-        rating: { fullStar: <RiStarSFill />, emptyStar: <RiStarLine /> }
-    },
-    {
-        id: 12,
-        img: donQuijote,
-        author: "Miguel de Cervantes",
-        title: "Don Quijote",
-        price: 14.00,
-        rating: "★★★★★",
-        category: "Best Seller"
-    },
-    {
-        id: 13,
-        img: theInvincibleSummerOfJuniperJones,
-        author: "Daven Mcqueen",
-        title: "The Invincible Summer of Juniper Jones",
-        price: 15.00,
-        rating: { fullStar: <RiStarSFill />, halfStar: <RiStarLine /> }
-    }
-];
-
-
-export const BestSellerBooks = [
-    {
-        id: 4,
-        img: gulliversTravels,
-        author: "Jonathan Swift",
-        title: "Gullivers Travels",
-        price: 4.00,
-        rating: "★★★★★",
-        category: "Best Seller"
+        category: "Best Seller",
+        hasDiscount: false,
+        isNew: false
     },
     {
         id: 5,
@@ -145,9 +70,11 @@ export const BestSellerBooks = [
         title: "Les Miserables",
         previousPrice: 20.00,
         price: 17.00,
-        sale: "Sale 15%",
+        label: "Sale 15%",
         rating: "★★★★★",
-        category: "Best Seller"
+        category: "Best Seller",
+        hasDiscount: true,
+        isNew: false
     },
     {
         id: 6,
@@ -155,8 +82,71 @@ export const BestSellerBooks = [
         author: "George Orwell",
         title: "1984",
         price: 9.00,
+        label: "",
         rating: "★★★★★",
-        category: "Best Seller"
+        category: "Best Seller",
+        hasDiscount: false,
+        isNew: false
+    },
+    {
+        id: 7,
+        img: pompeii,
+        author: "Robert Harris",
+        title: "Pompeii",
+        price: 12.00,
+        label: "",
+        rating: "★★★★★",
+        category: "Other",
+        hasDiscount: false,
+        isNew: false
+    },
+    {
+        id: 8,
+        img: theAdventuresOfSherlockHolmes,
+        author: "Arthur Conan Doyle",
+        title: "The Adventures of Sherlock Holmes",
+        price: 15.00,
+        label: "",
+        rating: "★★★★★",
+        category: "Other",
+        hasDiscount: false,
+        isNew: false
+    },
+    {
+        id: 9,
+        img: theCast,
+        author: "Danielle Steel",
+        title: "The Cast",
+        price: 9.00,
+        label: "",
+        rating: "★★★★★",
+        category: "Other",
+        hasDiscount: false,
+        isNew: false
+    },
+    {
+        id: 10,
+        img: theDuchess,
+        author: "Danielle Steel",
+        title: "The Duchess",
+        price: 9.20,
+        label: "",
+        rating: "★★★★★",
+        category: "Other",
+        hasDiscount: false,
+        isNew: false
+    },
+    {
+        id: 11,
+        img: theHillWeClimb,
+        author: "Amanda Gorman",
+        title: "The Hill We Climb",
+        price: 39.99,
+        label: "New",
+        rating: "★★★★★",
+        category: "New Releases",
+        hasDiscount: false,
+        isNew: true
     },
     {
         id: 12,
@@ -165,8 +155,22 @@ export const BestSellerBooks = [
         title: "Don Quijote",
         previousPrice: 16.00,
         price: 14.00,
-        sale: "Sale 12.5%",
+        label: "Sale 12.5%",
         rating: "★★★★★",
-        category: "Best Seller"
+        category: "Best Seller",
+        hasDiscount: true,
+        isNew: false
+    },
+    {
+        id: 13,
+        img: theInvincibleSummerOfJuniperJones,
+        author: "Daven Mcqueen",
+        title: "The Invincible Summer of Juniper Jones",
+        price: 15.00,
+        label: "New",
+        rating: "★★★★★",
+        category: "New Releases",
+        hasDiscount: false,
+        isNew: true
     }
 ];
