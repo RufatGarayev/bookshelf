@@ -9,7 +9,7 @@ const BookCard = ({ book }) => {
             {
                 book.label !== "" ?
                     <div className="label">
-                        <span>{book.label}</span>
+                        <span className={book.label === "New" ? "new-background" : ""}>{book.label}</span>
                     </div> : ""
             }
             {/* ======= Image ======= */}

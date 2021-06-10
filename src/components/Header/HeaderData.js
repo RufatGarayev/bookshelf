@@ -1,7 +1,7 @@
 // Buttons
 export const NavBtnData = [
     { id: 1, icon: <i className="flaticon-search"></i> },
-    { id: 2, icon: <i className="flaticon-shopping-bag"></i>, sup: <sup>9</sup> },
+    { id: 2, icon: <i className="flaticon-shopping-bag"></i>, sup: <sup>0</sup> },
     { id: 3, icon: <i className="flaticon-profile"></i> },
     { id: 4, icon: <i className="flaticon-filter"></i> }
 ];

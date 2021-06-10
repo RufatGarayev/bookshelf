@@ -1,0 +1,68 @@
+.shop-content {
+  .books-count {
+    padding: 50px 0 15px;
+  }
+
+  #filter-panel {
+    padding-bottom: 40px;
+    .search-box {
+      position: relative;
+      input[type="text"] {
+        height: 40px;
+        font-size: 14px;
+        border: 1px solid rgb(212, 210, 210);
+        padding: 11px 12px 10px 15px;
+        &:focus {
+          outline: 0;
+          border: 1px solid rgb(98, 162, 210);
+        }
+      }
+      button {
+        border: 0;
+        background-color: transparent;
+        position: absolute;
+        right: 10px;
+        top: 11px;
+        i {
+          &::before {
+            font-weight: 700 !important;
+            color: rgb(173, 173, 173);
+          }
+        }
+      }
+    }
+    .sorting {
+      padding-top: 1px;
+      padding-left: 70px;
+      .sorting-area {
+        justify-content: flex-end;
+        align-items: center;
+
+        label {
+          font-size: 14px;
+          font-weight: 300;
+        }
+
+        select {
+          margin-left: 10px;
+          font-size: 14px;
+          outline: none;
+          border: 1px solid rgb(212, 210, 210);
+          height: 35px;
+          padding: 0 5px;
+          background: transparent;
+          cursor: pointer;
+          transition: color 0.2s linear;
+        }
+      }
+    }
+  }
+
+  #books-shop {
+    padding-bottom: 40px;
+
+    .book-item {
+      margin-bottom: 27px;
+    }
+  }
+}
