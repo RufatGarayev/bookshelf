@@ -3,15 +3,19 @@
 
   .swiper-container {
     padding: 0 0 40px;
+
+    .swiper-pagination {
+      bottom: 10px;
+    }
   }
 
   .new-releases-wrapper {
     padding-top: 15px;
-    
+
     .book-item {
       .label {
         span {
-          background-color: rgb(3,169,245);
+          background-color: rgb(3, 169, 245);
         }
       }
     }

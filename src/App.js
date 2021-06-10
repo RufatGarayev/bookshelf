@@ -1,19 +1,28 @@
 import Header from './components/Header/Header';
-import HomeEntry from './components/HomeEntry/HomeEntry';
-import Categories from './components/Categories/Categories';
+import Home from './pages/Home';
+import About from './pages/About';
 import SignUp from './components/SignUp/SignUp';
 import Footer from './components/Footer/Footer';
+import { BrowserRouter, Route } from "react-router-dom";
 import '../src/sass/_app.scss';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <HomeEntry />
-      <Categories />
-      <SignUp />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <header>
+          <Header />
+        </header>
+        <main>
+          <Route path="/" component={Home} exact />
+          <Route path="/about" component={About} />
+          <SignUp />
+        </main>
+        <footer>
+          <Footer />
+        </footer>
+      </div>
+    </BrowserRouter>
   );
 }
 

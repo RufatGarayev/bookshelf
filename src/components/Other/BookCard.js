@@ -1,7 +1,5 @@
 import React from 'react';
 import '../../sass/_book-card.scss';
-import { RiShoppingBagLine, RiScalesFill, RiHeartLine } from 'react-icons/ri';
-import { ImEye } from 'react-icons/im';
 
 
 const BookCard = ({ book }) => {
@@ -45,7 +43,7 @@ const BookCard = ({ book }) => {
                 {/* ======= Add to Cart Button ======= */}
                 <div className="add-to-cart-btn d-flex justify-content-center">
                     <button type="button" className="d-flex">
-                        <span><RiShoppingBagLine /></span>
+                        <span><i className="flaticon-shopping-bag"></i></span>
                         <p>Add To Cart</p>
                     </button>
                 </div>
@@ -55,19 +53,19 @@ const BookCard = ({ book }) => {
                         <div className="tooltip">
                             <p>Quick View</p>
                         </div>
-                        <ImEye />
+                        <i className="flaticon-photo"></i>
                     </span>
                     <span>
                         <div className="tooltip">
                             <p>Add To Wishlist</p>
                         </div>
-                        <RiScalesFill />
+                        <i className="flaticon-heart"></i>
                     </span>
                     <span>
                         <div className="tooltip">
                             <p>Add To Compare</p>
                         </div>
-                        <RiHeartLine />
+                        <i className="flaticon-balance"></i>
                     </span>
                 </div>
             </div>

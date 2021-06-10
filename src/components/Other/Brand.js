@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom";
+
 const Brand = () => {
     return (
         <div className="brand">
-            <a href="#home"><h4>BookStore</h4></a>
+            <Link to="/"><h4>bookshelf</h4></Link>
         </div>
     )
 }

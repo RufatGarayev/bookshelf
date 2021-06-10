@@ -4,12 +4,13 @@
   justify-content: center;
   border: solid 1px #d1cece;
   border-radius: 3px;
-  margin-bottom: 2px;
+  margin: 0 2px 2px;
   padding-top: 33px;
   text-align: center;
   position: relative;
   padding-bottom: 102px;
   overflow: hidden;
+
   &:hover {
     .bottom-content {
       transform: translateY(142px);
@@ -92,7 +93,7 @@
       button {
         background-color: #62a2d2;
         color: white;
-        padding: 5px 20px;
+        padding: 7px 20px 3px;
         border: 0;
         border-radius: 6px;
         transition: 0.3s ease;
@@ -102,14 +103,18 @@
         }
 
         span {
-          font-size: 18px;
+          i {
+            &::before {
+              font-size: 17px;
+            }
+          }
         }
 
         p {
           text-transform: uppercase;
           font-weight: 300;
           font-size: 14px;
-          margin: 5px 0 0 6px;
+          margin: 1px 0 0 6px;
         }
       }
     }
@@ -118,13 +123,12 @@
       padding: 25px 0;
       justify-content: space-between;
       span {
-        font-size: 18px;
         cursor: pointer;
         border-radius: 50%;
         border: solid 1px #a5a3a3;
         height: 45px;
         width: 45px;
-        line-height: 41px;
+        line-height: 51px;
         position: relative;
         transition: 0.3s ease;
         &:hover {
@@ -155,6 +159,7 @@
 
           p {
             font-size: 12px;
+            font-weight: 300;
             padding: 4px 0;
             text-align: center;
             border-radius: 4px;
@@ -173,6 +178,17 @@
               border-width: 9px 8px 0 8px;
               border-color: #fff transparent transparent transparent;
             }
+          }
+        }
+
+        i {
+          &::before {
+            font-size: 17px;
+          }
+        }
+        .flaticon-balance {
+          &::before {
+            font-size: 19px;
           }
         }
       }

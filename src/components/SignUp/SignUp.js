@@ -14,6 +14,10 @@ const SignUp = () => {
                             description="Sign up for our e-mail and be the first who know our special offers! Furthermore, 
                             we will give a 15% discount on the next order after you sign up."
                         />
+                    </div>
+                </div>
+                <div className="row">
+                    <div className="col-lg-6 offset-lg-3">
                         <Input />
                         <div className="social-media d-flex justify-content-center">
                             <ul className="d-flex">

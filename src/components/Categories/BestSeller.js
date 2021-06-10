@@ -1,23 +1,29 @@
-import SwiperCore, { A11y } from 'swiper';
+import SwiperCore, { Pagination, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
+import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
 import Title from '../Other/Title';
 import { BooksData } from '../Other/BooksData';
 import BookCard from '../Other/BookCard';
 
-SwiperCore.use([A11y]);
+SwiperCore.use([Pagination, A11y]);
 
 const BestSeller = () => {
     return (
         <div className="best-seller-wrapper">
-            <Title
-                title="Best Seller"
-                bottomTitle="Top View In This Week"
-            />
+            <div className="row">
+                <div className="col-12">
+                    <Title
+                        title="Best Seller"
+                        bottomTitle="Top View In This Week"
+                    />
+                </div>
+            </div>
             <Swiper
                 spaceBetween={50}
                 slidesPerView={1}
+                pagination={{ clickable: true }}
                 breakpoints={{
                     "320": {
                         "slidesPerView": 2,
@@ -37,7 +43,7 @@ const BestSeller = () => {
                     },
                     "1200": {
                         "slidesPerView": 4,
-                        "spaceBetween": 50
+                        "spaceBetween": 45
                     }
                 }}
             >

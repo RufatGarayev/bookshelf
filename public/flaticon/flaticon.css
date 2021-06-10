@@ -1,0 +1,62 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?164ac8976dc205939a32279200aa33c2") format("truetype"),
+url("./flaticon.woff?164ac8976dc205939a32279200aa33c2") format("woff"),
+url("./flaticon.woff2?164ac8976dc205939a32279200aa33c2") format("woff2"),
+url("./flaticon.eot?164ac8976dc205939a32279200aa33c2#iefix") format("embedded-opentype"),
+url("./flaticon.svg?164ac8976dc205939a32279200aa33c2#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-shopping-bag:before {
+    content: "\f101";
+}
+.flaticon-search:before {
+    content: "\f102";
+}
+.flaticon-profile:before {
+    content: "\f103";
+}
+.flaticon-filter:before {
+    content: "\f104";
+}
+.flaticon-photo:before {
+    content: "\f105";
+}
+.flaticon-balance:before {
+    content: "\f106";
+}
+.flaticon-heart:before {
+    content: "\f107";
+}
+.flaticon-eye:before {
+    content: "\f108";
+}
+.flaticon-phone-call:before {
+    content: "\f109";
+}
+.flaticon-telephone:before {
+    content: "\f10a";
+}
+.flaticon-location:before {
+    content: "\f10b";
+}
+.flaticon-pin:before {
+    content: "\f10c";
+}
+.flaticon-wall-clock:before {
+    content: "\f10d";
+}
+.flaticon-filter-1:before {
+    content: "\f10e";
+}

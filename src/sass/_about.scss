@@ -1,0 +1,22 @@
+#about-us {
+  padding: 50px 0;
+
+  .section-title {
+    padding-bottom: 10px;
+  }
+
+  .about-us-contents {
+    .img {
+      padding-top: 4px;
+    }
+
+    .text {
+      p {
+        font-size: 14px;
+        font-weight: 300;
+        text-align: justify;
+        margin-bottom: 5px;
+      }
+    }
+  }
+}

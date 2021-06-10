@@ -5,7 +5,7 @@ import Payment from './Payment';
 
 const Footer = () => {
     return (
-        <footer>
+        <div className="footer">
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6">
@@ -21,7 +21,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
     )
 }
 

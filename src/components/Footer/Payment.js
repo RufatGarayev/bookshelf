@@ -1,4 +1,4 @@
-import PaymentImg from '../../assets/img/payment.jpg';
+import PaymentImg from '../../assets/img/other/payment.jpg';
 
 const Payment = () => {
     return (
