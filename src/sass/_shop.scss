@@ -46,6 +46,7 @@
         select {
           margin-left: 10px;
           font-size: 14px;
+          font-weight: 300;
           outline: none;
           border: 1px solid rgb(212, 210, 210);
           height: 35px;
@@ -53,6 +54,9 @@
           background: transparent;
           cursor: pointer;
           transition: color 0.2s linear;
+          option{
+            font-weight: 300;
+          }
         }
       }
     }
@@ -63,6 +67,22 @@
 
     .book-item {
       margin-bottom: 27px;
+    }
+
+    .pagination {
+      padding-top: 7px;
+      li {
+        a {
+          &:hover {
+            color: white;
+            background-color: rgb(98,162,210);
+          }
+        }
+        .arrow {
+          padding: 7.5px 5px 6px;
+          font-size: 18px;
+        }
+      }
     }
   }
 }

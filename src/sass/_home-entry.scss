@@ -21,10 +21,10 @@
     }
 
     .swiper-button-prev {
-      left: calc(20% - 195px);
+      left: 10px;
     }
     .swiper-button-next {
-      right: calc(20% - 195px);
+      right: 10px;
     }
 
     .swiper-pagination-bullet {
@@ -37,7 +37,6 @@
   }
 
   .slide-content {
-    padding: 0 70px;
     .left-content {
       height: 100%;
       display: flex;

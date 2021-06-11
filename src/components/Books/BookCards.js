@@ -1,9 +1,8 @@
 import { BooksData } from './BooksData';
 import BookCard from './BookCard';
+import Pagination from '../Other/Pagination';
 
 const BookCards = () => {
-    
-
     return (
         <section id="books-shop">
             <div className="container">
@@ -15,6 +14,11 @@ const BookCards = () => {
                             </div>
                         ))
                     }
+                </div>
+                <div className="row">
+                    <div className="col-12">
+                        <Pagination />
+                    </div>
                 </div>
             </div>
         </section>

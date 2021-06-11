@@ -24,7 +24,7 @@ const AboutUs = () => {
                                 <div className="col-lg-7">
                                     {/* ======= Text ======= */}
                                     <div className="text">
-                                        <p>
+                                        <p className="paragraph">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                             Porro modi eaque dolor nihil asperiores sunt provident,
                                             quidem, quod neque, ducimus culpa dignissimos cumque!
@@ -38,7 +38,7 @@ const AboutUs = () => {
                                             Porro modi eaque dolor nihil asperiores sunt provident,
                                             Quibusdam quis quas impedit? Recusandae, eius aut.
                                         </p>
-                                        <p>
+                                        <p className="paragraph">
                                             Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                             Porro modi eaque dolor nihil asperiores sunt provident,
                                             quidem, quod neque, ducimus culpa dignissimos cumque!

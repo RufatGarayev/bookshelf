@@ -43,7 +43,7 @@ const NewReleases = () => {
                     },
                     "1200": {
                         "slidesPerView": 4,
-                        "spaceBetween": 45
+                        "spaceBetween": 30
                     }
                 }}
             >

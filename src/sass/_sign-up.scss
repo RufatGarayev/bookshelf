@@ -4,23 +4,23 @@
 
   .section-title {
     p {
-      color: #777;
-      font-size: 14px;
-      font-weight: 300;
       margin: 10px 0 7px;
     }
   }
 
   .sign-up-form {
     input[type="email"] {
-      width: 80%;
+      border: 1px solid white;
+      background-color: white;
+      border-radius: 6px 0 0 6px;
       height: 40px;
       font-size: 14px;
-      border: 1px solid white;
+      font-weight: 300;
       padding: 11px 12px 10px 15px;
-      border-radius: 6px 0 0 6px;
+      transition: 0.3s ease;
       &:focus {
         outline: 0;
+        transition: 0.3s ease;
         border: 1px solid rgb(98, 162, 210);
       }
     }

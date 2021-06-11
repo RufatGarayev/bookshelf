@@ -3,7 +3,7 @@ const Title = ({ title, bottomTitle, description }) => {
         <div className="section-title text-center">
             <h1>{title}</h1>
             <h6>{bottomTitle}</h6>
-            <p>{description}</p>
+            <p className="paragraph">{description}</p>
         </div>
     )
 }

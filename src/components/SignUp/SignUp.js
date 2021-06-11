@@ -18,7 +18,9 @@ const SignUp = () => {
                 </div>
                 <div className="row">
                     <div className="col-lg-6 offset-lg-3">
-                        <Input />
+                        <div className="sign-up-form">
+                            <Input />
+                        </div>
                         <div className="social-media d-flex justify-content-center">
                             <ul className="d-flex">
                                 {

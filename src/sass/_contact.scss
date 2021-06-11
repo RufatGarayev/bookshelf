@@ -1,0 +1,78 @@
+.contact-content {
+  #map-area {
+    padding: 50px 0;
+  }
+
+  #contact-items {
+    padding-bottom: 50px;
+    .contact-item {
+      .icon {
+        padding-bottom: 20px;
+        i {
+          color: rgb(40, 121, 254);
+          &::before {
+            font-size: 45px;
+          }
+        }
+      }
+      .content {
+        p {
+          padding: 0 90px;
+        }
+      }
+    }
+  }
+
+  #send-message {
+    padding-bottom: 55px;
+
+    .input-wrapper {
+      padding-bottom: 16px;
+    }
+    .input-box {
+      height: 40px;
+    }
+    .text-area {
+      height: 153px;
+    }
+
+    .input-box,
+    .text-area {
+      border: 1px solid #f7f8fa;
+      background-color: #f7f8fa;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 300;
+      padding: 11px 12px 10px 15px;
+      transition: 0.3s ease;
+      &:focus {
+        outline: 0;
+        transition: 0.3s ease;
+        border: 1px solid rgb(40, 121, 254);
+      }
+    }
+
+    .send-msg-btn-wrapper {
+      padding-top: 16px;
+      .send-msg-btn {
+        background-color: #62a2d2;
+        border: none;
+        color: rgb(253, 253, 253);
+        font-size: 14px;
+        text-transform: uppercase;
+        line-height: 1px;
+        letter-spacing: 0.03em;
+        position: relative;
+        outline: none;
+        padding: 6px 31px 4px;
+        height: 40px;
+        border-radius: 6px;
+        transition: 0.3s ease;
+        &:hover {
+          background-color: rgb(0, 0, 0);
+          transition: 0.3s ease;
+        }
+      }
+    }
+  }
+}
