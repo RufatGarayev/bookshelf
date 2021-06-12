@@ -54,6 +54,50 @@ body {
   font-weight: 300;
 }
 
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
+.btn-style {
+  background: transparent;
+  color: #2879fe;
+  border: 2px solid #2879fe;
+  padding: 7px 26px;
+  border-radius: 6px;
+  font-size: 14px;
+  line-height: 1px;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  &:hover {
+    color: #ffff;
+    background-color: #000000;
+    border: 2px solid #000000;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+}
+
+.input-wrapper {
+  padding-bottom: 16px;
+  input {
+    height: 40px;
+    border: 1px solid #f7f8fa;
+    background-color: #f7f8fa;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 11px 12px 10px 15px;
+    transition: 0.3s ease;
+    &:focus {
+      outline: 0;
+      transition: 0.3s ease;
+      border: 1px solid rgb(40, 121, 254);
+    }
+  }
+}
+
 .swiper-container {
   .swiper-pagination-bullet {
     width: 20px;

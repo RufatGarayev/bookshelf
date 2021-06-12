@@ -1,9 +1,9 @@
 // Buttons
 export const NavBtnData = [
-    { id: 1, icon: <i className="flaticon-search"></i> },
-    { id: 2, icon: <i className="flaticon-shopping-bag"></i>, sup: <sup>0</sup> },
-    { id: 3, icon: <i className="flaticon-profile"></i> },
-    { id: 4, icon: <i className="flaticon-filter"></i> }
+    { id: 1, icon: <i className="flaticon-search"></i>, href: "/login" },
+    { id: 2, icon: <i className="flaticon-shopping-bag"></i>, sup: <sup>0</sup>, href: "/login" },
+    { id: 3, icon: <i className="flaticon-profile"></i>, href: "/login" },
+    { id: 4, icon: <i className="flaticon-filter"></i>, href: "/login" }
 ];
 
 // Nav items

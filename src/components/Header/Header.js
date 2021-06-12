@@ -31,7 +31,7 @@ const Header = () => {
                             {
                                 NavBtnData.map(btn => (
                                     <li key={btn.id}>
-                                        <a href="#/">{btn.icon}</a>
+                                        <Link to={btn.href}>{btn.icon}</Link>
                                         {btn.sup}
                                     </li>
                                 ))

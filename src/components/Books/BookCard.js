@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../../sass/_book-card.scss';
 
 
@@ -14,7 +15,9 @@ const BookCard = ({ book }) => {
             }
             {/* ======= Image ======= */}
             <div className="img-wrapper">
-                <a href="/#"><img className="img-fluid" src={book.img} alt="book" /></a>
+                <Link to={`/book-details/${book.id}`}>
+                    <img className="img-fluid" src={book.img} alt="book" />
+                </Link>
             </div>
             <div className="bottom-content w-100 d-flex flex-column align-items-center">
                 {/* ======= Rating ======= */}
@@ -23,7 +26,9 @@ const BookCard = ({ book }) => {
                 </div>
                 {/* ======= Title and Author ======= */}
                 <div className="title-author">
-                    <a href="/#"><h6>{book.title}</h6></a>
+                    <Link to={`/book-details/${book.id}`}>
+                        <h6>{book.title}</h6>
+                    </Link>
                     <p>{book.author}</p>
                 </div>
                 {/* ======= Price ======= */}

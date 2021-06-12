@@ -1,4 +1,4 @@
-import Input from './Input';
+import Input from '../Other/Input';
 
 const SendMessage = () => {
     return (

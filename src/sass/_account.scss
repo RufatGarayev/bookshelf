@@ -1,0 +1,64 @@
+// === login and register === //
+#login {
+  .new-customer-wrapper {
+    height: 100%;
+
+    p {
+      padding-bottom: 16px;
+    }
+  }
+}
+
+#login,
+#register {
+  padding: 50px 0 60px;
+
+  .section-title {
+    h1 {
+      font-weight: 500;
+      font-size: 24px;
+      font-family: Hind, sans-serif;
+    }
+  }
+
+  .account-inputs {
+    border: 1px solid #e9e7e7;
+    padding: 32px 39px 40px;
+    h4 {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+    label {
+      font-size: 14px;
+      color: #191919;
+      font-weight: 500;
+      padding-bottom: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    .bottom-contents {
+      padding-top: 10px;
+      height: 100%;
+
+      input[type="submit"] {
+        line-height: 21px;
+      }
+
+      .additional-link {
+        font-size: 14px;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+#register {
+  .account-inputs {
+    padding: 35px 39px 47px;
+    .bottom-contents {
+      padding-right: 222px;
+    }
+  }
+}
