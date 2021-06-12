@@ -5,6 +5,7 @@ import Shop from './pages/Shop';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Cart from './pages/Cart';
 import SignUp from './components/SignUp/SignUp';
 import Footer from './components/Footer/Footer';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
@@ -25,6 +26,7 @@ function App() {
             <Route path="/contact" component={Contact} />
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
+            <Route path="/cart" component={Cart} />
           </Switch>
           <SignUp />
         </main>
