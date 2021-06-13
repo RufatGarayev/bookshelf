@@ -8,18 +8,22 @@ import Register from './pages/Register';
 import Cart from './pages/Cart';
 import SignUp from './components/SignUp/SignUp';
 import Footer from './components/Footer/Footer';
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import configureStore from './redux/store/configureStore';
+import { Provider } from "react-redux";
+import { BrowserRouter, Route } from "react-router-dom";
 import '../src/sass/_app.scss';
 
 function App() {
+  const store = configureStore();
+  
   return (
-    <BrowserRouter>
-      <div className="App">
-        <header>
-          <Header />
-        </header>
-        <main>
-          <Switch>
+    <Provider store={store}>
+      <BrowserRouter>
+        <div className="App">
+          <header>
+            <Header />
+          </header>
+          <main>
             <Route path="/" component={Home} exact />
             <Route path="/about" component={About} />
             <Route path="/shop" component={Shop} />
@@ -27,14 +31,14 @@ function App() {
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route path="/cart" component={Cart} />
-          </Switch>
-          <SignUp />
-        </main>
-        <footer>
-          <Footer />
-        </footer>
-      </div>
-    </BrowserRouter>
+            <SignUp />
+          </main>
+          <footer>
+            <Footer />
+          </footer>
+        </div>
+      </BrowserRouter>
+    </Provider>
   );
 }
 

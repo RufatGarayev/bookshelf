@@ -1,14 +1,17 @@
-import { BooksData } from './BooksData';
 import BookCard from './BookCard';
 import Pagination from '../Other/Pagination';
+import { connect } from 'react-redux';
 
-const BookCards = () => {
+
+const BookCards = (props) => {
+    const { books } = props.books;
+
     return (
         <section id="books-shop">
             <div className="container">
                 <div className="row">
                     {
-                        BooksData.map(book => (
+                        books.map(book => (
                             <div key={book.id} className="col-lg-3">
                                 <BookCard book={book} />
                             </div>
@@ -25,4 +28,11 @@ const BookCards = () => {
     )
 }
 
-export default BookCards;
+const mapStateToProps = (state) => {
+    return {
+        books: state.books
+    }
+};
+
+
+export default connect(mapStateToProps)(BookCards);
