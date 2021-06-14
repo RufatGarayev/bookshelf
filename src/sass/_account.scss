@@ -69,6 +69,18 @@
 #shopping-cart {
   padding: 50px 0 60px;
 
+  .btn-style-2 {
+    width: 100%;
+    padding: 18px 26px;
+    line-height: 8px;
+    color: white;
+    background-color: rgb(40, 120, 253);
+    &:hover {
+      border: 2px solid rgb(16, 96, 224);
+      background-color: rgb(16, 96, 224);
+    }
+  }
+
   .section-title {
     padding-bottom: 30px;
     h1 {
@@ -152,7 +164,8 @@
       padding-top: 30px;
       justify-content: space-between;
 
-      a {
+      a,
+      button {
         font-size: 14px;
         color: #2879fe;
         text-decoration: none;
@@ -172,6 +185,12 @@
         p {
           padding-bottom: 3px;
         }
+      }
+
+      button {
+        border: 0;
+        background-color: transparent;
+        outline: none;
       }
     }
   }
@@ -223,18 +242,36 @@
         font-size: 24px;
       }
     }
+  }
 
-    .checkout-btn {
-      button {
-        width: 100%;
-        padding: 18px 26px;
-        line-height: 8px;
-        color: white;
-        background-color: rgb(40, 120, 253);
-        &:hover {
-          border: 2px solid rgb(16, 96, 224);
-          background-color: rgb(16, 96, 224);
+  .cart-is-empty-wrapper {
+    padding: 100px 0;
+
+    .icon-area {
+      i {
+        &::before {
+          font-size: 120px;
+          font-weight: 700 !important;
+          color: rgb(235, 236, 238);
         }
+      }
+    }
+
+    .title-and-paragraph {
+      padding: 20px 0;
+      h1 {
+        font-size: 32px;
+        letter-spacing: 1px;
+      }
+      p{
+        font-size: 15px;
+      }
+    }
+
+    .continue-btn {
+      padding: 0 170px;
+      a {
+        padding: 7px 32px;
       }
     }
   }

@@ -1,10 +1,13 @@
 import React from 'react';
 import Brand from '../Other/Brand';
-import { NavMenuData, NavBtnData } from './HeaderData';
+import { NavMenuData } from './HeaderData';
+import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 import '../../sass/_header.scss';
 
-const Header = () => {
+const Header = (props) => {
+    const { cart } = props.cart;
+
     return (
         <div className="header">
             <div className="container">
@@ -28,14 +31,19 @@ const Header = () => {
                     {/* ======= Buttons ======= */}
                     <div className="btns">
                         <ul className="d-flex">
-                            {
-                                NavBtnData.map(btn => (
-                                    <li key={btn.id}>
-                                        <Link to={btn.href}>{btn.icon}</Link>
-                                        {btn.sup}
-                                    </li>
-                                ))
-                            }
+                            <li>
+                                <Link to="/"><i className="flaticon-search"></i></Link>
+                            </li>
+                            <li>
+                                <Link to="/cart"><i className="flaticon-shopping-bag"></i></Link>
+                                <sup>{cart.length}</sup>
+                            </li>
+                            <li>
+                                <Link to="/login"><i className="flaticon-profile"></i></Link>
+                            </li>
+                            <li>
+                                <Link to="/"><i className="flaticon-filter"></i></Link>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -44,4 +52,11 @@ const Header = () => {
     )
 }
 
-export default Header;
+const mapStateToProps = (state) => {
+    return {
+        cart: state.cart
+    }
+};
+
+
+export default connect(mapStateToProps)(Header);

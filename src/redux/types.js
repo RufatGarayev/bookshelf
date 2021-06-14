@@ -1,2 +1,3 @@
 export const ADD_TO_CART = "ADD_TO_CART";
-export const GET_BOOKS = "GET_BOOKS";
+export const DELETE_BOOK_FROM_CART = "DELETE_BOOK_FROM_CART";
+export const CLEAR_CART = "CLEAR_CART";

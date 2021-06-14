@@ -1,5 +1,6 @@
 import Quantity from '../../Other/Quantity';
 import { connect } from 'react-redux';
+import { DeleteBook } from '../../../redux/actions/cartActions';
 
 const CartTable = (props) => {
     const { cart } = props.cart;
@@ -12,7 +13,7 @@ const CartTable = (props) => {
                         cart.map(book => (
                             <tr key={book.id}>
                                 <td>
-                                    <button className="btn-close" type="button">
+                                    <button className="btn-close" type="button" onClick={() => props.DeleteBook(book.id)}>
                                         <i className="flaticon-delete"></i>
                                     </button>
                                 </td>
@@ -58,4 +59,4 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps)(CartTable);
+export default connect(mapStateToProps, { DeleteBook })(CartTable);

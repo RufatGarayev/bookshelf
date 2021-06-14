@@ -1,4 +1,9 @@
-const CartTotals = () => {
+import { connect } from 'react-redux';
+
+const CartTotals = (props) => {
+    const {cart} = props.cart;
+    const totalPrice = cart.reduce((total, book) => (total += book.price), 0);
+
     return (
         <div className="cart-totals">
             <div className="cart-totals-title">
@@ -15,14 +20,20 @@ const CartTotals = () => {
                 <h4>GRAND TOTAL</h4>
                 <p>
                     <span>$</span>
-                    25.00
+                    {totalPrice}
                 </p>
             </div>
             <div className="checkout-btn">
-                <button className="btn-style">PROCEED TO CHECKOUT</button>
+                <button className="btn-style btn-style-2">PROCEED TO CHECKOUT</button>
             </div>
         </div>
     )
 }
 
-export default CartTotals;
+const mapStateToProps = (state) => {
+    return {
+        cart: state.cart
+    }
+};
+
+export default connect(mapStateToProps)(CartTotals);
