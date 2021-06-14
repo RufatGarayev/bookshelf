@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 
 const CartTotals = (props) => {
     const {cart} = props.cart;
-    const totalPrice = cart.reduce((total, book) => (total += book.price), 0);
+    const totalPrice = cart.reduce((total, book) => (total += book.price * book.count), 0);
 
     return (
         <div className="cart-totals">
@@ -13,14 +13,14 @@ const CartTotals = (props) => {
                 <h5>SUBTOTAL</h5>
                 <p>
                     <span>$</span>
-                    25.00
+                    {totalPrice.toFixed(2)}
                 </p>
             </div>
             <div className="grand-total price d-flex justify-content-between">
                 <h4>GRAND TOTAL</h4>
                 <p>
                     <span>$</span>
-                    {totalPrice}
+                    {totalPrice.toFixed(2)}
                 </p>
             </div>
             <div className="checkout-btn">

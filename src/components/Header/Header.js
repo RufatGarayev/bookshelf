@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Brand from '../Other/Brand';
 import { NavMenuData } from './HeaderData';
 import { connect } from 'react-redux';
@@ -7,9 +7,18 @@ import '../../sass/_header.scss';
 
 const Header = (props) => {
     const { cart } = props.cart;
+    const [shadow, setShadow] = useState(false);
+
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 40) {
+            setShadow(true)
+        } else {
+            setShadow(false)
+        }
+    });
 
     return (
-        <div className="header">
+        <div className={ shadow ? "header-shadow header" : "header"}>
             <div className="container">
                 <div className="wrapper d-flex">
                     <div className="brand-and-nav-menu d-flex">
@@ -57,6 +66,5 @@ const mapStateToProps = (state) => {
         cart: state.cart
     }
 };
-
 
 export default connect(mapStateToProps)(Header);

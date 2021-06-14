@@ -1,4 +1,5 @@
-import { ADD_TO_CART, DELETE_BOOK_FROM_CART, CLEAR_CART } from "../types";
+import { ADD_TO_CART, DELETE_BOOK_FROM_CART, CLEAR_CART, 
+INCREASE_BOOK_COUNT, DECREASE_BOOK_COUNT } from "../types";
 
 
 export const AddToCart = (book) => {
@@ -16,5 +17,19 @@ export const DeleteBook = (id) => {
 export const ClearCart = () => {
     return {
         type: CLEAR_CART
+    }
+};
+
+export const IncreaseBookCount = (id) => {
+    return {
+        type: INCREASE_BOOK_COUNT,
+        payload: id
+    }
+};
+
+export const DecreaseBookCount = (id) => {
+    return {
+        type: DECREASE_BOOK_COUNT,
+        payload: id
     }
 };

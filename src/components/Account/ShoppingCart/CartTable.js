@@ -1,6 +1,6 @@
 import Quantity from '../../Other/Quantity';
 import { connect } from 'react-redux';
-import { DeleteBook } from '../../../redux/actions/cartActions';
+import { DeleteBook, IncreaseBookCount, DecreaseBookCount } from '../../../redux/actions/cartActions';
 
 const CartTable = (props) => {
     const { cart } = props.cart;
@@ -32,16 +32,20 @@ const CartTable = (props) => {
                                     </h6>
                                 </td>
                                 <td>
-                                    <p className="book-price price"><span>$</span>{book.price}</p>
+                                    <p className="book-price price"><span>$</span>{book.price.toFixed(2)}</p>
                                 </td>
                                 <td>
                                     <div className="quantity-wrapper">
-                                        <Quantity />
+                                        <Quantity
+                                            book={book}
+                                            increaseBook={props.IncreaseBookCount}
+                                            decreaseBook={props.DecreaseBookCount}
+                                        />
                                     </div>
                                 </td>
                                 <td>
                                     <p className="total-price price d-flex align-items-center">
-                                        <span>$</span> 25.00
+                                        <span>$</span> {(book.price * book.count).toFixed(2)}
                                     </p>
                                 </td>
                             </tr>
@@ -59,4 +63,4 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps, { DeleteBook })(CartTable);
+export default connect(mapStateToProps, { DeleteBook, IncreaseBookCount, DecreaseBookCount })(CartTable);
