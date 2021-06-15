@@ -13,7 +13,7 @@ const CartTable = (props) => {
                         cart.map(book => (
                             <tr key={book.id}>
                                 <td>
-                                    <button className="btn-close" type="button" onClick={() => props.DeleteBook(book.id)}>
+                                    <button className="btnClose" type="button" onClick={() => props.DeleteBook(book.id)}>
                                         <i className="flaticon-delete"></i>
                                     </button>
                                 </td>

@@ -145,3 +145,107 @@ button {
     color: #191919;
   }
 }
+
+.modal {
+  z-index: 99999 !important;
+  .modal-dialog {
+    margin: 14% auto !important;
+  }
+}
+
+.added-to-cart-modal {
+  .modal-dialog {
+    width: 736px !important;
+    max-width: none;
+    .modal-body {
+      padding: 16px 24px 32px;
+      .btnClose {
+        border: none;
+        outline: none;
+        background-color: transparent;
+      }
+      .added-to-cart-window {
+        .price {
+          font-weight: 500;
+          font-size: 14px;
+          letter-spacing: 0.5px;
+          .dollarSign {
+            font-family: "Times New Roman", Times, serif;
+            font-size: 15px;
+            margin: 0 1px 0 3px;
+          }
+        }
+
+        .left-content {
+          .added-to-cart-title {
+            padding-bottom: 15px;
+            span {
+              color: #2879fe;
+              font-weight: 700;
+            }
+          }
+          .info {
+            padding-top: 15px;
+
+            h6 {
+              a {
+                font-weight: 400;
+                font-size: 14px;
+                color: #191919;
+                transition: 0.3s ease;
+                text-decoration: none;
+                &:hover {
+                  color: #2879fe;
+                  transition: 0.3s ease;
+                }
+              }
+            }
+          }
+        }
+        .right-content {
+          height: 97%;
+          border-left: 2px solid #e6e7e9;
+          .wrapper {
+            padding: 40px 16px 40px 40px;
+
+            .info {
+              .paragraph {
+                font-size: 15px;
+                font-weight: 300;
+                letter-spacing: 0;
+              }
+              .total-price {
+                span {
+                  color: #2879fe;
+                }
+                .dollarSign {
+                  font-size: 22px;
+                }
+                .mark-span {
+                  font-size: 23px;
+                }
+              }
+            }
+
+            .btns {
+              height: 200px;
+              a {
+                padding: 18px 26px;
+                text-align: center;
+                text-decoration: none;
+              }
+              .checkout-btn {
+                color: #ffff;
+                background-color: #2879fe;
+                &:hover {
+                  border: 2px solid rgb(16, 96, 224);
+                  background-color: rgb(16, 96, 224);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

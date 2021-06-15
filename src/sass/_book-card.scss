@@ -55,6 +55,7 @@
         color: rgb(255, 181, 3);
       }
     }
+
     .title-author {
       h6,
       p {
@@ -72,6 +73,7 @@
         margin: 2px 0;
       }
     }
+
     .price {
       span {
         font-family: "Times New Roman", Times, serif;
@@ -89,6 +91,7 @@
         }
       }
     }
+
     .add-to-cart-btn {
       button {
         background-color: #62a2d2;
@@ -113,12 +116,17 @@
 
         p {
           text-transform: uppercase;
-          font-weight: 300;
           font-size: 14px;
           margin: 1px 0 0 6px;
+          letter-spacing: 0.4px;
         }
       }
     }
+    .disabledBtn {
+      background-color: rgb(196, 211, 234) !important;
+      cursor: default !important;
+    }
+
     .btns {
       width: 180px;
       padding: 25px 0;

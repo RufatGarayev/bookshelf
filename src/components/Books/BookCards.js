@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 
 const BookCards = (props) => {
     const { books } = props.books;
+    const { cart } = props.cart;
 
     return (
         <section id="books-shop">
@@ -12,7 +13,7 @@ const BookCards = (props) => {
                     {
                         books.map(book => (
                             <div key={book.id} className="col-lg-3">
-                                <BookCard book={book} />
+                                <BookCard book={book} cart={cart} />
                             </div>
                         ))
                     }
@@ -29,7 +30,8 @@ const BookCards = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        books: state.books
+        books: state.books,
+        cart: state.cart
     }
 };
 
