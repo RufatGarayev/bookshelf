@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { AddToCart } from '../../redux/actions/cartActions';
+import { AddToCart, MakingIsInCartTrue } from '../../redux/actions/cartActions';
 import '../../sass/_book-card.scss';
 
 
@@ -51,7 +51,11 @@ const BookCard = (props) => {
                 </div>
                 {/* ======= Add to Cart Button ======= */}
                 <div className="add-to-cart-btn d-flex justify-content-center">
-                    <button type="button" className="d-flex" onClick={() => props.AddToCart(book)}>
+                    <button
+                        type="button"
+                        className="d-flex"
+                        onClick={() => { props.AddToCart(book); props.MakingIsInCartTrue(book.id) }}
+                    >
                         <span><i className="flaticon-shopping-bag"></i></span>
                         <p>Add To Cart</p>
                     </button>
@@ -78,14 +82,12 @@ const BookCard = (props) => {
                     </span>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
 
 const mapStateToProps = (state) => {
-    return {
-        cart: state.cart
-    }
+    return state;
 };
 
-export default connect(mapStateToProps, { AddToCart })(BookCard);
+export default connect(mapStateToProps, { AddToCart, MakingIsInCartTrue })(BookCard);

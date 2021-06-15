@@ -28,7 +28,8 @@ export const BooksData = [
         category: "New Releases",
         hasDiscount: false,
         isNew: true,
-        count: 1
+        count: 1,
+        isInCart: false
     },
     {
         id: 2,
@@ -42,7 +43,8 @@ export const BooksData = [
         category: "Other",
         hasDiscount: false,
         isNew: false,
-        count: 1
+        count: 1,
+        isInCart: false
     },
     {
         id: 3,
@@ -56,7 +58,8 @@ export const BooksData = [
         category: "New Releases",
         hasDiscount: false,
         isNew: true,
-        count: 1
+        count: 1,
+        isInCart: false
     },
     {
         id: 4,
@@ -70,7 +73,8 @@ export const BooksData = [
         category: "Best Seller",
         hasDiscount: false,
         isNew: false,
-        count: 1
+        count: 1,
+        isInCart: false
     },
     {
         id: 5,
@@ -85,7 +89,8 @@ export const BooksData = [
         category: "Best Seller",
         hasDiscount: true,
         isNew: false,
-        count: 1
+        count: 1,
+        isInCart: false
     },
     {
         id: 6,
@@ -99,7 +104,8 @@ export const BooksData = [
         category: "Best Seller",
         hasDiscount: false,
         isNew: false,
-        count: 1
+        count: 1,
+        isInCart: false
     },
     {
         id: 7,
@@ -113,7 +119,8 @@ export const BooksData = [
         category: "Other",
         hasDiscount: false,
         isNew: false,
-        count: 1
+        count: 1,
+        isInCart: false
     },
     {
         id: 8,
@@ -127,7 +134,8 @@ export const BooksData = [
         category: "Other",
         hasDiscount: false,
         isNew: false,
-        count: 1
+        count: 1,
+        isInCart: false
     },
     {
         id: 9,
@@ -141,7 +149,8 @@ export const BooksData = [
         category: "Other",
         hasDiscount: false,
         isNew: false,
-        count: 1
+        count: 1,
+        isInCart: false
     },
     {
         id: 10,
@@ -155,7 +164,8 @@ export const BooksData = [
         category: "Other",
         hasDiscount: false,
         isNew: false,
-        count: 1
+        count: 1,
+        isInCart: false
     },
     {
         id: 11,
@@ -169,7 +179,8 @@ export const BooksData = [
         category: "New Releases",
         hasDiscount: false,
         isNew: true,
-        count: 1
+        count: 1,
+        isInCart: false
     },
     {
         id: 12,
@@ -184,7 +195,8 @@ export const BooksData = [
         category: "Best Seller",
         hasDiscount: true,
         isNew: false,
-        count: 1
+        count: 1,
+        isInCart: false
     },
     {
         id: 13,
@@ -198,7 +210,8 @@ export const BooksData = [
         category: "New Releases",
         hasDiscount: false,
         isNew: true,
-        count: 1
+        count: 1,
+        isInCart: false
     },
     {
         id: 14,
@@ -212,6 +225,7 @@ export const BooksData = [
         category: "New Releases",
         hasDiscount: false,
         isNew: true,
-        count: 1
+        count: 1,
+        isInCart: false
     }
 ];

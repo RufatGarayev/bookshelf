@@ -1,5 +1,7 @@
-import { ADD_TO_CART, DELETE_BOOK_FROM_CART, CLEAR_CART, 
-INCREASE_BOOK_COUNT, DECREASE_BOOK_COUNT } from '../types';
+import {
+    ADD_TO_CART, DELETE_BOOK_FROM_CART, CLEAR_CART,
+    INCREASE_BOOK_COUNT, DECREASE_BOOK_COUNT, MAKE_ISINCART_TRUE
+} from '../types';
 
 const initialState = {
     cart: []
@@ -7,11 +9,33 @@ const initialState = {
 
 const cartReducer = (state = initialState, action) => {
     switch (action.type) {
+        // Adding book to cart
         case ADD_TO_CART:
-            return {
-                ...state, cart: [...state.cart, action.payload]
-            };
+            let alreadyExists = false;
 
+            state.cart.forEach((book) => {
+                if (book.id === action.payload.id) {
+                    alreadyExists = true;
+                    book.count++;
+                }
+            });
+
+            if (!alreadyExists) {
+                state.cart.push({ ...action.payload, count: 1 });
+            }
+
+            return {
+                ...state
+            }
+
+        // Making isInCart True
+        case MAKE_ISINCART_TRUE:
+            return {
+                ...state,
+                cart: state.cart.map(book => book.id === action.payload ? { ...book, isInCart: book.isInCart = true } : book)
+            }
+
+        // Deleting book from cart
         case DELETE_BOOK_FROM_CART:
             return {
                 ...state,
@@ -24,33 +48,19 @@ const cartReducer = (state = initialState, action) => {
                 cart: []
             };
 
+        // Increasing book count
         case INCREASE_BOOK_COUNT:
-            const increaseBookCount = state.cart.map(book => {
-                if (book.id === action.payload) {
-                    book = {...book, count: book.count + 1}
-                }
-
-                return book;
-            })
-
             return {
                 ...state,
-                cart: increaseBookCount
-            };
+                cart: state.cart.map(book => book.id === action.payload ? { ...book, count: book.count + 1 } : book)
+            }
 
+        // Decreasing book count
         case DECREASE_BOOK_COUNT:
-            const decreaseBookCount = state.cart.map(book => {
-                if (book.id === action.payload) {
-                    book = {...book, count: book.count - 1}
-                }
-
-                return book;
-            })
-
             return {
                 ...state,
-                cart: decreaseBookCount
-            };
+                cart: state.cart.map(book => book.id === action.payload ? { ...book, count: book.count - 1 } : book)
+            }
 
         default:
             return state;

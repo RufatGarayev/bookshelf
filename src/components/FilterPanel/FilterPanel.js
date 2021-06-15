@@ -1,12 +1,15 @@
 import BooksCount from './BooksCount';
 import Search from './Search';
 import Sorting from './Sorting';
+import { connect } from 'react-redux';
 
-const FilterPanel = () => {
+const FilterPanel = (props) => {
+    const { books } = props.books;
+
     return (
         <div className="container">
             <div className="books-count-wrapper">
-                <BooksCount />
+                <BooksCount books={books}/>
             </div>
             <div id="filter-panel">
                 <div className="row">
@@ -26,4 +29,10 @@ const FilterPanel = () => {
     )
 }
 
-export default FilterPanel;
+const mapStateToProps = (state) => {
+    return {
+        books: state.books
+    }
+};
+
+export default connect(mapStateToProps)(FilterPanel);

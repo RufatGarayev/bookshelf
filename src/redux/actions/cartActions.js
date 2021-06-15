@@ -1,10 +1,16 @@
 import { ADD_TO_CART, DELETE_BOOK_FROM_CART, CLEAR_CART, 
-INCREASE_BOOK_COUNT, DECREASE_BOOK_COUNT } from "../types";
+INCREASE_BOOK_COUNT, DECREASE_BOOK_COUNT, MAKE_ISINCART_TRUE } from "../types";
 
 
 export const AddToCart = (book) => {
     return {
         type: ADD_TO_CART, payload: book
+    }
+};
+
+export const MakingIsInCartTrue = (id) => {
+    return {
+        type: MAKE_ISINCART_TRUE, payload: id
     }
 };
 

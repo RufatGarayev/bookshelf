@@ -2,7 +2,6 @@ import BookCard from './BookCard';
 import Pagination from '../Other/Pagination';
 import { connect } from 'react-redux';
 
-
 const BookCards = (props) => {
     const { books } = props.books;
 
@@ -33,6 +32,5 @@ const mapStateToProps = (state) => {
         books: state.books
     }
 };
-
 
 export default connect(mapStateToProps)(BookCards);

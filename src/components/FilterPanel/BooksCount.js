@@ -1,7 +1,7 @@
-const BooksCount = () => {
+const BooksCount = ({books}) => {
     return (
         <div className="books-count">
-            <h5>Books <span>(14)</span></h5>
+            <h5>Books <span>({books.length})</span></h5>
         </div>
     )
 }
