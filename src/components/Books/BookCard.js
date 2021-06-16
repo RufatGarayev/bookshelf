@@ -44,7 +44,7 @@ const BookCard = (props) => {
                     </div>
                     {/* ======= Title and Author ======= */}
                     <div className="title-author">
-                        <Link to={`/book-details/${book.id}`}>
+                        <Link to={`book-details/${book.id}`}>
                             <h6>{book.title}</h6>
                         </Link>
                         <p>{book.author}</p>
@@ -79,7 +79,6 @@ const BookCard = (props) => {
                                 <button
                                     type="button"
                                     className="d-flex"
-                                    data-toggle="modal" data-target="#myModal"
                                     onClick={() => { props.AddToCart(book); props.MakingIsInCartTrue(book.id); handleShow() }}
                                 >
                                     <span><i className="flaticon-shopping-bag"></i></span>

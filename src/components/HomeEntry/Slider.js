@@ -17,8 +17,6 @@ const Slider = () => {
             loop={true}
             navigation
             pagination={{ clickable: true }}
-            onSlideChange={() => console.log("slide change")}
-            onSwiper={(swiper) => console.log(swiper)}
         >
             {
                 EntrySlideData.map(book => (

@@ -1,4 +1,4 @@
-import Quantity from '../../Other/Quantity';
+import Quantity from './Quantity';
 import { connect } from 'react-redux';
 import { DeleteBook, IncreaseBookCount, DecreaseBookCount } from '../../../redux/actions/cartActions';
 

@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Cart from './pages/Cart';
+import BookDetails from './pages/BookDetails';
 import SignUp from './components/SignUp/SignUp';
 import Footer from './components/Footer/Footer';
 import configureStore from './redux/store/configureStore';
@@ -15,7 +16,7 @@ import '../src/sass/_app.scss';
 
 function App() {
   const store = configureStore();
-  
+
   return (
     <Provider store={store}>
       <BrowserRouter>
@@ -31,6 +32,7 @@ function App() {
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route path="/cart" component={Cart} />
+            <Route path="/book-details/:id" component={BookDetails} />
             <SignUp />
           </main>
           <footer>
