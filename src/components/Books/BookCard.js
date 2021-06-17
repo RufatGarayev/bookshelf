@@ -4,6 +4,8 @@ import { connect } from 'react-redux';
 import { AddToCart, MakingIsInCartTrue } from '../../redux/actions/cartActions';
 import AddedToCartWindow from '../Other/AddedToCartWindow';
 import { Modal } from 'react-bootstrap';
+import { FaBalanceScale, FaRegHeart, FaRegEye } from 'react-icons/fa';
+import { AiOutlineShopping } from 'react-icons/ai';
 import '../../sass/_book-card.scss';
 
 
@@ -44,7 +46,7 @@ const BookCard = (props) => {
                     </div>
                     {/* ======= Title and Author ======= */}
                     <div className="title-author">
-                        <Link to={`book-details/${book.id}`}>
+                        <Link to={`/book-details/${book.id}`}>
                             <h6>{book.title}</h6>
                         </Link>
                         <p>{book.author}</p>
@@ -72,7 +74,7 @@ const BookCard = (props) => {
                                     className="disabledBtn d-flex"
                                     disabled="disabled"
                                 >
-                                    <span><i className="flaticon-shopping-bag"></i></span>
+                                    <span><AiOutlineShopping /></span>
                                     <p>Added To Cart</p>
                                 </button>
                             ) : (
@@ -81,7 +83,7 @@ const BookCard = (props) => {
                                     className="d-flex"
                                     onClick={() => { props.AddToCart(book); props.MakingIsInCartTrue(book.id); handleShow() }}
                                 >
-                                    <span><i className="flaticon-shopping-bag"></i></span>
+                                    <span><AiOutlineShopping /></span>
                                     <p>Add To Cart</p>
                                 </button>
                             )
@@ -89,23 +91,23 @@ const BookCard = (props) => {
                     </div>
                     {/* ======= Other Buttons ======= */}
                     <div className="btns d-flex">
-                        <span>
+                        <span className="btn-wrapper">
                             <div className="tooltip">
                                 <p>Quick View</p>
                             </div>
-                            <i className="flaticon-photo"></i>
+                            <span className="iconn"><FaRegEye /></span>
                         </span>
-                        <span>
+                        <span className="btn-wrapper">
                             <div className="tooltip">
                                 <p>Add To Wishlist</p>
                             </div>
-                            <i className="flaticon-heart"></i>
+                            <span className="iconn"><FaRegHeart /></span>
                         </span>
-                        <span>
+                        <span className="btn-wrapper">
                             <div className="tooltip">
                                 <p>Add To Compare</p>
                             </div>
-                            <i className="flaticon-balance"></i>
+                            <span className="iconn"><FaBalanceScale /></span>
                         </span>
                     </div>
                 </div>

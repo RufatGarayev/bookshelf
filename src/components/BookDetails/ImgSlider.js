@@ -21,18 +21,24 @@ const Slider = (props) => {
             >
                 <div className="book-slider">
                     <SwiperSlide>
-                        <div className="img-wrapper">
-                            <img className="img-fluid" src={book.img} alt={book.title} />
+                        <div className="wrapper">
+                            <div className="img-wrapper">
+                                <img className="img-fluid" src={book.img} alt={book.title} />
+                            </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="img-wrapper">
-                            <img className="img-fluid" src={img1} alt="book1" />
+                        <div className="wrapper">
+                            <div className="img-wrapper">
+                                <img className="img-fluid" src={img1} alt="book1" />
+                            </div>
                         </div>
                     </SwiperSlide>
                     <SwiperSlide>
-                        <div className="img-wrapper">
-                            <img className="img-fluid" src={img2} alt="book2" />
+                        <div className="wrapper">
+                            <div className="img-wrapper">
+                                <img className="img-fluid" src={img2} alt="book2" />
+                            </div>
                         </div>
                     </SwiperSlide>
                 </div>

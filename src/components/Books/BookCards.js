@@ -6,6 +6,8 @@ const BookCards = (props) => {
     const { books } = props.books;
     const { cart } = props.cart;
 
+    console.log(props)
+
     return (
         <section id="books-shop">
             <div className="container">
@@ -31,7 +33,8 @@ const BookCards = (props) => {
 const mapStateToProps = (state) => {
     return {
         books: state.books,
-        cart: state.cart
+        cart: state.cart,
+        searchhBook: state.searchhBook
     }
 };
 

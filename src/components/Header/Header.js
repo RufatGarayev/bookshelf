@@ -3,6 +3,10 @@ import Brand from '../Other/Brand';
 import { NavMenuData } from './HeaderData';
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
+import { AiOutlineShopping } from 'react-icons/ai';
+import { CgSearch } from 'react-icons/cg';
+import { HiOutlineUser } from 'react-icons/hi';
+import { BsFilterLeft } from 'react-icons/bs';
 import '../../sass/_header.scss';
 
 const Header = (props) => {
@@ -18,7 +22,7 @@ const Header = (props) => {
     });
 
     return (
-        <div className={ shadow ? "header-shadow header" : "header"}>
+        <div className={shadow ? "header-shadow header" : "header"}>
             <div className="container">
                 <div className="wrapper d-flex">
                     <div className="brand-and-nav-menu d-flex">
@@ -41,17 +45,17 @@ const Header = (props) => {
                     <div className="btns">
                         <ul className="d-flex">
                             <li>
-                                <Link to="/"><i className="flaticon-search"></i></Link>
+                                <Link to="/"><span><CgSearch /></span></Link>
                             </li>
                             <li>
-                                <Link to="/cart"><i className="flaticon-shopping-bag"></i></Link>
+                                <Link to="/cart"><span><AiOutlineShopping /></span></Link>
                                 <sup>{cart.length}</sup>
                             </li>
                             <li>
-                                <Link to="/login"><i className="flaticon-profile"></i></Link>
+                                <Link to="/login"><span><HiOutlineUser /></span></Link>
                             </li>
                             <li>
-                                <Link to="/"><i className="flaticon-filter"></i></Link>
+                                <Link to="/"><span className="filter-btn"><BsFilterLeft /></span></Link>
                             </li>
                         </ul>
                     </div>

@@ -8,11 +8,9 @@
     .contact-item {
       .icon {
         padding-bottom: 20px;
-        i {
+        span {
+          font-size: 48px;
           color: rgb(40, 121, 254);
-          &::before {
-            font-size: 45px;
-          }
         }
       }
       .content {

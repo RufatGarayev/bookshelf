@@ -41,7 +41,7 @@ header {
       .btns {
         position: relative;
         ul {
-          padding: 20px 0 0;
+          padding: 17px 0 0;
           width: 120px;
           justify-content: space-between;
           li {
@@ -53,17 +53,12 @@ header {
                 color: rgb(98, 162, 208);
                 transition: 0.3s ease;
               }
-              i {
-                &::before {
-                  font-size: 16px;
-                  font-weight: 700 !important;
-                }
+              span {
+                font-size: 18px;
+                font-weight: 700 !important;
               }
-              .flaticon-filter {
-                &::before {
-                  font-size: 18px;
-                  font-weight: 500 !important;
-                }
+              .filter-btn {
+                font-size: 20px;
               }
             }
             sup {
@@ -85,6 +80,6 @@ header {
   }
 }
 
-.header-shadow{
+.header-shadow {
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
 }

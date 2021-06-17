@@ -1,6 +1,9 @@
 import Title from '../../Other/Title';
 import CartTable from './CartTable';
 import CartTotals from './CartTotals';
+import { AiOutlineShopping } from 'react-icons/ai';
+import { RiDeleteBinLine } from 'react-icons/ri';
+import { HiArrowNarrowLeft } from 'react-icons/hi';
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import { ClearCart } from '../../../redux/actions/cartActions';
@@ -31,14 +34,14 @@ const ShoppingCart = (props) => {
                                         <div className="bottom-elements d-flex">
                                             <div className="continue-shopping-link">
                                                 <Link to="/shop" className="d-flex align-items-center">
-                                                    <i className="flaticon-left-arrow mr-2"></i>
-                                                    <p className="m-0">CONTINUE SHOPPING</p>
+                                                    <span><HiArrowNarrowLeft /></span>
+                                                    <p>CONTINUE SHOPPING</p>
                                                 </Link>
                                             </div>
                                             <div className="clear-btn">
                                                 <button className="d-flex align-items-center" onClick={() => props.ClearCart()}>
-                                                    <i className="flaticon-delete mr-2"></i>
-                                                    <p className="m-0">CLEAR SHOPPING CART</p>
+                                                    <span><RiDeleteBinLine /></span>
+                                                    <p>CLEAR SHOPPING CART</p>
                                                 </button>
                                             </div>
                                         </div>
@@ -57,7 +60,7 @@ const ShoppingCart = (props) => {
                                 <div className="col-lg-6 offset-lg-3">
                                     <div className="cart-is-empty">
                                         <div className="icon-area d-flex justify-content-center">
-                                            <i className="flaticon-shopping-bag"></i>
+                                            <span><AiOutlineShopping /></span>
                                         </div>
                                         <div className="title-and-paragraph text-center">
                                             <h1>SHOPPING CART IS EMPTY</h1>

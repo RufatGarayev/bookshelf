@@ -65,7 +65,7 @@ export const BooksData = [
         id: 4,
         img: gulliversTravels,
         author: "Jonathan Swift",
-        title: "Gullivers Travels",
+        title: "Gulliver's Travels",
         genre: "Classic",
         price: 4.00,
         label: "",

@@ -103,6 +103,15 @@
               border: none;
               background-color: transparent;
               outline: none;
+
+              .delete-btn {
+                font-size: 18px;
+                transition: 0.3s ease;
+                &:hover {
+                  color: rgb(40, 120, 253);
+                  transition: 0.3s ease;
+                }
+              }
             }
 
             .img-wrapper {
@@ -118,10 +127,10 @@
                 font-size: 14px;
                 font-weight: 400;
                 transition: 0.3s ease;
+                text-decoration: none;
                 &:hover {
                   color: rgb(40, 120, 253);
                   transition: 0.3s ease;
-                  text-decoration: none;
                 }
               }
             }
@@ -176,14 +185,12 @@
           color: #000000;
         }
 
-        i {
-          &::before {
-            font-size: 16px;
-          }
+        span {
+          font-size: 20px;
         }
 
         p {
-          padding-bottom: 3px;
+          margin: 3px 0 0 5px;
         }
       }
 
@@ -245,25 +252,23 @@
   }
 
   .cart-is-empty-wrapper {
-    padding: 100px 0;
+    padding: 60px 0 110px;
 
     .icon-area {
-      i {
-        &::before {
-          font-size: 120px;
-          font-weight: 700 !important;
-          color: rgb(235, 236, 238);
-        }
+      span {
+        font-size: 140px;
+        font-weight: 700 !important;
+        color: rgb(235, 236, 238);
       }
     }
 
     .title-and-paragraph {
-      padding: 20px 0;
+      padding-bottom: 30px;
       h1 {
         font-size: 32px;
         letter-spacing: 1px;
       }
-      p{
+      p {
         font-size: 15px;
       }
     }

@@ -39,24 +39,4 @@
       }
     }
   }
-
-  .social-media {
-    padding: 22px 0 0;
-    ul {
-      width: 135px;
-      justify-content: space-between;
-      padding: 0;
-      margin: 0;
-      li {
-        a {
-          color: rgb(216, 216, 216);
-          transition: 0.3s ease;
-          &:hover {
-            color: black;
-            transition: 0.3s ease;
-          }
-        }
-      }
-    }
-  }
 }

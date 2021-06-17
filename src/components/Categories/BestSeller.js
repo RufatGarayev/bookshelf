@@ -21,7 +21,6 @@ const BestSeller = () => {
                 </div>
             </div>
             <Swiper
-                spaceBetween={50}
                 slidesPerView={1}
                 pagination={{ clickable: true }}
                 breakpoints={{

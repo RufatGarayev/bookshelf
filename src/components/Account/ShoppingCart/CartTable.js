@@ -1,4 +1,5 @@
 import Quantity from './Quantity';
+import { RiDeleteBinLine } from 'react-icons/ri';
 import { connect } from 'react-redux';
 import { DeleteBook, IncreaseBookCount, DecreaseBookCount } from '../../../redux/actions/cartActions';
 
@@ -14,7 +15,7 @@ const CartTable = (props) => {
                             <tr key={book.id}>
                                 <td>
                                     <button className="btnClose" type="button" onClick={() => props.DeleteBook(book.id)}>
-                                        <i className="flaticon-delete"></i>
+                                        <span className="delete-btn"><RiDeleteBinLine /></span>
                                     </button>
                                 </td>
                                 <td>

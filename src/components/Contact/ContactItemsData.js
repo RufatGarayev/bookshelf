@@ -1,3 +1,7 @@
+import { FiPhone } from 'react-icons/fi';
+import { GoLocation } from 'react-icons/go';
+import { BsClock } from 'react-icons/bs';
+
 const phoneText = (
     <>
         +994 51 777-77-99
@@ -26,19 +30,19 @@ const workTimeText = (
 export const ContactItemsData = [
     {
         id: 1,
-        icon: <i className="flaticon-phone-call"></i>,
+        icon: <span><FiPhone /></span>,
         title: "LET’S HAVE A CHAT!",
         content: phoneText
     },
     {
         id: 2,
-        icon: <i className="flaticon-location"></i>,
+        icon: <span><GoLocation /></span>,
         title: "VISIT OUR LOCATION",
         content: locationText
     },
     {
         id: 3,
-        icon: <i className="flaticon-wall-clock"></i>,
+        icon: <span><BsClock /></span>,
         title: "WORK TIME",
         content: workTimeText
     }
