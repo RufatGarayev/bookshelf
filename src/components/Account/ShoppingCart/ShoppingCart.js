@@ -66,7 +66,7 @@ const ShoppingCart = (props) => {
                                             <h1>SHOPPING CART IS EMPTY</h1>
                                             <p className="paragraph">You have no items in your shopping cart.</p>
                                         </div>
-                                        <div className="continue-btn">
+                                        <div className="continue-btn text-center">
                                             <Link to="/shop" className="btn-style btn-style-2">CONTINUE SHOPPING</Link>
                                         </div>
                                     </div>

@@ -1,32 +1,36 @@
-const Sorting = () => {
+const Sorting = (props) => {
     return (
         <div className="sorting">
             <div className="row">
                 <div className="col-lg-6">
+                    {/* ======= Sorting by Name and Price ======= */}
                     <div className="sorting-area name-price d-flex">
                         <label className="m-0">SORT BY:</label>
-                        <select>
+                        <select
+                            onChange={(e) => props.Sorting(e.target.value)}
+                        >
                             <option value="default">Default</option>
-                            <option value="nameA2Z">Name (A-Z)</option>
-                            <option value="nameZ2A">Name (Z-A)</option>
-                            <option value="priceLow2High">Price (Low to High)</option>
-                            <option value="priceHigh2Low">Price (High to Low)</option>
+                            <option value="nameA">Name (A-Z)</option>
+                            <option value="nameZ">Name (Z-A)</option>
+                            <option value="lowPrice">Price (Low to High)</option>
+                            <option value="highPrice">Price (High to Low)</option>
                         </select>
                     </div>
                 </div>
                 <div className="col-lg-6">
+                    {/* ======= Sorting by Genre ======= */}
                     <div className="sorting-area genre d-flex">
                         <label className="m-0">GENRE:</label>
                         <select>
-                            <option value="all">All</option>
-                            <option value="classic">Classic</option>
-                            <option value="novel">Novel</option>
-                            <option value="romance">Romance</option>
-                            <option value="historical">Historical</option>
-                            <option value="poetry">Poetry</option>
-                            <option value="science-fiction">Science Fiction</option>
-                            <option value="contemporary-fiction">Contemporary Fiction</option>
-                            <option value="industrial-applications">Industrial Applications</option>
+                            <option value="All">All</option>
+                            <option value="Classic">Classic</option>
+                            <option value="Novel">Novel</option>
+                            <option value="Romance">Romance</option>
+                            <option value="Historical">Historical</option>
+                            <option value="Poetry">Poetry</option>
+                            <option value="ScienceFiction">Science Fiction</option>
+                            <option value="ContemporaryFiction">Contemporary Fiction</option>
+                            <option value="IndustrialApplications">Industrial Applications</option>
                         </select>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
-import { SEARCH_BOOK } from '../types';
+import { SORT_BOOKS_BY_NAME_AND_PRICE } from '../types';
 
-export const SearchBook = (searchValue) => {
+export const SortBook = (selectValue) => {
     return {
-        type: SEARCH_BOOK, payload: searchValue
+        type: SORT_BOOKS_BY_NAME_AND_PRICE, payload: selectValue
     }
 }
