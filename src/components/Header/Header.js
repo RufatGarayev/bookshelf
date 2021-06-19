@@ -1,21 +1,16 @@
 import React, { useState } from 'react';
 import Brand from '../Other/Brand';
-import { NavMenuData } from './HeaderData';
+import { NavMenuData, ButtonsData } from './HeaderData';
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
-import { AiOutlineShopping } from 'react-icons/ai';
-import { CgSearch } from 'react-icons/cg';
-import { HiOutlineUser } from 'react-icons/hi';
-import { BsFilterLeft } from 'react-icons/bs';
-import { FaBalanceScale, FaRegHeart } from 'react-icons/fa';
-import { RiLock2Line } from 'react-icons/ri';
+import { DeleteBook } from '../../redux/actions/cartActions';
+import DropdownCart from './DropdownCart';
 import '../../sass/_header.scss';
 
 const Header = (props) => {
     const { cart } = props.cart;
     const [shadow, setShadow] = useState(false);
-    const [showMonetaryUnit, setShowMonetaryUnit] = useState(false);
-    const [showAccount, setShowAccount] = useState(false);
+    const [clickedbtnid, setClickedBtnId] = useState("");
 
     window.addEventListener("scroll", () => {
         if (window.scrollY > 40) {
@@ -37,7 +32,7 @@ const Header = (props) => {
                             <ul className="d-flex">
                                 {
                                     NavMenuData.map(item => (
-                                        <li className={item.class} key={item.id}>
+                                        <li key={item.id} className={item.class}>
                                             <Link to={item.href}>{item.title}</Link>
                                         </li>
                                     ))
@@ -48,51 +43,31 @@ const Header = (props) => {
                     {/* ======= Buttons ======= */}
                     <div className="btns">
                         <ul className="d-flex">
-                            <li>
-                                <button onClick={e => e.preventDefault()}>
-                                    <span><CgSearch /></span>
-                                </button>
-                            </li>
-                            <li>
-                                <Link to="/cart"><span><AiOutlineShopping /></span></Link>
-                                <sup>{cart.length}</sup>
-                            </li>
-                            <li>
-                                <button onClick={() => setShowAccount(!showAccount)}>
-                                    <span><HiOutlineUser /></span>
-                                </button>
-                                <div className={showAccount ? "showDropdown dropdownMenu account" : "dropdownMenu account"}>
-                                    <ul>
-                                        <li>
-                                            <Link to="/cart"><span><AiOutlineShopping /></span> Cart</Link>
+                            {
+                                ButtonsData.map(item => (
+                                    item.id === 2 ? (
+                                        <li
+                                            key={item.id}
+                                            clickedbtnid={item.id}
+                                            onClick={() => clickedbtnid !== item.id ? setClickedBtnId(item.id) : setClickedBtnId("")}
+                                            className={clickedbtnid === item.id ? "showDropdown" : ""}
+                                        >
+                                            {item.content}
+                                            <sup>{cart.length}</sup>
+                                            <DropdownCart cart={cart} deleteBook={props.DeleteBook} />
                                         </li>
-                                        <li>
-                                            <Link to="#/"><span><FaRegHeart /></span> Wishlist</Link>
+                                    ) : (
+                                        <li
+                                            key={item.id}
+                                            clickedbtnid={item.id}
+                                            onClick={() => clickedbtnid !== item.id ? setClickedBtnId(item.id) : setClickedBtnId("")}
+                                            className={clickedbtnid === item.id ? "showDropdown" : ""}
+                                        >
+                                            {item.content}
                                         </li>
-                                        <li>
-                                            <Link to="#/"><span><FaBalanceScale /></span> Compare</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/login"><span><RiLock2Line /></span> Log In</Link>
-                                        </li>
-                                        <li>
-                                            <Link to="/register"><span><HiOutlineUser /></span> Register</Link>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li>
-                                <button onClick={() => { setShowMonetaryUnit(!showMonetaryUnit); }}>
-                                    <span className="filter-btn"><BsFilterLeft /></span>
-                                </button>
-                                <div className={showMonetaryUnit ? "showDropdown dropdownMenu monetary-unit" : "dropdownMenu monetary-unit"}>
-                                    <ul>
-                                        <li><button>$ USD - US Dollar</button></li>
-                                        <li><button>€ EUR - Euro</button></li>
-                                        <li><button>£ GBP - British Pound Sterling</button></li>
-                                    </ul>
-                                </div>
-                            </li>
+                                    )
+                                ))
+                            }
                         </ul>
                     </div>
                 </div>
@@ -107,4 +82,4 @@ const mapStateToProps = (state) => {
     }
 };
 
-export default connect(mapStateToProps)(Header);
+export default connect(mapStateToProps, { DeleteBook })(Header);
