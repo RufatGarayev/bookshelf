@@ -44,7 +44,7 @@ const DropdownCart = (props) => {
                                                         <span className="book-count">{book.count}</span>
                                                         <span className="multiplication">×</span>
                                                         <p className="total-price price d-flex align-items-center">
-                                                            <span>$</span> {(book.price * book.count).toFixed(2)}
+                                                            <span>$</span> {book.price.toFixed(2)}
                                                         </p>
                                                     </li>
                                                 </ul>

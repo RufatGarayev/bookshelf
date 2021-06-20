@@ -74,10 +74,13 @@
     .pagination {
       padding-top: 7px;
       li {
-        a {
+        button {
           &:hover {
             color: white;
             background-color: rgb(98, 162, 210);
+          }
+          &:focus {
+            box-shadow: none !important;
           }
         }
         .arrow {
