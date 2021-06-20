@@ -1,4 +1,5 @@
 import Quantity from './Quantity';
+import { Link } from "react-router-dom";
 import { RiDeleteBinLine } from 'react-icons/ri';
 import { connect } from 'react-redux';
 import { DeleteBook, IncreaseBookCount, DecreaseBookCount } from '../../../redux/actions/cartActions';
@@ -20,16 +21,16 @@ const CartTable = (props) => {
                                 </td>
                                 <td>
                                     <div className="book-img">
-                                        <a href="/#">
+                                        <Link to={`/book-details/${book.id}`}>
                                             <div className="img-wrapper">
                                                 <img className="img-fluid" src={book.img} alt="book" />
                                             </div>
-                                        </a>
+                                        </Link>
                                     </div>
                                 </td>
                                 <td>
                                     <h6 className="book-title">
-                                        <a href="/#">{book.title}</a>
+                                        <Link to={`/book-details/${book.id}`}>{book.title}</Link>
                                     </h6>
                                 </td>
                                 <td>

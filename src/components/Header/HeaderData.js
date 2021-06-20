@@ -6,7 +6,6 @@ import { FaBalanceScale, FaRegHeart } from 'react-icons/fa';
 import { RiLock2Line } from 'react-icons/ri';
 import { Link } from "react-router-dom";
 
-
 // Nav links
 export const NavMenuData = [
     { id: 1, title: "Home", href: "/", class: "first-li" },
@@ -15,14 +14,13 @@ export const NavMenuData = [
     { id: 4, title: "Contact", href: "/contact", class: "fourth-li" }
 ];
 
-
 // Buttons and Dropdown items
 export const ButtonsData = [
     {
         id: 1,
         content:
             <div className="li-content">
-                <button onClick={e => e.preventDefault()}>
+                <button>
                     <span><CgSearch /></span>
                 </button>
             </div>

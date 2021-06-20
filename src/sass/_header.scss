@@ -123,28 +123,97 @@ header {
 
             .dropdownCart {
               padding: 30px 15px 30px 20px;
-              width: 270px;
-              right: -68px;
+              width: 285px;
+              right: -69px;
               table {
                 width: 100%;
-                td {
-                  padding: 10px 0;
-                  .img-wrapper {
-                    height: 65px;
-                    width: 45px;
-                    img {
-                      height: 100%;
-                      width: 100%;
-                      object-fit: cover;
+                tbody {
+                  width: 100%;
+                  max-height: 260px;
+                  display: inline-block;
+                  overflow-y: auto;
+                  td {
+                    padding: 12px 0;
+                    button {
+                      padding-right: 10px;
+                      span {
+                        font-size: 16px;
+                      }
+                    }
+                    .img-wrapper {
+                      height: 65px;
+                      width: 45px;
+                      img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                      }
+                    }
+                    ul {
+                      padding: 0 10px 0 13px;
+                      .count-and-price {
+                        .multiplication{
+                          margin: 0 5px;
+                        }
+
+                        p {
+                          margin: 0;
+                        }
+                      }
                     }
                   }
+                }
+              }
 
-                  .count-and-price {
-                    width: 60px;
-
-                    p {
-                      margin: 0;
+              .total-area {
+                border-top: 1px solid #e9e7e7;
+                margin-top: 30px;
+                padding-top: 14px;
+                .top-content {
+                  h6 {
+                    font-size: 15px;
+                  }
+                  p {
+                    line-height: 18px;
+                    font-weight: 500;
+                  }
+                }
+                .checkout-btn {
+                  button {
+                    color: white;
+                    font-size: 13px;
+                    letter-spacing: 0.5px;
+                    padding: 18px 26px 16px;
+                    background-color: rgb(40, 120, 253);
+                    &:hover {
+                      border: 2px solid rgb(16, 96, 224);
+                      background-color: rgb(16, 96, 224);
                     }
+                  }
+                }
+                .view-cart-btn {
+                  padding-top: 13px;
+                  a {
+                    font-size: 14px;
+                    transition: 0.3s ease;
+                    text-decoration: none;
+                    &:hover {
+                      color: #000000;
+                      transition: 0.3s ease;
+                    }
+                  }
+                }
+              }
+
+              .empty-cart {
+                svg {
+                  font-size: 38px;
+                  color: #cdcdcd;
+                }
+                .alert-text {
+                  padding-top: 10px;
+                  p {
+                    margin: 0;
                   }
                 }
               }

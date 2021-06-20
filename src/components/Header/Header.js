@@ -10,7 +10,7 @@ import '../../sass/_header.scss';
 const Header = (props) => {
     const { cart } = props.cart;
     const [shadow, setShadow] = useState(false);
-    const [clickedbtnid, setClickedBtnId] = useState("");
+    const [clickedBtnId, setClickedBtnId] = useState("");
 
     window.addEventListener("scroll", () => {
         if (window.scrollY > 40) {
@@ -48,9 +48,8 @@ const Header = (props) => {
                                     item.id === 2 ? (
                                         <li
                                             key={item.id}
-                                            clickedbtnid={item.id}
-                                            onClick={() => clickedbtnid !== item.id ? setClickedBtnId(item.id) : setClickedBtnId("")}
-                                            className={clickedbtnid === item.id ? "showDropdown" : ""}
+                                            onClick={() => clickedBtnId !== item.id ? setClickedBtnId(item.id) : setClickedBtnId("")}
+                                            className={clickedBtnId === item.id ? "showDropdown" : ""}
                                         >
                                             {item.content}
                                             <sup>{cart.length}</sup>
@@ -59,9 +58,8 @@ const Header = (props) => {
                                     ) : (
                                         <li
                                             key={item.id}
-                                            clickedbtnid={item.id}
-                                            onClick={() => clickedbtnid !== item.id ? setClickedBtnId(item.id) : setClickedBtnId("")}
-                                            className={clickedbtnid === item.id ? "showDropdown" : ""}
+                                            onClick={() => clickedBtnId !== item.id ? setClickedBtnId(item.id) : setClickedBtnId("")}
+                                            className={clickedBtnId === item.id ? "showDropdown" : ""}
                                         >
                                             {item.content}
                                         </li>
