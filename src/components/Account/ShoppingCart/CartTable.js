@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { RiDeleteBinLine } from 'react-icons/ri';
 import { connect } from 'react-redux';
 import { DeleteBook, IncreaseBookCount, DecreaseBookCount } from '../../../redux/actions/cartActions';
+import { WishlistBookIsInCartFalse } from '../../../redux/actions/wishlistActions';
+import { MakeIsInCartFalse } from '../../../redux/actions/bookActions';
 
 const CartTable = (props) => {
     const { cart } = props.cart;
@@ -15,7 +17,15 @@ const CartTable = (props) => {
                         cart.map(book => (
                             <tr key={book.id}>
                                 <td>
-                                    <button className="btnClose" type="button" onClick={() => props.DeleteBook(book.id)}>
+                                    <button
+                                        className="btnClose"
+                                        type="button"
+                                        onClick={() => {
+                                            props.DeleteBook(book.id);
+                                            props.MakeIsInCartFalse(book.id);
+                                            props.WishlistBookIsInCartFalse(book.id);
+                                        }}
+                                    >
                                         <span className="delete-btn"><RiDeleteBinLine /></span>
                                     </button>
                                 </td>
@@ -61,8 +71,11 @@ const CartTable = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        cart: state.cart
+        cart: state.cart,
+        books: state.books
     }
 };
 
-export default connect(mapStateToProps, { DeleteBook, IncreaseBookCount, DecreaseBookCount })(CartTable);
+export default connect(mapStateToProps,
+    { DeleteBook, IncreaseBookCount, DecreaseBookCount, WishlistBookIsInCartFalse, MakeIsInCartFalse }
+)(CartTable);

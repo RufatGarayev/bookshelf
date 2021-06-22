@@ -26,6 +26,10 @@
     }
   }
 
+  .remove-from-wishlist-btn{
+    display: none;
+  }
+
   .img-wrapper {
     padding: 0 43px 20px;
     height: 320px;
@@ -122,23 +126,13 @@
     }
 
     .btns {
-      width: 180px;
+      width: 110px;
       padding: 25px 0;
       justify-content: space-between;
       .btn-wrapper {
-        cursor: pointer;
-        border-radius: 50%;
-        border: solid 1px #a5a3a3;
-        height: 45px;
-        width: 45px;
-        line-height: 51px;
         position: relative;
-        transition: 0.3s ease;
+
         &:hover {
-          transition: 0.3s ease;
-          background-color: rgb(98, 162, 208);
-          border: solid 1px rgb(98, 162, 208);
-          color: white;
           .tooltip {
             transform: translateY(0px);
             transition: all 0.2s ease-out;
@@ -148,13 +142,20 @@
               color: black;
             }
           }
+
+          button {
+            transition: 0.3s ease;
+            background-color: rgb(98, 162, 208);
+            border: solid 1px rgb(98, 162, 208);
+            color: white;
+          }
         }
 
         .tooltip {
           position: absolute;
-          min-width: 110px;
+          min-width: 130px;
           top: -40px;
-          left: -34px;
+          left: -42px;
           transform: translateY(7px);
           transition: all 0.2s ease-out;
           opacity: 0;
@@ -184,11 +185,31 @@
           }
         }
 
-        .iconn {
-          font-size: 17px;
-          svg {
-            margin-bottom: 7px;
+        button {
+          border-radius: 50%;
+          border: solid 1px #a5a3a3;
+          height: 45px;
+          width: 45px;
+          line-height: 51px;
+          transition: 0.3s ease;
+          &:hover {
+            .iconn {
+              color: #ffff;
+            }
           }
+
+          .iconn {
+            font-size: 17px;
+            svg {
+              margin-bottom: 7px;
+            }
+          }
+        }
+
+        .activeBtn {
+          background-color: rgb(98, 162, 208);
+          border: solid 1px rgb(98, 162, 208);
+          color: white;
         }
       }
     }

@@ -1,6 +1,7 @@
 #login,
 #register,
-#shopping-cart {
+#shopping-cart,
+#wishlist {
   .section-title {
     h1 {
       font-weight: 500;
@@ -68,18 +69,6 @@
 
 #shopping-cart {
   padding: 50px 0 60px;
-
-  .btn-style-2 {
-    width: 100%;
-    padding: 18px 26px;
-    line-height: 8px;
-    color: white;
-    background-color: rgb(40, 120, 253);
-    &:hover {
-      border: 2px solid rgb(16, 96, 224);
-      background-color: rgb(16, 96, 224);
-    }
-  }
 
   .section-title {
     padding-bottom: 30px;
@@ -250,34 +239,45 @@
       }
     }
   }
+}
 
-  .cart-is-empty-wrapper {
-    padding: 60px 0 110px;
+#wishlist {
+  padding: 50px 0 40px;
 
-    .icon-area {
-      span {
-        font-size: 140px;
-        font-weight: 700 !important;
-        color: rgb(235, 236, 238);
+  .section-title {
+    padding-bottom: 30px;
+    h1 {
+      font-size: 28px;
+    }
+  }
+
+  .book-item {
+    margin-bottom: 30px;
+
+    &:hover {
+      .bottom-content {
+        transform: translateY(160px);
       }
     }
 
-    .title-and-paragraph {
-      padding-bottom: 30px;
-      h1 {
-        font-size: 32px;
-        letter-spacing: 1px;
-      }
-      p {
-        font-size: 15px;
+    .remove-from-wishlist-btn {
+      display: block !important;
+      position: absolute;
+      top: 3px;
+      right: 10px;
+
+      button {
+        svg {
+          font-size: 19px;
+          color: red;
+        }
       }
     }
 
-    .continue-btn {
-      padding: 0 170px;
-      a {
-        padding: 7px 32px;
-        text-decoration: none;
+    .bottom-content {
+      transform: translateY(228px);
+      .btns {
+        display: none !important;
       }
     }
   }

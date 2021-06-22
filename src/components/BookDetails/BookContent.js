@@ -1,5 +1,5 @@
 import ImgSlider from './ImgSlider';
-import Info from './Info';
+import ExtensiveInfo from './ExtensiveInfo';
 import { SocialMediaData } from '../Other/SocialMedia';
 
 const BookContent = (props) => {
@@ -13,7 +13,7 @@ const BookContent = (props) => {
                         <ImgSlider book={book} />
                     </div>
                     <div className="col-lg-6">
-                        <Info book={book} />
+                        <ExtensiveInfo book={book} />
                     </div>
                 </div>
             </div>

@@ -42,6 +42,7 @@ const cartReducer = (state = initialState, action) => {
                 cart: state.cart.filter(book => book.id !== action.payload)
             };
 
+        // Clearing the cart
         case CLEAR_CART:
             return {
                 ...state,

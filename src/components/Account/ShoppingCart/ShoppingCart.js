@@ -1,9 +1,10 @@
 import Title from '../../Other/Title';
 import CartTable from './CartTable';
 import CartTotals from './CartTotals';
-import { AiOutlineShopping } from 'react-icons/ai';
+import EmptyAlert from '../../Other/EmptyAlert';
 import { RiDeleteBinLine } from 'react-icons/ri';
 import { HiArrowNarrowLeft } from 'react-icons/hi';
+import { AiOutlineShopping } from 'react-icons/ai';
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import { ClearCart } from '../../../redux/actions/cartActions';
@@ -56,22 +57,11 @@ const ShoppingCart = (props) => {
                         </>
                     ) : (
                         <div className="cart-is-empty-wrapper">
-                            <div className="row">
-                                <div className="col-lg-6 offset-lg-3">
-                                    <div className="cart-is-empty">
-                                        <div className="icon-area d-flex justify-content-center">
-                                            <span><AiOutlineShopping /></span>
-                                        </div>
-                                        <div className="title-and-paragraph text-center">
-                                            <h1>SHOPPING CART IS EMPTY</h1>
-                                            <p className="paragraph">You have no items in your shopping cart.</p>
-                                        </div>
-                                        <div className="continue-btn text-center">
-                                            <Link to="/shop" className="btn-style btn-style-2">CONTINUE SHOPPING</Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <EmptyAlert
+                                icon={<AiOutlineShopping />}
+                                title="SHOPPING CART IS EMPTY"
+                                paragraph="You have no items in your shopping cart."
+                            />
                         </div>
                     )
                 }

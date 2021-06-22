@@ -3,11 +3,12 @@ import { FaBalanceScale, FaRegHeart } from 'react-icons/fa';
 import { AiOutlineShopping } from 'react-icons/ai';
 import { connect } from 'react-redux';
 import AddedToCartWindow from '../Other/AddedToCartWindow';
+// import PrimaryInfo from './PrimaryInfo';
 import { Modal } from 'react-bootstrap';
 import { AddToCart, MakingIsInCartTrue } from '../../redux/actions/cartActions';
 import CheckoutImg from '../../assets/img/other/checkout.png';
 
-const Info = (props) => {
+const ExtensiveInfo = (props) => {
     const { book } = props;
     const { cart } = props.cart;
     const [height, setHeight] = useState(false);
@@ -32,18 +33,18 @@ const Info = (props) => {
                             <span className={book.label === "New" ? "new-background" : null}>{book.label}</span>
                         </div> : ""
                 }
-                {/* ======= Title and other ======= */}
-                <div className="title-and-others">
-                    <h3>{book.title}</h3>
-                    <p className="book-price"><span>$</span>{book.price.toFixed(2)}</p>
-                    <span className="book-rating">{book.rating}</span>
-                    <p className="paragraph">
-                        Lorem ipsum dolor sit amet conse ctetur adipisicing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-                    </p>
+                {/* ======= Primary info ======= */}
+                <div className="primary-info-wrapper">
+                    <div className="book-primary-info">
+                        <h3>{book.title}</h3>
+                        <p className="book-price"><span>$</span>{book.price.toFixed(2)}</p>
+                        <span className="book-rating">{book.rating}</span>
+                        <p className="paragraph">
+                            Lorem ipsum dolor sit amet conse ctetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+                        </p>
+                    </div>
                 </div>
-                {/* ======= Quantity ======= */}
-
                 {/* ======= Add-to-cart btn ======= */}
                 <div className="add-to-cart-btn">
                     {
@@ -111,4 +112,4 @@ const mapStateToProps = (state) => {
     return state;
 };
 
-export default connect(mapStateToProps, { AddToCart, MakingIsInCartTrue })(Info);
+export default connect(mapStateToProps, { AddToCart, MakingIsInCartTrue })(ExtensiveInfo);

@@ -1,5 +1,5 @@
 import { BooksData } from '../../components/Books/BooksData';
-import { SORT_BOOKS_BY_NAME_AND_PRICE } from '../types';
+import { SORT_BOOKS_BY_NAME_AND_PRICE, MAKE_ISINCART_FALSE } from '../types';
 
 const initialState = {
     books: BooksData
@@ -7,6 +7,7 @@ const initialState = {
 
 const bookReducer = (state = initialState, action) => {
     switch (action.type) {
+        // Sorting books by name and price
         case SORT_BOOKS_BY_NAME_AND_PRICE:
             const sortedBooks = state.books.slice();
 
@@ -25,6 +26,13 @@ const bookReducer = (state = initialState, action) => {
             return {
                 ...state,
                 books: sortedBooks
+            }
+
+        // Making isInCart False
+        case MAKE_ISINCART_FALSE:
+            return {
+                ...state,
+                books: state.books.map(book => book.id === action.payload ? { ...book, isInCart: book.isInCart = false } : book)
             }
 
 

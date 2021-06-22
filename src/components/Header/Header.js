@@ -4,11 +4,14 @@ import { NavMenuData, ButtonsData } from './HeaderData';
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 import { DeleteBook } from '../../redux/actions/cartActions';
+import { WishlistBookIsInCartFalse } from '../../redux/actions/wishlistActions';
+import { MakeIsInCartFalse } from '../../redux/actions/bookActions';
 import DropdownCart from './DropdownCart';
 import '../../sass/_header.scss';
 
 const Header = (props) => {
     const { cart } = props.cart;
+    const { books } = props.books;
     const [shadow, setShadow] = useState(false);
     const [clickedBtnId, setClickedBtnId] = useState("");
 
@@ -53,7 +56,13 @@ const Header = (props) => {
                                         >
                                             {item.content}
                                             <sup>{cart.length}</sup>
-                                            <DropdownCart cart={cart} deleteBook={props.DeleteBook} />
+                                            <DropdownCart
+                                                cart={cart}
+                                                books={books}
+                                                deleteBook={props.DeleteBook}
+                                                wishlistBookIsInCartFalse={props.WishlistBookIsInCartFalse}
+                                                makeIsInCartFalse={props.MakeIsInCartFalse}
+                                            />
                                         </li>
                                     ) : (
                                         <li
@@ -76,8 +85,11 @@ const Header = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        cart: state.cart
+        cart: state.cart,
+        books: state.books
     }
 };
 
-export default connect(mapStateToProps, { DeleteBook })(Header);
+export default connect(mapStateToProps,
+    { DeleteBook, WishlistBookIsInCartFalse, MakeIsInCartFalse }
+)(Header);

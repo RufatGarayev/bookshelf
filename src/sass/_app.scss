@@ -16,7 +16,7 @@ body {
   overflow-x: hidden;
 }
 
-button{
+button {
   background-color: transparent;
   border: none;
 }
@@ -107,6 +107,18 @@ button {
   }
 }
 
+.btn-style-2 {
+  width: 100%;
+  padding: 18px 26px;
+  line-height: 8px;
+  color: white;
+  background-color: rgb(40, 120, 253);
+  &:hover {
+    border: 2px solid rgb(16, 96, 224);
+    background-color: rgb(16, 96, 224);
+  }
+}
+
 .input-wrapper {
   padding-bottom: 16px;
   input {
@@ -177,17 +189,43 @@ button {
   }
 }
 
-.modal {
-  z-index: 99999 !important;
-  .modal-dialog {
-    margin: 14% auto !important;
+.cart-is-empty-wrapper {
+  padding: 60px 0 110px;
+
+  .icon-area {
+    span {
+      font-size: 140px;
+      font-weight: 700 !important;
+      color: rgb(235, 236, 238);
+    }
+  }
+
+  .title-and-paragraph {
+    padding-bottom: 30px;
+    h1 {
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+    p {
+      font-size: 15px;
+    }
+  }
+
+  .continue-btn {
+    padding: 0 170px;
+    a {
+      padding: 8px 32px !important;
+      text-decoration: none;
+    }
   }
 }
 
-.added-to-cart-modal {
+.modal {
+  z-index: 99999 !important;
   .modal-dialog {
     width: 736px !important;
     max-width: none;
+    margin: 11% auto !important;
     .modal-content {
       border-radius: 0;
       .modal-body {
@@ -283,4 +321,68 @@ button {
       }
     }
   }
+}
+
+.alert-box-wrapper {
+  .alert-box {
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+    transform: translateY(20px);
+    background-color: #ffff;
+    border-radius: 5px;
+    border-left: 4px solid #16c60c;
+    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    padding: 20px;
+    bottom: 25px;
+    right: 25px;
+    z-index: 999;
+
+    .check-icon,
+    .remove-icon {
+      span {
+        display: inline-block;
+        text-align: center;
+        color: #ffff;
+        font-size: 14px;
+        height: 22px;
+        width: 23px;
+        line-height: 27px;
+        border-radius: 50%;
+        background-color: #16c60c;
+      }
+    }
+
+    .remove-icon {
+      span {
+        background-color: red;
+      }
+    }
+
+    .alert-text {
+      padding-left: 20px;
+
+      h5 {
+        font-size: 16px;
+      }
+
+      h6 {
+        font-size: 14px;
+        font-weight: 400;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .alert-box-remove-style {
+    border-left: 4px solid red !important;
+  }
+}
+
+.show-alert-box .alert-box {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0px) !important;
+  transition: 0.4s ease;
 }

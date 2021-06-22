@@ -47,7 +47,7 @@ export const ButtonsData = [
                             <Link to="/cart"><span><AiOutlineShopping /></span> Cart</Link>
                         </li>
                         <li>
-                            <Link to="#/"><span><FaRegHeart /></span> Wishlist</Link>
+                            <Link to="/wishlist"><span><FaRegHeart /></span> Wishlist</Link>
                         </li>
                         <li>
                             <Link to="#/"><span><FaBalanceScale /></span> Compare</Link>
