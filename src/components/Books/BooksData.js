@@ -30,7 +30,8 @@ export const BooksData = [
         isNew: true,
         count: 1,
         isInCart: false,
-        isInWishlist: false
+        isInWishlist: false,
+        isInCompare: false
     },
     {
         id: 2,
@@ -46,7 +47,8 @@ export const BooksData = [
         isNew: false,
         count: 1,
         isInCart: false,
-        isInWishlist: false
+        isInWishlist: false,
+        isInCompare: false
     },
     {
         id: 3,
@@ -62,7 +64,8 @@ export const BooksData = [
         isNew: true,
         count: 1,
         isInCart: false,
-        isInWishlist: false
+        isInWishlist: false,
+        isInCompare: false
 
     },
     {
@@ -79,7 +82,8 @@ export const BooksData = [
         isNew: false,
         count: 1,
         isInCart: false,
-        isInWishlist: false
+        isInWishlist: false,
+        isInCompare: false
     },
     {
         id: 5,
@@ -96,7 +100,8 @@ export const BooksData = [
         isNew: false,
         count: 1,
         isInCart: false,
-        isInWishlist: false
+        isInWishlist: false,
+        isInCompare: false
     },
     {
         id: 6,
@@ -112,7 +117,8 @@ export const BooksData = [
         isNew: false,
         count: 1,
         isInCart: false,
-        isInWishlist: false
+        isInWishlist: false,
+        isInCompare: false
     },
     {
         id: 7,
@@ -128,7 +134,8 @@ export const BooksData = [
         isNew: false,
         count: 1,
         isInCart: false,
-        isInWishlist: false
+        isInWishlist: false,
+        isInCompare: false
     },
     {
         id: 8,
@@ -144,7 +151,8 @@ export const BooksData = [
         isNew: false,
         count: 1,
         isInCart: false,
-        isInWishlist: false
+        isInWishlist: false,
+        isInCompare: false
     },
     {
         id: 9,
@@ -160,7 +168,8 @@ export const BooksData = [
         isNew: false,
         count: 1,
         isInCart: false,
-        isInWishlist: false
+        isInWishlist: false,
+        isInCompare: false
     },
     {
         id: 10,
@@ -176,7 +185,8 @@ export const BooksData = [
         isNew: false,
         count: 1,
         isInCart: false,
-        isInWishlist: false
+        isInWishlist: false,
+        isInCompare: false
     },
     {
         id: 11,
@@ -192,7 +202,8 @@ export const BooksData = [
         isNew: true,
         count: 1,
         isInCart: false,
-        isInWishlist: false
+        isInWishlist: false,
+        isInCompare: false
     },
     {
         id: 12,
@@ -209,7 +220,8 @@ export const BooksData = [
         isNew: false,
         count: 1,
         isInCart: false,
-        isInWishlist: false
+        isInWishlist: false,
+        isInCompare: false
     },
     {
         id: 13,
@@ -225,7 +237,8 @@ export const BooksData = [
         isNew: true,
         count: 1,
         isInCart: false,
-        isInWishlist: false
+        isInWishlist: false,
+        isInCompare: false
     },
     {
         id: 14,
@@ -241,6 +254,7 @@ export const BooksData = [
         isNew: true,
         count: 1,
         isInCart: false,
-        isInWishlist: false
+        isInWishlist: false,
+        isInCompare: false
     }
 ];

@@ -8,6 +8,7 @@ import Register from './pages/Register';
 import Cart from './pages/Cart';
 import BookDetails from './pages/BookDetails';
 import Wishlist from './pages/WishList';
+import Compare from './pages/Compare';
 import SignUp from './components/SignUp/SignUp';
 import Footer from './components/Footer/Footer';
 import configureStore from './redux/store/configureStore';
@@ -35,6 +36,7 @@ function App() {
             <Route path="/cart" component={Cart} />
             <Route path="/book-details/:id" component={BookDetails} />
             <Route path="/wishlist" component={Wishlist} />
+            <Route path="/compare" component={Compare} />
             <SignUp />
           </main>
           <footer>

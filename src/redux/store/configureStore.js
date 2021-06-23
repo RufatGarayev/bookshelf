@@ -3,6 +3,7 @@ import throttle from 'lodash/throttle';
 import bookReducer from "../reducers/bookReducer";
 import cartReducer from "../reducers/cartReducer";
 import wishlistReducer from "../reducers/wishlistReducer";
+import compareReducer from "../reducers/compareReducer";
 import { loadState, saveState } from './localStorage';
 
 const configureStore = () => {
@@ -11,7 +12,8 @@ const configureStore = () => {
         combineReducers({
             books: bookReducer,
             cart: cartReducer,
-            wishlist: wishlistReducer
+            wishlist: wishlistReducer,
+            compare: compareReducer
         }),
         persistedState,
         window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
@@ -19,7 +21,8 @@ const configureStore = () => {
     store.subscribe(throttle(() => {
         saveState({
             cart: store.getState().cart,
-            wishlist: store.getState().wishlist
+            wishlist: store.getState().wishlist,
+            compare: store.getState().compare
         })
     }, 1000))
 

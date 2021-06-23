@@ -20,10 +20,11 @@ const DropdownCart = (props) => {
                                                     className="btnClose"
                                                     type="button"
                                                     onClick={(e) => {
-                                                        props.deleteBook(book.id);
                                                         e.stopPropagation();
+                                                        props.deleteBook(book.id);
                                                         props.makeIsInCartFalse(book.id);
                                                         props.wishlistBookIsInCartFalse(book.id);
+                                                        props.compareBookIsInCartFalse(book.id);
                                                     }}
                                                 >
                                                     <span className="delete-btn"><RiDeleteBinLine /></span>

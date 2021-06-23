@@ -1,22 +1,22 @@
 import {
-    ADD_TO_WISHLIST, REMOVE_FROM_WISHLIST, MAKE_IS_IN_WISHLIST_TRUE,
-    MAKE_WISHLIST_BOOK_ISINCART_FALSE
+    ADD_TO_WISHLIST, REMOVE_FROM_WISHLIST,
+    MAKE_WISHLIST_BOOK_ISINCART_FALSE, MAKE_IS_IN_WISHLIST_TRUE_IN_WISHLIST
 } from '../types';
 
 const initialState = {
     wishlist: []
-}
+};
 
 const wishlistReducer = (state = initialState, action) => {
     switch (action.type) {
-        // Adding book to wishlist
+        // Adding book to Wishlist
         case ADD_TO_WISHLIST:
             return {
                 ...state, wishlist: [...state.wishlist, action.payload]
             };
-
-        // Making isInWishlist True
-        case MAKE_IS_IN_WISHLIST_TRUE:
+        
+        // Making book's isInWishlist true in the Wishlist
+        case MAKE_IS_IN_WISHLIST_TRUE_IN_WISHLIST:
             return {
                 ...state,
                 wishlist: state.wishlist.map(book => book.id === action.payload ?
@@ -31,7 +31,7 @@ const wishlistReducer = (state = initialState, action) => {
                     { ...book, isInCart: book.isInCart = false } : book)
             };
 
-        // Removing book from wishlist
+        // Removing book from Wishlist
         case REMOVE_FROM_WISHLIST:
             return {
                 ...state, wishlist: state.wishlist.filter(book => book.id !== action.payload)

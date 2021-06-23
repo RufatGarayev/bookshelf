@@ -50,7 +50,7 @@ export const ButtonsData = [
                             <Link to="/wishlist"><span><FaRegHeart /></span> Wishlist</Link>
                         </li>
                         <li>
-                            <Link to="#/"><span><FaBalanceScale /></span> Compare</Link>
+                            <Link to="/compare"><span><FaBalanceScale /></span> Compare</Link>
                         </li>
                         <li>
                             <Link to="/login"><span><RiLock2Line /></span> Log In</Link>

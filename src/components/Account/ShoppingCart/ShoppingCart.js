@@ -56,7 +56,7 @@ const ShoppingCart = (props) => {
                             </div>
                         </>
                     ) : (
-                        <div className="cart-is-empty-wrapper">
+                        <div className="empty-alert-wrapper">
                             <EmptyAlert
                                 icon={<AiOutlineShopping />}
                                 title="SHOPPING CART IS EMPTY"

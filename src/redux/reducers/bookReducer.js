@@ -1,5 +1,8 @@
 import { BooksData } from '../../components/Books/BooksData';
-import { SORT_BOOKS_BY_NAME_AND_PRICE, MAKE_ISINCART_FALSE } from '../types';
+import {
+    SORT_BOOKS_BY_NAME_AND_PRICE, MAKE_ISINCART_FALSE,
+    MAKE_IS_IN_WISHLIST_FALSE, MAKE_IS_IN_COMPARE_FALSE
+} from '../types';
 
 const initialState = {
     books: BooksData
@@ -32,8 +35,25 @@ const bookReducer = (state = initialState, action) => {
         case MAKE_ISINCART_FALSE:
             return {
                 ...state,
-                books: state.books.map(book => book.id === action.payload ? { ...book, isInCart: book.isInCart = false } : book)
+                books: state.books.map(book => book.id === action.payload ?
+                    { ...book, isInCart: book.isInCart = false } : book)
             }
+
+        // Making isInWishlist False
+        case MAKE_IS_IN_WISHLIST_FALSE:
+            return {
+                ...state,
+                books: state.books.map(book => book.id === action.payload ?
+                    { ...book, isInWishlist: book.isInWishlist = false } : book)
+            };
+
+        // Making isInCompare False
+        case MAKE_IS_IN_COMPARE_FALSE:
+            return {
+                ...state,
+                books: state.books.map(book => book.id === action.payload ?
+                    { ...book, isInCompare: book.isInCompare = false } : book)
+            };
 
 
         default:

@@ -2,8 +2,12 @@ import Quantity from './Quantity';
 import { Link } from "react-router-dom";
 import { RiDeleteBinLine } from 'react-icons/ri';
 import { connect } from 'react-redux';
-import { DeleteBook, IncreaseBookCount, DecreaseBookCount } from '../../../redux/actions/cartActions';
+import {
+    DeleteBook, IncreaseBookCount,
+    DecreaseBookCount
+} from '../../../redux/actions/cartActions';
 import { WishlistBookIsInCartFalse } from '../../../redux/actions/wishlistActions';
+import { CompareBookIsInCartFalse } from '../../../redux/actions/compareActions';
 import { MakeIsInCartFalse } from '../../../redux/actions/bookActions';
 
 const CartTable = (props) => {
@@ -24,6 +28,7 @@ const CartTable = (props) => {
                                             props.DeleteBook(book.id);
                                             props.MakeIsInCartFalse(book.id);
                                             props.WishlistBookIsInCartFalse(book.id);
+                                            props.CompareBookIsInCartFalse(book.id);
                                         }}
                                     >
                                         <span className="delete-btn"><RiDeleteBinLine /></span>
@@ -77,5 +82,8 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps,
-    { DeleteBook, IncreaseBookCount, DecreaseBookCount, WishlistBookIsInCartFalse, MakeIsInCartFalse }
+    {
+        DeleteBook, IncreaseBookCount, DecreaseBookCount,
+        WishlistBookIsInCartFalse, MakeIsInCartFalse, CompareBookIsInCartFalse
+    }
 )(CartTable);

@@ -1,6 +1,6 @@
 import {
-    ADD_TO_WISHLIST, REMOVE_FROM_WISHLIST, MAKE_IS_IN_WISHLIST_TRUE,
-    MAKE_WISHLIST_BOOK_ISINCART_FALSE
+    ADD_TO_WISHLIST, REMOVE_FROM_WISHLIST,
+    MAKE_WISHLIST_BOOK_ISINCART_FALSE, MAKE_IS_IN_WISHLIST_TRUE_IN_WISHLIST
 } from '../types';
 
 
@@ -10,9 +10,9 @@ export const AddToWishlist = (book) => {
     }
 };
 
-export const MakeIsInWishlistTrue = (id) => {
+export const MakeIsInWishlistTrueInWishlist = (id) => {
     return {
-        type: MAKE_IS_IN_WISHLIST_TRUE, payload: id
+        type: MAKE_IS_IN_WISHLIST_TRUE_IN_WISHLIST, payload: id
     }
 };
 

@@ -3,14 +3,16 @@ import { FaBalanceScale, FaRegHeart } from 'react-icons/fa';
 import { AiOutlineShopping } from 'react-icons/ai';
 import { connect } from 'react-redux';
 import AddedToCartWindow from '../Other/AddedToCartWindow';
-// import PrimaryInfo from './PrimaryInfo';
 import { Modal } from 'react-bootstrap';
 import { AddToCart, MakingIsInCartTrue } from '../../redux/actions/cartActions';
+import { AddToWishlist, RemoveFromWishlist, MakeIsInWishlistTrueInWishlist } from '../../redux/actions/wishlistActions';
+import { MakeIsInWishlistFalse } from '../../redux/actions/bookActions';
 import CheckoutImg from '../../assets/img/other/checkout.png';
 
 const ExtensiveInfo = (props) => {
     const { book } = props;
     const { cart } = props.cart;
+    const { wishlist } = props.wishlist;
     const [height, setHeight] = useState(false);
     const [show, setShow] = useState(false);
 
@@ -19,7 +21,13 @@ const ExtensiveInfo = (props) => {
 
     cart.forEach(cartBook => {
         if (cartBook.id === book.id) {
-            book.isInCart = true;
+            book.isInCart = cartBook.isInCart;
+        }
+    });
+
+    wishlist.forEach(wishlistBook => {
+        if (wishlistBook.id === book.id) {
+            book.isInWishlist = wishlistBook.isInWishlist;
         }
     });
 
@@ -72,7 +80,27 @@ const ExtensiveInfo = (props) => {
                 {/* ======= Bottom buttons ======= */}
                 <div className="bottom-btns d-flex">
                     <div className="add-to-wishlist">
-                        <button><span><FaRegHeart /></span> Add To Wishlist</button>
+                        {
+                            book.isInWishlist ? (
+                                <button
+                                    onClick={() => {
+                                        props.RemoveFromWishlist(book.id);
+                                        props.MakeIsInWishlistFalse(book.id);
+                                    }}
+                                >
+                                    <span><FaRegHeart /></span> Remove From Wishlist
+                                </button>
+                            ) : (
+                                <button
+                                    onClick={() => {
+                                        props.AddToWishlist(book);
+                                        props.MakeIsInWishlistTrueInWishlist(book.id);
+                                    }}
+                                >
+                                    <span><FaRegHeart /></span> Add To Wishlist
+                                </button>
+                            )
+                        }
                     </div>
                     <div className="add-to-compare">
                         <button><span><FaBalanceScale /></span> Add To Compare</button>
@@ -112,4 +140,9 @@ const mapStateToProps = (state) => {
     return state;
 };
 
-export default connect(mapStateToProps, { AddToCart, MakingIsInCartTrue })(ExtensiveInfo);
+export default connect(mapStateToProps,
+    {
+        AddToCart, MakingIsInCartTrue, AddToWishlist, RemoveFromWishlist,
+        MakeIsInWishlistTrueInWishlist, MakeIsInWishlistFalse
+    }
+)(ExtensiveInfo);

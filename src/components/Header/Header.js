@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 import { DeleteBook } from '../../redux/actions/cartActions';
 import { WishlistBookIsInCartFalse } from '../../redux/actions/wishlistActions';
+import { CompareBookIsInCartFalse } from '../../redux/actions/compareActions';
 import { MakeIsInCartFalse } from '../../redux/actions/bookActions';
 import DropdownCart from './DropdownCart';
 import '../../sass/_header.scss';
@@ -61,6 +62,7 @@ const Header = (props) => {
                                                 books={books}
                                                 deleteBook={props.DeleteBook}
                                                 wishlistBookIsInCartFalse={props.WishlistBookIsInCartFalse}
+                                                compareBookIsInCartFalse={props.CompareBookIsInCartFalse}
                                                 makeIsInCartFalse={props.MakeIsInCartFalse}
                                             />
                                         </li>
@@ -91,5 +93,8 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps,
-    { DeleteBook, WishlistBookIsInCartFalse, MakeIsInCartFalse }
+    {
+        DeleteBook, WishlistBookIsInCartFalse,
+        MakeIsInCartFalse, CompareBookIsInCartFalse
+    }
 )(Header);

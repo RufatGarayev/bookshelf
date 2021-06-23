@@ -1,8 +1,22 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { AddToCart, MakingIsInCartTrue } from '../../redux/actions/cartActions';
-import { AddToWishlist, MakeIsInWishlistTrue, RemoveFromWishlist } from '../../redux/actions/wishlistActions';
+import {
+    AddToCart,
+    MakingIsInCartTrue
+} from '../../redux/actions/cartActions';
+import {
+    AddToWishlist, RemoveFromWishlist,
+    MakeIsInWishlistTrueInWishlist
+} from '../../redux/actions/wishlistActions';
+import {
+    AddToCompare, RemoveFromCompare,
+    MakeIsInCompareTrueInCompare
+} from '../../redux/actions/compareActions';
+import {
+    MakeIsInWishlistFalse,
+    MakeIsInCompareFalse
+} from '../../redux/actions/bookActions';
 import AddedToCartWindow from '../Other/AddedToCartWindow';
 import { Modal } from 'react-bootstrap';
 import { FaBalanceScale, FaRegHeart } from 'react-icons/fa';
@@ -15,6 +29,7 @@ const BookCard = (props) => {
     const { book } = props;
     const { cart } = props.cart;
     const { wishlist } = props.wishlist;
+    const { compare } = props.compare;
     const [showModal, setShowModal] = useState(false);
     const [showAlert, setShowAlert] = useState(false);
 
@@ -31,7 +46,7 @@ const BookCard = (props) => {
 
     cart.forEach(cartBook => {
         if (cartBook.id === book.id) {
-            book.isInCart = true;
+            book.isInCart = cartBook.isInCart;
         }
     });
 
@@ -41,7 +56,11 @@ const BookCard = (props) => {
         }
     });
 
-    const MakeIsInWishlistFalse = () => book.isInWishlist = false;
+    compare.forEach(compareBook => {
+        if (compareBook.id === book.id) {
+            book.isInCompare = true;
+        }
+    });
 
 
     return (
@@ -59,7 +78,7 @@ const BookCard = (props) => {
                     <button
                         onClick={() => {
                             props.RemoveFromWishlist(book.id);
-                            MakeIsInWishlistFalse();
+                            props.MakeIsInWishlistFalse(book.id);
                         }}
                     >
                         <RiDeleteBinLine />
@@ -138,7 +157,7 @@ const BookCard = (props) => {
                                         onClick={() => {
                                             handleShowAlert();
                                             props.RemoveFromWishlist(book.id);
-                                            MakeIsInWishlistFalse();
+                                            props.MakeIsInWishlistFalse(book.id);
                                         }}
                                     >
                                         <span className="iconn"><FaRegHeart /></span>
@@ -154,7 +173,7 @@ const BookCard = (props) => {
                                         onClick={() => {
                                             handleShowAlert();
                                             props.AddToWishlist(book);
-                                            props.MakeIsInWishlistTrue(book.id);
+                                            props.MakeIsInWishlistTrueInWishlist(book.id);
                                         }}
                                     >
                                         <span className="iconn"><FaRegHeart /></span>
@@ -162,15 +181,42 @@ const BookCard = (props) => {
                                 </span>
                             )
                         }
-                        {/* ======= Add To Compare Button ======= */}
-                        <span className="btn-wrapper">
-                            <div className="tooltip">
-                                <p>Add To Compare</p>
-                            </div>
-                            <button>
-                                <span className="iconn"><FaBalanceScale /></span>
-                            </button>
-                        </span>
+                        {
+                            book.isInCompare ? (
+                                // ======= Remove From Compare Button ======= //
+                                <span className="btn-wrapper">
+                                    <div className="tooltip">
+                                        <p>Remove From Compare</p>
+                                    </div>
+                                    <button
+                                        className="activeBtn"
+                                        onClick={() => {
+                                            // handleShowAlert();
+                                            props.RemoveFromCompare(book.id);
+                                            props.MakeIsInCompareFalse(book.id);
+                                        }}
+                                    >
+                                        <span className="iconn"><FaBalanceScale /></span>
+                                    </button>
+                                </span>
+                            ) : (
+                                // ======= Add To Compare Button ======= //
+                                <span className="btn-wrapper">
+                                    <div className="tooltip">
+                                        <p>Add To Compare</p>
+                                    </div>
+                                    <button
+                                        onClick={() => {
+                                            // handleShowAlert();
+                                            props.AddToCompare(book);
+                                            props.MakeIsInCompareTrueInCompare(book.id);
+                                        }}
+                                    >
+                                        <span className="iconn"><FaBalanceScale /></span>
+                                    </button>
+                                </span>
+                            )
+                        }
                     </div>
                 </div>
             </div >
@@ -185,7 +231,7 @@ const BookCard = (props) => {
                 </Modal.Body>
             </Modal>
 
-            {/* ======= Alert ======= */}
+            {/* ======= Alert box ======= */}
             <div className={showAlert ? "alert-box-wrapper show-alert-box" : "alert-box-wrapper"}>
                 {
                     book.isInWishlist ? (
@@ -220,5 +266,9 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps,
-    { AddToCart, MakingIsInCartTrue, AddToWishlist, MakeIsInWishlistTrue, RemoveFromWishlist }
+    {
+        AddToCart, MakingIsInCartTrue, AddToWishlist, MakeIsInCompareFalse,
+        MakeIsInWishlistFalse, RemoveFromWishlist, MakeIsInWishlistTrueInWishlist,
+        AddToCompare, RemoveFromCompare, MakeIsInCompareTrueInCompare
+    }
 )(BookCard);

@@ -29,7 +29,7 @@ const WishListBooks = (props) => {
                             </div>
                         </>
                     ) : (
-                        <div className="cart-is-empty-wrapper">
+                        <div className="empty-alert-wrapper">
                             <EmptyAlert
                                 icon={<FaRegHeart />}
                                 title="WISHLIST IS EMPTY"
