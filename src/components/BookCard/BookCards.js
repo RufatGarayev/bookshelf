@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import BookCard from './BookCard';
-import Pagination from '../Other/Pagination';
+import Pagination from '../Shop/Pagination';
 import { connect } from 'react-redux';
 
 const BookCards = (props) => {

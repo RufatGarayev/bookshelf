@@ -23,10 +23,10 @@ button {
 
 .brand {
   a {
-    color: rgb(98, 162, 208);
+    color: #2879fe;
     text-decoration: none;
     &:hover {
-      color: rgb(98, 162, 208);
+      color: #2879fe;
     }
     h4 {
       margin-bottom: 1px;
@@ -50,6 +50,41 @@ button {
     text-transform: uppercase;
     font-size: 12px;
     letter-spacing: 1px;
+  }
+}
+
+.breadcrumb {
+  background-color: rgb(247, 248, 250);
+  padding: 6px 0 !important;
+  margin: 0 !important;
+
+  ul {
+    font-size: 12px;
+    font-weight: 300;
+    li {
+      &:first-of-type {
+        padding-right: 9px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+        transition: 0.2s ease;
+        &:hover {
+          color: rgb(13, 110, 253);
+          transition: 0.2s ease;
+        }
+      }
+      span {
+        position: relative;
+        padding-left: 11px;
+        &::before {
+          content: "/";
+          position: absolute;
+          left: 0;
+          top: 1px;
+        }
+      }
+    }
   }
 }
 
@@ -86,12 +121,11 @@ button {
 
 .btn-style {
   background: transparent;
-  color: #2879fe;
-  border: 2px solid #2879fe;
-  padding: 7px 26px;
+  color: #2878FD;
+  border: 2px solid #2878FD;
+  padding: 5px 22px 3px;
   border-radius: 6px;
   font-size: 14px;
-  line-height: 1px;
   font-weight: 400;
   text-transform: uppercase;
   transition: 0.3s ease;
@@ -109,13 +143,25 @@ button {
 
 .btn-style-2 {
   width: 100%;
-  padding: 18px 26px;
-  line-height: 8px;
-  color: white;
-  background-color: rgb(40, 120, 253);
+  padding: 8px 26px;
+  color: white !important;
+  border-radius: 6px;
+  background-color: #2878FD;
+  border: 2px solid #2878FD;
   &:hover {
     border: 2px solid rgb(16, 96, 224);
     background-color: rgb(16, 96, 224);
+  }
+}
+
+.remove-btn {
+  button {
+    color: red;
+    transition: 0.3s ease;
+    &:hover {
+      transition: 0.3s ease;
+      color: rgb(40, 120, 253);
+    }
   }
 }
 
@@ -156,7 +202,7 @@ button {
     height: 19px;
   }
   .new-background {
-    background-color: rgb(3, 169, 245) !important;
+    background-color: #2878FD !important;
   }
 }
 
@@ -302,7 +348,7 @@ button {
               .btns {
                 height: 200px;
                 a {
-                  padding: 18px 26px;
+                  padding: 8px 26px;
                   text-align: center;
                   text-decoration: none;
                 }
@@ -321,68 +367,4 @@ button {
       }
     }
   }
-}
-
-.alert-box-wrapper {
-  .alert-box {
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.4s ease;
-    transform: translateY(20px);
-    background-color: #ffff;
-    border-radius: 5px;
-    border-left: 4px solid #16c60c;
-    box-shadow: 0px 0px 10px -3px rgba(0, 0, 0, 0.5);
-    position: fixed;
-    padding: 20px;
-    bottom: 25px;
-    right: 25px;
-    z-index: 999;
-
-    .check-icon,
-    .remove-icon {
-      span {
-        display: inline-block;
-        text-align: center;
-        color: #ffff;
-        font-size: 14px;
-        height: 22px;
-        width: 23px;
-        line-height: 27px;
-        border-radius: 50%;
-        background-color: #16c60c;
-      }
-    }
-
-    .remove-icon {
-      span {
-        background-color: red;
-      }
-    }
-
-    .alert-text {
-      padding-left: 20px;
-
-      h5 {
-        font-size: 16px;
-      }
-
-      h6 {
-        font-size: 14px;
-        font-weight: 400;
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  .alert-box-remove-style {
-    border-left: 4px solid red !important;
-  }
-}
-
-.show-alert-box .alert-box {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: translateY(0px) !important;
-  transition: 0.4s ease;
 }

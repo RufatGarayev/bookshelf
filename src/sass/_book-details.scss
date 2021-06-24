@@ -38,11 +38,6 @@
     .book-info {
       padding-right: 100px;
 
-      button {
-        background-color: transparent;
-        border: none;
-      }
-
       .label {
         padding-bottom: 25px;
         span {
@@ -79,19 +74,11 @@
       .add-to-cart-btn {
         padding: 0 200px 0 0;
         button {
-          width: 100%;
           font-size: 15px;
-          padding: 8px 26px;
-          color: white;
-          border: 2px solid rgb(40, 120, 253);
-          background-color: rgb(40, 120, 253);
-          &:hover {
-            border: 2px solid rgb(16, 96, 224);
-            background-color: rgb(16, 96, 224);
-          }
-
+          padding: 3px 26px;
+          text-transform: uppercase;
           span {
-            margin: 0 5px 6px 0;
+            margin: 0 5px 3px 0;
             font-size: 20px;
           }
 
@@ -110,6 +97,7 @@
       .bottom-btns {
         padding: 30px 0 40px;
         button {
+          background-color: transparent;
           font-size: 15px;
           font-weight: 500;
           color: rgb(40, 120, 253);

@@ -59,7 +59,7 @@ const ExtensiveInfo = (props) => {
                         book.isInCart ? (
                             <button
                                 type="button"
-                                className="disabledBtn d-flex justify-content-center align-items-center btn-style"
+                                className="disabledBtn d-flex justify-content-center align-items-center btn-style-2"
                                 disabled="disabled"
                             >
                                 <span><AiOutlineShopping /></span>
@@ -68,7 +68,7 @@ const ExtensiveInfo = (props) => {
                         ) : (
                             <button
                                 type="button"
-                                className="d-flex justify-content-center align-items-center btn-style"
+                                className="d-flex justify-content-center align-items-center btn-style-2"
                                 onClick={() => { props.AddToCart(book); props.MakingIsInCartTrue(book.id); handleShow() }}
                             >
                                 <span><AiOutlineShopping /></span>

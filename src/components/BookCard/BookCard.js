@@ -31,18 +31,9 @@ const BookCard = (props) => {
     const { wishlist } = props.wishlist;
     const { compare } = props.compare;
     const [showModal, setShowModal] = useState(false);
-    const [showAlert, setShowAlert] = useState(false);
 
     const handleShow = () => setShowModal(true);
     const handleClose = () => setShowModal(false);
-
-    const handleShowAlert = () => {
-        setShowAlert(true);
-
-        setTimeout(() => {
-            setShowAlert(false);
-        }, 2500);
-    };
 
     cart.forEach(cartBook => {
         if (cartBook.id === book.id) {
@@ -122,7 +113,7 @@ const BookCard = (props) => {
                             book.isInCart ? (
                                 <button
                                     type="button"
-                                    className="disabledBtn d-flex"
+                                    className="disabledBtn btn-style d-flex align-items-center"
                                     disabled="disabled"
                                 >
                                     <span><AiOutlineShopping /></span>
@@ -131,7 +122,7 @@ const BookCard = (props) => {
                             ) : (
                                 <button
                                     type="button"
-                                    className="d-flex"
+                                    className="d-flex align-items-center btn-style"
                                     onClick={() => {
                                         props.AddToCart(book);
                                         props.MakingIsInCartTrue(book.id);
@@ -155,7 +146,6 @@ const BookCard = (props) => {
                                     <button
                                         className="activeBtn"
                                         onClick={() => {
-                                            handleShowAlert();
                                             props.RemoveFromWishlist(book.id);
                                             props.MakeIsInWishlistFalse(book.id);
                                         }}
@@ -171,7 +161,6 @@ const BookCard = (props) => {
                                     </div>
                                     <button
                                         onClick={() => {
-                                            handleShowAlert();
                                             props.AddToWishlist(book);
                                             props.MakeIsInWishlistTrueInWishlist(book.id);
                                         }}
@@ -191,7 +180,6 @@ const BookCard = (props) => {
                                     <button
                                         className="activeBtn"
                                         onClick={() => {
-                                            // handleShowAlert();
                                             props.RemoveFromCompare(book.id);
                                             props.MakeIsInCompareFalse(book.id);
                                         }}
@@ -207,7 +195,6 @@ const BookCard = (props) => {
                                     </div>
                                     <button
                                         onClick={() => {
-                                            // handleShowAlert();
                                             props.AddToCompare(book);
                                             props.MakeIsInCompareTrueInCompare(book.id);
                                         }}
@@ -230,33 +217,6 @@ const BookCard = (props) => {
                     <AddedToCartWindow book={book} />
                 </Modal.Body>
             </Modal>
-
-            {/* ======= Alert box ======= */}
-            <div className={showAlert ? "alert-box-wrapper show-alert-box" : "alert-box-wrapper"}>
-                {
-                    book.isInWishlist ? (
-                        <div className="alert-box d-flex align-items-center">
-                            <div className="check-icon">
-                                <span>✔</span>
-                            </div>
-                            <div className="alert-text">
-                                <h5>Added To Wishlist!</h5>
-                                <h6>"{book.title}" is successfully added.</h6>
-                            </div>
-                        </div>
-                    ) : (
-                        <div className="alert-box alert-box-remove-style d-flex align-items-center">
-                            <div className="remove-icon">
-                                <span>✕</span>
-                            </div>
-                            <div className="alert-text">
-                                <h5>Removed From Wishlist!</h5>
-                                <h6>"{book.title}" is removed from Wishlist.</h6>
-                            </div>
-                        </div>
-                    )
-                }
-            </div>
         </>
     )
 }

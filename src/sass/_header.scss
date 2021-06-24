@@ -30,7 +30,7 @@ header {
               text-transform: uppercase;
               transition: 0.3s ease;
               &:hover {
-                color: rgb(98, 162, 208);
+                color: #2878FD;
                 transition: 0.3s ease;
               }
             }
@@ -51,7 +51,7 @@ header {
               transition: 0.3s ease;
               text-decoration: none;
               &:hover {
-                color: rgb(98, 162, 208);
+                color: #2878FD;
                 transition: 0.3s ease;
               }
               span {
@@ -63,10 +63,10 @@ header {
               }
             }
             sup {
-              height: 16px;
-              width: 16px;
+              height: 17px;
+              width: 17px;
               border-radius: 50%;
-              background-color: rgb(98, 162, 208);
+              background-color: #2878FD;
               position: absolute;
               top: -3px;
               left: 17px;
@@ -101,7 +101,7 @@ header {
                     transition: 0.3s ease;
                     &:hover {
                       transition: 0.3s ease;
-                      color: #2879fe;
+                      color: #2878FD;
                     }
                   }
 
@@ -180,15 +180,8 @@ header {
                 }
                 .checkout-btn {
                   button {
-                    color: white;
                     font-size: 13px;
                     letter-spacing: 0.5px;
-                    padding: 18px 26px 16px;
-                    background-color: rgb(40, 120, 253);
-                    &:hover {
-                      border: 2px solid rgb(16, 96, 224);
-                      background-color: rgb(16, 96, 224);
-                    }
                   }
                 }
                 .view-cart-btn {

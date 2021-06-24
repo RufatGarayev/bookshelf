@@ -64,6 +64,11 @@
       a {
         text-decoration: none;
         color: black;
+        transition: 0.3s ease;
+        &:hover{
+          transition: 0.3s ease;
+          color: #2878FD;
+        }
         h6 {
           margin-top: 2px;
         }
@@ -93,22 +98,17 @@
 
     .add-to-cart-btn {
       button {
-        background-color: #62a2d2;
+        background-color: #2878FD;
         color: white;
-        padding: 7px 20px 3px;
-        border: 0;
-        border-radius: 6px;
-        outline: none;
-        transition: 0.3s ease;
+        padding: 2px 22px;
         &:hover {
-          transition: 0.3s ease;
           background-color: black;
         }
 
         span {
-          font-size: 17px;
+          font-size: 19px;
           svg {
-            margin-bottom: 5px;
+            margin-bottom: 3px;
           }
         }
 
@@ -121,7 +121,8 @@
       }
     }
     .disabledBtn {
-      background-color: rgb(196, 211, 234) !important;
+      background-color: #b5cffc !important;
+      border: 2px solid #b5cffc !important;
       cursor: default !important;
     }
 
@@ -145,8 +146,8 @@
 
           button {
             transition: 0.3s ease;
-            background-color: rgb(98, 162, 208);
-            border: solid 1px rgb(98, 162, 208);
+            background-color: #2878FD;
+            border: solid 1px #2878FD;
             color: white;
           }
         }
@@ -207,8 +208,8 @@
         }
 
         .activeBtn {
-          background-color: rgb(98, 162, 208);
-          border: solid 1px rgb(98, 162, 208);
+          background-color: #2878FD;
+          border: solid 1px #2878FD;
           color: white;
         }
       }

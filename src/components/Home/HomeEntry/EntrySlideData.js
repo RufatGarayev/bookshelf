@@ -1,6 +1,6 @@
-import book1 from '../../assets/img/books/home-entry/book-01.jpg';
-import book2 from '../../assets/img/books/home-entry/book-02.jpg';
-import book3 from '../../assets/img/books/home-entry/book-03.jpg';
+import book1 from '../../../assets/img/books/home-entry/book-01.jpg';
+import book2 from '../../../assets/img/books/home-entry/book-02.jpg';
+import book3 from '../../../assets/img/books/home-entry/book-03.jpg';
 
 export const EntrySlideData = [
     {

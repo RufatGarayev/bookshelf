@@ -5,10 +5,10 @@ import { connect } from 'react-redux';
 import {
     DeleteBook, IncreaseBookCount,
     DecreaseBookCount
-} from '../../../redux/actions/cartActions';
-import { WishlistBookIsInCartFalse } from '../../../redux/actions/wishlistActions';
-import { CompareBookIsInCartFalse } from '../../../redux/actions/compareActions';
-import { MakeIsInCartFalse } from '../../../redux/actions/bookActions';
+} from '../../redux/actions/cartActions';
+import { WishlistBookIsInCartFalse } from '../../redux/actions/wishlistActions';
+import { CompareBookIsInCartFalse } from '../../redux/actions/compareActions';
+import { MakeIsInCartFalse } from '../../redux/actions/bookActions';
 
 const CartTable = (props) => {
     const { cart } = props.cart;

@@ -1,5 +1,4 @@
 import Slider from './Slider';
-import '../../sass/_home-entry.scss';
 
 const HomeEntry = () => {
     return (

@@ -67,7 +67,7 @@ const DropdownCart = (props) => {
                                 <p><span>$</span>{totalPrice.toFixed(2)}</p>
                             </div>
                             <div className="checkout-btn d-flex">
-                                <button onClick={(e) => e.preventDefault()} className="btn-style w-100">Proceed To Checkout</button>
+                                <button onClick={(e) => e.preventDefault()} className="btn-style-2 w-100">Proceed To Checkout</button>
                             </div>
                             <div className="view-cart-btn text-center">
                                 <Link to="/cart">View Cart</Link>

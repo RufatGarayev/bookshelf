@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Title from '../Other/Title';
-import CompareSlider from '../Compare/CompareSlider';
+import CompareSlider from './CompareSlider';
 import EmptyAlert from '../Other/EmptyAlert';
 import { FaBalanceScale } from 'react-icons/fa';
 

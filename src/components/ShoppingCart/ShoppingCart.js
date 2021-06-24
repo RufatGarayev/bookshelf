@@ -1,14 +1,13 @@
-import Title from '../../Other/Title';
+import Title from '../Other/Title';
 import CartTable from './CartTable';
 import CartTotals from './CartTotals';
-import EmptyAlert from '../../Other/EmptyAlert';
+import EmptyAlert from '../Other/EmptyAlert';
 import { RiDeleteBinLine } from 'react-icons/ri';
 import { HiArrowNarrowLeft } from 'react-icons/hi';
 import { AiOutlineShopping } from 'react-icons/ai';
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
-import { ClearCart } from '../../../redux/actions/cartActions';
-import '../../../sass/_account.scss';
+import { ClearCart } from '../../redux/actions/cartActions';
 
 const ShoppingCart = (props) => {
     const { cart } = props.cart;

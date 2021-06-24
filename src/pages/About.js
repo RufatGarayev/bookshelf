@@ -1,5 +1,5 @@
 import Breadcrumb from '../components/Other/Breadcrumb';
-import AboutUs from '../components/AboutUs/AboutUs';
+import AboutUs from '../components/About/AboutUs';
 import '../sass/_about.scss';
 
 const About = () => {

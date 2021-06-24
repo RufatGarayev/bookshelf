@@ -2,7 +2,7 @@ import BooksCount from './BooksCount';
 import Search from './Search';
 import Sorting from './Sorting';
 import { connect } from 'react-redux';
-import { SortBook } from '../../redux/actions/bookActions';
+import { SortBook } from '../../../redux/actions/bookActions';
 
 const FilterPanel = (props) => {
     const { books } = props.books;

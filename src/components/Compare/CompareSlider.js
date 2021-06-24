@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
-import BookItem from '../Compare/BookItem';
+import BookItem from './BookItem';
 
 SwiperCore.use([Navigation, A11y]);
 

@@ -1,6 +1,5 @@
 import BestSeller from './BestSeller';
 import NewReleases from './NewReleases';
-import '../../sass/_categories.scss';
 
 const Categories = () => {
     return (

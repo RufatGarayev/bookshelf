@@ -76,3 +76,19 @@
     }
   }
 }
+
+#categories {
+  padding: 60px 0 45px;
+
+  .swiper-container {
+    padding: 0 0 40px;
+
+    .swiper-pagination {
+      bottom: 10px;
+    }
+  }
+
+  .new-releases-wrapper {
+    padding-top: 30px;
+  }
+}

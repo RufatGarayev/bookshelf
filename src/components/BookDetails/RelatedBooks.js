@@ -3,8 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
 import 'swiper/components/pagination/pagination.scss';
-import BookCard from '../Books/BookCard';
-import { BooksData } from '../Books/BooksData';
+import BookCard from '../BookCard/BookCard';
+import { BooksData } from '../../data';
 import Title from '../Other/Title';
 
 SwiperCore.use([Pagination, A11y]);
@@ -26,7 +26,6 @@ const RelatedBooks = (props) => {
                 </div>
                 <Swiper
                     slidesPerView={4}
-                    // loop={true}
                     pagination={{ clickable: true }}
                     breakpoints={{
                         "320": {

@@ -1,4 +1,4 @@
-import { BooksData } from '../../components/Books/BooksData';
+import { BooksData } from '../../data';
 import {
     SORT_BOOKS_BY_NAME_AND_PRICE, MAKE_ISINCART_FALSE,
     MAKE_IS_IN_WISHLIST_FALSE, MAKE_IS_IN_COMPARE_FALSE
@@ -53,7 +53,7 @@ const bookReducer = (state = initialState, action) => {
                 ...state,
                 books: state.books.map(book => book.id === action.payload ?
                     { ...book, isInCompare: book.isInCompare = false } : book)
-            };
+            };  
 
 
         default:

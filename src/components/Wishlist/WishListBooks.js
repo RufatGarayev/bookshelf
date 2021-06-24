@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Title from '../Other/Title';
-import BookCard from '../Books/BookCard';
+import BookCard from '../BookCard/BookCard';
 import EmptyAlert from '../Other/EmptyAlert';
 import { FaRegHeart } from 'react-icons/fa';
 

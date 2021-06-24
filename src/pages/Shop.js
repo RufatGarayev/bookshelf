@@ -1,6 +1,6 @@
 import Breadcrumb from '../components/Other/Breadcrumb';
-import FilterPanel from '../components/FilterPanel/FilterPanel';
-import BookCards from '../components/Books/BookCards';
+import FilterPanel from '../components/Shop/FilterPanel/FilterPanel';
+import BookCards from '../components/BookCard/BookCards';
 import '../sass/_shop.scss';
 
 const Shop = () => {

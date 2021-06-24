@@ -1,7 +1,6 @@
 import Title from '../Other/Title';
 import Input from '../Other/Input';
 import { Link } from "react-router-dom";
-import '../../sass/_account.scss';
 
 const RegisterSection = () => {
     return (
@@ -32,7 +31,7 @@ const RegisterSection = () => {
                                 <div className="bottom-contents d-flex justify-content-between align-items-center">
                                     <input className="btn-style" type="submit" value="CREATE" />
                                     <div>
-                                        <span className="paragraph mr-1">or</span>
+                                        <span className="paragraph">or</span>
                                         <Link className="additional-link" to="/shop">Return to Store</Link>
                                     </div>
                                 </div>

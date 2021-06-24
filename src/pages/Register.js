@@ -1,5 +1,6 @@
 import Breadcrumb from '../components/Other/Breadcrumb';
-import RegisterSection from '../components/Account/RegisterSection';
+import RegisterSection from '../components/Account/Register';
+import '../sass/_account.scss';
 
 const Register = () => {
     return (

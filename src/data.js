@@ -1,18 +1,18 @@
 // importing images
-import artificialIntelligence from '../../assets/img/books/all-books/artificial-intelligence.jpg';
-import country from '../../assets/img/books/all-books/country.jpg';
-import doctorWho from '../../assets/img/books/all-books/doctor-who.jpg';
-import gulliversTravels from "../../assets/img/books/all-books/gulliver's-travels.jpg";
-import lesMiserables from '../../assets/img/books/all-books/les-miserables.jpg';
-import nineteenEightyFour from '../../assets/img/books/all-books/nineteen-eighty-four.jpg';
-import pompeii from '../../assets/img/books/all-books/pompeii.jpg';
-import theAdventuresOfSherlockHolmes from '../../assets/img/books/all-books/the-adventures-of-sherlock-holmes.jpg';
-import theCast from '../../assets/img/books/all-books/the-cast.jpg';
-import theDuchess from '../../assets/img/books/all-books/the-duchess.jpg';
-import theHillWeClimb from '../../assets/img/books/all-books/the-hill-we-climb.jpg';
-import donQuijote from '../../assets/img/books/all-books/don-quijote.jpg';
-import theInvincibleSummerOfJuniperJones from '../../assets/img/books/all-books/the-invincible-summer-of-juniper-jones.jpg';
-import beforeTheCoffeeGetsCold from '../../assets/img/books/all-books/before-the-coffee-gets-cold.jpg';
+import artificialIntelligence from './assets/img/books/all-books/artificial-intelligence.jpg';
+import country from './assets/img/books/all-books/country.jpg';
+import doctorWho from './assets/img/books/all-books/doctor-who.jpg';
+import gulliversTravels from "./assets/img/books/all-books/gulliver's-travels.jpg";
+import lesMiserables from './assets/img/books/all-books/les-miserables.jpg';
+import nineteenEightyFour from './assets/img/books/all-books/nineteen-eighty-four.jpg';
+import pompeii from './assets/img/books/all-books/pompeii.jpg';
+import theAdventuresOfSherlockHolmes from './assets/img/books/all-books/the-adventures-of-sherlock-holmes.jpg';
+import theCast from './assets/img/books/all-books/the-cast.jpg';
+import theDuchess from './assets/img/books/all-books/the-duchess.jpg';
+import theHillWeClimb from './assets/img/books/all-books/the-hill-we-climb.jpg';
+import donQuijote from './assets/img/books/all-books/don-quijote.jpg';
+import theInvincibleSummerOfJuniperJones from './assets/img/books/all-books/the-invincible-summer-of-juniper-jones.jpg';
+import beforeTheCoffeeGetsCold from './assets/img/books/all-books/before-the-coffee-gets-cold.jpg';
 
 
 export const BooksData = [

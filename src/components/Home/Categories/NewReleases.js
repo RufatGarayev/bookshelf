@@ -3,9 +3,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
-import Title from '../Other/Title';
-import { BooksData } from '../Books/BooksData';
-import BookCard from '../Books/BookCard';
+import Title from '../../Other/Title';
+import { BooksData } from '../../../data';
+import BookCard from '../../BookCard/BookCard';
 
 SwiperCore.use([Pagination, A11y]);
 

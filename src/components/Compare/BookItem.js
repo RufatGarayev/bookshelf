@@ -40,7 +40,9 @@ const BookItem = (props) => {
                     </div>
                     {/* ======= Image ======= */}
                     <div className="book-img">
-                        <img className="img-fluid" src={book.img} alt={book.title} />
+                        <Link to={`/book-details/${book.id}`}>
+                            <img className="img-fluid" src={book.img} alt={book.title} />
+                        </Link>
                     </div>
                 </div>
                 <div className="middle-part">
@@ -78,7 +80,7 @@ const BookItem = (props) => {
                                 // ======= Added To Cart button ======= //
                                 <button
                                     type="button"
-                                    className="disabledBtn btn-style d-flex align-items-center"
+                                    className="disabledBtn btn-style-2 d-flex align-items-center"
                                     disabled="disabled"
                                 >
                                     <span><AiOutlineShopping /></span>
@@ -88,7 +90,7 @@ const BookItem = (props) => {
                                 // ======= Add To Cart button ======= //
                                 <button
                                     type="button"
-                                    className="d-flex btn-style align-items-center"
+                                    className="d-flex btn-style-2 align-items-center"
                                     onClick={() => {
                                         props.AddToCart(book);
                                         props.MakingIsInCartTrue(book.id);

@@ -1,5 +1,6 @@
-import HomeEntry from '../components/HomeEntry/HomeEntry';
-import Categories from '../components/Categories/Categories';
+import HomeEntry from '../components/Home/HomeEntry/HomeEntry';
+import Categories from '../components/Home/Categories/Categories';
+import '../sass/_home.scss';
 
 const Home = () => {
     return (

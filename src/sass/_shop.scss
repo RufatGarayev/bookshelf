@@ -77,7 +77,8 @@
         button {
           &:hover {
             color: white;
-            background-color: rgb(98, 162, 210);
+            background-color: #2878FD;
+            border: 1px solid #2878FD;
           }
           &:focus {
             box-shadow: none !important;

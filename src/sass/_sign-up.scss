@@ -21,14 +21,14 @@
       &:focus {
         outline: 0;
         transition: 0.3s ease;
-        border: 1px solid rgb(98, 162, 210);
+        border: 1px solid #2878FD;
       }
     }
 
     input[type="submit"] {
       width: 20%;
       border-radius: 0 6px 6px 0;
-      background-color: rgb(98, 162, 210);
+      background-color: #2878FD;
       color: white;
       border: 0;
       font-size: 14px;

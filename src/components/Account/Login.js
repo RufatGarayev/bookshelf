@@ -1,7 +1,6 @@
 import Title from '../Other/Title';
 import Input from '../Other/Input';
 import { Link } from "react-router-dom";
-import '../../sass/_account.scss';
 
 const LoginSection = () => {
     return (

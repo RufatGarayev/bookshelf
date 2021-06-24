@@ -1,6 +1,6 @@
 import Breadcrumb from '../components/Other/Breadcrumb';
-import WishListBooks from '../components/Account/WishListBooks';
-import '../sass/_account.scss';
+import WishListBooks from '../components/Wishlist/WishListBooks';
+import '../sass/_wishlist.scss';
 
 const Wishlist = () => {
     return (

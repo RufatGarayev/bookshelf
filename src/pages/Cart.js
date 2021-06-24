@@ -1,5 +1,6 @@
 import Breadcrumb from '../components/Other/Breadcrumb';
-import ShoppingCart from '../components/Account/ShoppingCart/ShoppingCart';
+import ShoppingCart from '../components/ShoppingCart/ShoppingCart';
+import '../sass/_shopping-cart.scss';
 
 const Cart = () => {
     return (

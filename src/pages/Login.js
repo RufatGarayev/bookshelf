@@ -1,5 +1,6 @@
 import Breadcrumb from '../components/Other/Breadcrumb';
-import LoginSection from '../components/Account/LoginSection';
+import LoginSection from '../components/Account/Login';
+import '../sass/_account.scss';
 
 const Login = () => {
     return (
