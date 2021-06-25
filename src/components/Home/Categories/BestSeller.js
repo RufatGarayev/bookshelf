@@ -4,12 +4,11 @@ import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
 import Title from '../../Other/Title';
-import { BooksData } from '../../../data';
 import BookCard from '../../BookCard/BookCard';
 
 SwiperCore.use([Pagination, A11y]);
 
-const BestSeller = () => {
+const BestSeller = (props) => {
     return (
         <div className="best-seller-wrapper">
             <div className="row">
@@ -48,7 +47,7 @@ const BestSeller = () => {
             >
                 <div className="best-seller">
                     {
-                        BooksData.map((book) => (
+                        props.books.map((book) => (
                             book.category === "Best Seller" ?
                                 <SwiperSlide key={book.id} >
                                     <BookCard book={book} />

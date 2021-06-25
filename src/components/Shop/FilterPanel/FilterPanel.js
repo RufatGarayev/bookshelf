@@ -21,7 +21,9 @@ const FilterPanel = (props) => {
                     </div>
                     <div className="col-lg-6">
                         <div className="sorting-wrapper">
-                            <Sorting Sorting={props.SortBook} />
+                            <Sorting
+                                Sorting={props.SortBook}
+                            />
                         </div>
                     </div>
                 </div>

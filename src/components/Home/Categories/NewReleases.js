@@ -4,12 +4,11 @@ import 'swiper/swiper.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
 import Title from '../../Other/Title';
-import { BooksData } from '../../../data';
 import BookCard from '../../BookCard/BookCard';
 
 SwiperCore.use([Pagination, A11y]);
 
-const NewReleases = () => {
+const NewReleases = (props) => {
     return (
         <div className="new-releases-wrapper">
             <div className="row">
@@ -48,7 +47,7 @@ const NewReleases = () => {
             >
                 <div className="new-releases">
                     {
-                        BooksData.map((book) => (
+                        props.books.map((book) => (
                             book.category === "New Releases" ?
                                 <SwiperSlide key={book.id} >
                                     <BookCard book={book} />

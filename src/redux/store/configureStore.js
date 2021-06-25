@@ -8,6 +8,7 @@ import { loadState, saveState } from './localStorage';
 
 const configureStore = () => {
     const persistedState = loadState();
+
     const store = createStore(
         combineReducers({
             books: bookReducer,

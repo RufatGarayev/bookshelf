@@ -1,15 +1,24 @@
 import BestSeller from './BestSeller';
 import NewReleases from './NewReleases';
+import { connect } from 'react-redux';
 
-const Categories = () => {
+const Categories = (props) => {
+    const {books} = props.books;
+
     return (
         <section id="categories">
             <div className="container">
-                <BestSeller />
-                <NewReleases />
+                <BestSeller books={books} />
+                <NewReleases books={books} />
             </div>
         </section>
     )
 }
 
-export default Categories;
+const mapStateToProps = (state) => {
+    return {
+        books: state.books
+    }
+};
+
+export default connect(mapStateToProps)(Categories);
