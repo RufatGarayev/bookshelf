@@ -40,7 +40,10 @@ const BookItem = (props) => {
                     </div>
                     {/* ======= Image ======= */}
                     <div className="book-img">
-                        <Link to={`/book-details/${book.id}`}>
+                        <Link
+                            to={`/book-details/${book.id}`}
+                            onClick={() => window.location.href = `/book-details/${book.id}`}
+                        >
                             <img className="img-fluid" src={book.img} alt={book.title} />
                         </Link>
                     </div>
@@ -49,7 +52,12 @@ const BookItem = (props) => {
                     {/* ======= Title ======= */}
                     <div className="title">
                         <h6>
-                            <Link to={`/book-details/${book.id}`}>{book.title}</Link>
+                            <Link
+                                to={`/book-details/${book.id}`}
+                                onClick={() => window.location.href = `/book-details/${book.id}`}
+                            >
+                                {book.title}
+                            </Link>
                         </h6>
                     </div>
                     {/* ======= Price ======= */}

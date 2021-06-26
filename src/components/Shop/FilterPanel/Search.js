@@ -5,8 +5,11 @@ const Search = (props) => {
     const [searchValue, setSearchValue] = useState("");
 
     const handleChange = (e) => {
+        props.searchBook(searchValue);
         setSearchValue(e.target.value);
     }
+
+    console.log(searchValue)
 
     return (
         <div className="search-box">

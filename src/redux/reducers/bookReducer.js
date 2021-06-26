@@ -1,7 +1,7 @@
 import booksData from '../../books.json';
 import {
-    SORT_BOOKS_BY_NAME_AND_PRICE, MAKE_ISINCART_FALSE,
-    MAKE_IS_IN_WISHLIST_FALSE, MAKE_IS_IN_COMPARE_FALSE
+    SORT_BOOKS_BY_NAME_AND_PRICE, SORT_BOOKS_BY_GENRE, MAKE_ISINCART_FALSE,
+    MAKE_IS_IN_WISHLIST_FALSE, MAKE_IS_IN_COMPARE_FALSE, SEARCH_BOOK
 } from '../types';
 
 const initialState = {
@@ -31,6 +31,16 @@ const bookReducer = (state = initialState, action) => {
                 books: sortedBooks
             }
 
+        // Sorting books by genre 
+        case SORT_BOOKS_BY_GENRE:
+            const sortBooksByGenre = action.payload === "All" ? initialState.books :
+                initialState.books.filter((book) => book.genre.indexOf(action.payload) !== -1)
+
+            return {
+                ...initialState,
+                books: sortBooksByGenre
+            }
+
         // Making isInCart False
         case MAKE_ISINCART_FALSE:
             return {
@@ -54,6 +64,16 @@ const bookReducer = (state = initialState, action) => {
                 books: state.books.map(book => book.id === action.payload ?
                     { ...book, isInCompare: book.isInCompare = false } : book)
             };
+
+        // Search book 
+        case SEARCH_BOOK:
+            return {
+                ...initialState,
+                books: initialState.books.filter(book => (
+                    book.title.toLowerCase().indexOf(action.payload.toLowerCase()) !== -1
+                ))
+            }
+
 
         default:
             return state;

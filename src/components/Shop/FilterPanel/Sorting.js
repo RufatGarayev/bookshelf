@@ -7,7 +7,7 @@ const Sorting = (props) => {
                     <div className="sorting-area name-price d-flex">
                         <label className="m-0">SORT BY:</label>
                         <select
-                            onChange={(e) => props.Sorting(e.target.value)}
+                            onChange={(e) => props.sortByPriceAndName(e.target.value)}
                         >
                             <option value="default">Default</option>
                             <option value="nameA">Name (A-Z)</option>
@@ -21,7 +21,9 @@ const Sorting = (props) => {
                     {/* ======= Sorting by Genre ======= */}
                     <div className="sorting-area genre d-flex">
                         <label className="m-0">GENRE:</label>
-                        <select>
+                        <select
+                            onChange={(e) => props.sortByGenre(e.target.value)}
+                        >
                             <option value="All">All</option>
                             <option value="Classic">Classic</option>
                             <option value="Novel">Novel</option>

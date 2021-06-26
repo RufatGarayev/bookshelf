@@ -5,19 +5,27 @@ import { connect } from 'react-redux';
 import AddedToCartWindow from '../Other/AddedToCartWindow';
 import { Modal } from 'react-bootstrap';
 import { AddToCart, MakingIsInCartTrue } from '../../redux/actions/cartActions';
-import { AddToWishlist, RemoveFromWishlist, MakeIsInWishlistTrueInWishlist } from '../../redux/actions/wishlistActions';
-import { MakeIsInWishlistFalse } from '../../redux/actions/bookActions';
+import {
+    AddToWishlist, RemoveFromWishlist,
+    MakeIsInWishlistTrueInWishlist
+} from '../../redux/actions/wishlistActions';
+import {
+    AddToCompare, RemoveFromCompare,
+    MakeIsInCompareTrueInCompare
+} from '../../redux/actions/compareActions';
+import { MakeIsInWishlistFalse, MakeIsInCompareFalse } from '../../redux/actions/bookActions';
 import CheckoutImg from '../../assets/img/other/checkout.png';
 
 const ExtensiveInfo = (props) => {
     const { book } = props;
     const { cart } = props.cart;
     const { wishlist } = props.wishlist;
+    const { compare } = props.compare;
     const [height, setHeight] = useState(false);
-    const [show, setShow] = useState(false);
+    const [showModal, setShowModal] = useState(false);
 
-    const handleShow = () => setShow(true);
-    const handleClose = () => setShow(false);
+    const handleShow = () => setShowModal(true);
+    const handleClose = () => setShowModal(false);
 
     cart.forEach(cartBook => {
         if (cartBook.id === book.id) {
@@ -28,6 +36,12 @@ const ExtensiveInfo = (props) => {
     wishlist.forEach(wishlistBook => {
         if (wishlistBook.id === book.id) {
             book.isInWishlist = wishlistBook.isInWishlist;
+        }
+    });
+
+    compare.forEach(compareBook => {
+        if (compareBook.id === book.id) {
+            book.isInCompare = compareBook.isInCompare;
         }
     });
 
@@ -77,11 +91,11 @@ const ExtensiveInfo = (props) => {
                         )
                     }
                 </div>
-                {/* ======= Bottom buttons ======= */}
                 <div className="bottom-btns d-flex">
                     <div className="add-to-wishlist">
                         {
                             book.isInWishlist ? (
+                                // ======= Remove From Wishlist Button ======= //
                                 <button
                                     onClick={() => {
                                         props.RemoveFromWishlist(book.id);
@@ -91,6 +105,7 @@ const ExtensiveInfo = (props) => {
                                     <span><FaRegHeart /></span> Remove From Wishlist
                                 </button>
                             ) : (
+                                // ======= Add To Wishlist Button ======= //
                                 <button
                                     onClick={() => {
                                         props.AddToWishlist(book);
@@ -103,7 +118,29 @@ const ExtensiveInfo = (props) => {
                         }
                     </div>
                     <div className="add-to-compare">
-                        <button><span><FaBalanceScale /></span> Add To Compare</button>
+                        {
+                            book.isInCompare ? (
+                                // ======= Remove From Compare Button ======= //
+                                <button
+                                    onClick={() => {
+                                        props.RemoveFromCompare(book.id);
+                                        props.MakeIsInCompareFalse(book.id);
+                                    }}
+                                >
+                                    <span><FaBalanceScale /></span> Remove From Compare
+                                </button>
+                            ) : (
+                                // ======= Add To Compare Button ======= //
+                                <button
+                                    onClick={() => {
+                                        props.AddToCompare(book);
+                                        props.MakeIsInCompareTrueInCompare(book.id);
+                                    }}
+                                >
+                                    <span><FaBalanceScale /></span> Add To Compare
+                                </button>
+                            )
+                        }
                     </div>
                 </div>
                 {/* ======= Checkout img ======= */}
@@ -124,7 +161,7 @@ const ExtensiveInfo = (props) => {
             </div>
 
             {/* ======= AddedToCart Modal ======= */}
-            <Modal show={show} onHide={handleClose} className="added-to-cart-modal">
+            <Modal show={showModal} onHide={handleClose} className="added-to-cart-modal">
                 <Modal.Body>
                     <div className="d-flex justify-content-end">
                         <button className="btnClose" onClick={() => handleClose()}>✖</button>
@@ -143,6 +180,7 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps,
     {
         AddToCart, MakingIsInCartTrue, AddToWishlist, RemoveFromWishlist,
-        MakeIsInWishlistTrueInWishlist, MakeIsInWishlistFalse
+        MakeIsInWishlistTrueInWishlist, MakeIsInWishlistFalse, AddToCompare,
+        RemoveFromCompare, MakeIsInCompareTrueInCompare, MakeIsInCompareFalse
     }
 )(ExtensiveInfo);

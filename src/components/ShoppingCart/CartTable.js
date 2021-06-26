@@ -36,7 +36,10 @@ const CartTable = (props) => {
                                 </td>
                                 <td>
                                     <div className="book-img">
-                                        <Link to={`/book-details/${book.id}`}>
+                                        <Link
+                                            to={`/book-details/${book.id}`}
+                                            onClick={() => window.location.href = `/book-details/${book.id}`}
+                                        >
                                             <div className="img-wrapper">
                                                 <img className="img-fluid" src={book.img} alt="book" />
                                             </div>
@@ -45,7 +48,12 @@ const CartTable = (props) => {
                                 </td>
                                 <td>
                                     <h6 className="book-title">
-                                        <Link to={`/book-details/${book.id}`}>{book.title}</Link>
+                                        <Link
+                                            to={`/book-details/${book.id}`}
+                                            onClick={() => window.location.href = `/book-details/${book.id}`}
+                                        >
+                                            {book.title}
+                                        </Link>
                                     </h6>
                                 </td>
                                 <td>

@@ -24,7 +24,6 @@ import { AiOutlineShopping } from 'react-icons/ai';
 import { RiDeleteBinLine } from 'react-icons/ri';
 import '../../sass/_book-card.scss';
 
-
 const BookCard = (props) => {
     const { book } = props;
     const { cart } = props.cart;
@@ -43,16 +42,15 @@ const BookCard = (props) => {
 
     wishlist.forEach(wishlistBook => {
         if (wishlistBook.id === book.id) {
-            book.isInWishlist = true;
+            book.isInWishlist = wishlistBook.isInWishlist;
         }
     });
 
     compare.forEach(compareBook => {
         if (compareBook.id === book.id) {
-            book.isInCompare = true;
+            book.isInCompare = compareBook.isInCompare;
         }
     });
-
 
     return (
         <>
@@ -77,7 +75,10 @@ const BookCard = (props) => {
                 </div>
                 {/* ======= Image ======= */}
                 <div className="img-wrapper">
-                    <Link to={`/book-details/${book.id}`}>
+                    <Link
+                        to={`/book-details/${book.id}`}
+                        onClick={() => window.location.href = `/book-details/${book.id}`}
+                    >
                         <img className="img-fluid" src={book.img} alt="book" />
                     </Link>
                 </div>
@@ -88,7 +89,10 @@ const BookCard = (props) => {
                     </div>
                     {/* ======= Title and Author ======= */}
                     <div className="title-author">
-                        <Link to={`/book-details/${book.id}`}>
+                        <Link
+                            to={`/book-details/${book.id}`}
+                            onClick={() => window.location.href = `/book-details/${book.id}`}
+                        >
                             <h6>{book.title}</h6>
                         </Link>
                         <p>{book.author}</p>

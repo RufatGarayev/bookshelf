@@ -37,7 +37,13 @@ const Header = (props) => {
                                 {
                                     NavMenuData.map(item => (
                                         <li key={item.id} className={item.class}>
-                                            <Link to={item.href}>{item.title}</Link>
+                                            {
+                                                item.id === 1 ? (
+                                                    <Link onClick={() => window.location.href="/"} to={item.href}>{item.title}</Link>
+                                                ) : (
+                                                    <Link to={item.href}>{item.title}</Link>
+                                                )
+                                            }
                                         </li>
                                     ))
                                 }
