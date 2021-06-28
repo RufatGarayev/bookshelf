@@ -16,21 +16,24 @@ const DropdownCart = (props) => {
                                     props.cart.map(book => (
                                         <tr key={book.id}>
                                             <td>
-                                                <button
-                                                    className="remove-btn"
-                                                    type="button"
-                                                    onClick={(e) => {
-                                                        e.stopPropagation();
-                                                        props.deleteBook(book.id);
-                                                        props.makeIsInCartFalse(book.id);
-                                                        props.wishlistBookIsInCartFalse(book.id);
-                                                        props.compareBookIsInCartFalse(book.id);
-                                                    }}
-                                                >
-                                                    <span className="delete-btn"><RiDeleteBinLine /></span>
-                                                </button>
+                                                {/* ======= Remove button ======= */}
+                                                <div className="remove-btn">
+                                                    <button
+                                                        type="button"
+                                                        onClick={(e) => {
+                                                            e.stopPropagation();
+                                                            props.deleteBook(book.id);
+                                                            props.makeIsInCartFalse(book.id);
+                                                            props.wishlistBookIsInCartFalse(book.id);
+                                                            props.compareBookIsInCartFalse(book.id);
+                                                        }}
+                                                    >
+                                                        <span><RiDeleteBinLine /></span>
+                                                    </button>
+                                                </div>
                                             </td>
                                             <td>
+                                                {/* ======= Image ======= */}
                                                 <div className="book-img">
                                                     <Link
                                                         to={`/book-details/${book.id}`}
@@ -45,6 +48,7 @@ const DropdownCart = (props) => {
                                             <td>
                                                 <ul>
                                                     <li>
+                                                        {/* ======= Title ======= */}
                                                         <h6 className="book-title">
                                                             <Link
                                                                 to={`/book-details/${book.id}`}
@@ -54,6 +58,7 @@ const DropdownCart = (props) => {
                                                             </Link>
                                                         </h6>
                                                     </li>
+                                                    {/* ======= Count and Price ======= */}
                                                     <li className="d-flex count-and-price">
                                                         <span className="book-count">{book.count}</span>
                                                         <span className="multiplication">×</span>
@@ -69,6 +74,7 @@ const DropdownCart = (props) => {
                             </tbody>
                         </table>
 
+                        {/* ======= Cart totals ======= */}
                         <div className="total-area">
                             <div className="top-content d-flex justify-content-between">
                                 <h6>SUBTOTAL</h6>
@@ -88,6 +94,7 @@ const DropdownCart = (props) => {
                         </div>
                     </>
                 ) : (
+                    // ======= Empty cart ======= //
                     <div className="empty-cart">
                         <div className="shopping-icon d-flex justify-content-center">
                             <AiOutlineShopping />

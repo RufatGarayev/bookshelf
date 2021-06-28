@@ -38,20 +38,29 @@ export const ButtonsData = [
         id: 3,
         content:
             <div className="li-content">
+                <Link to="/wishlist">
+                    <span><FaRegHeart /></span>
+                </Link>
+            </div>
+    },
+    {
+        id: 4,
+        content:
+            <div className="li-content">
+                <Link to="/compare">
+                    <span><FaBalanceScale /></span>
+                </Link>
+            </div>
+    },
+    {
+        id: 5,
+        content:
+            <div className="li-content">
                 <button>
                     <span><HiOutlineUser /></span>
                 </button>
                 <div className="dropdownMenu account">
                     <ul>
-                        <li>
-                            <Link to="/cart"><span><AiOutlineShopping /></span> Cart</Link>
-                        </li>
-                        <li>
-                            <Link to="/wishlist"><span><FaRegHeart /></span> Wishlist</Link>
-                        </li>
-                        <li>
-                            <Link to="/compare"><span><FaBalanceScale /></span> Compare</Link>
-                        </li>
                         <li>
                             <Link to="/login"><span><RiLock2Line /></span> Log In</Link>
                         </li>
@@ -63,13 +72,13 @@ export const ButtonsData = [
             </div>
     },
     {
-        id: 4,
+        id: 6,
         content:
             <div className="li-content">
                 <button>
                     <span className="filter-btn"><BsFilterLeft /></span>
                 </button>
-                <div className="dropdownMenu monetary-unit">
+                <div onClick={(e) => e.stopPropagation()} className="dropdownMenu monetary-unit">
                     <ul>
                         <li><button>$ USD - US Dollar</button></li>
                         <li><button>€ EUR - Euro</button></li>

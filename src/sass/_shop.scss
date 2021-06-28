@@ -77,8 +77,8 @@
         button {
           &:hover {
             color: white;
-            background-color: #2878FD;
-            border: 1px solid #2878FD;
+            background-color: #2878fd;
+            border: 1px solid #2878fd;
           }
           &:focus {
             box-shadow: none !important;
@@ -89,6 +89,20 @@
           font-size: 18px;
         }
       }
+    }
+  }
+
+  .no-books {
+    padding: 30px 0 50px;
+
+    svg {
+      color: #cdcdcd;
+      font-size: 50px;
+    }
+
+    p {
+      margin-top: 10px;
+      font-size: 20px;
     }
   }
 }

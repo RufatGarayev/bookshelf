@@ -3,12 +3,18 @@
     padding: 60px 0;
 
     .book-details-slider-wrapper {
-      padding: 0 20px;
+      padding: 10px 0 0 100px;
 
-      .swiper-slide {
-        .wrapper {
-          .img-wrapper {
-            padding: 0 140px;
+      .little-img-wrapper {
+        height: 410px;
+
+        .img-wrapper {
+          padding: 20px;
+          button {
+            height: 90px;
+            width: 65px;
+            padding: 5px;
+            border: 1px solid #ffff;
             img {
               height: 100%;
               width: 100%;
@@ -16,21 +22,25 @@
             }
           }
         }
-      }
 
-      .swiper-container {
-        .swiper-button-prev,
-        .swiper-button-next {
-          &::after {
-            font-size: 15px;
+        .active-little-img {
+          button {
+            border: 1px solid #000000 !important;
           }
         }
+      }
 
-        .swiper-button-next {
-          right: 100px;
-        }
-        .swiper-button-prev {
-          left: 100px;
+      .big-img-wrapper {
+        height: 100%;
+
+        .img-wrapper {
+          height: 410px;
+          width: 265px;
+          img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+          }
         }
       }
     }
@@ -74,7 +84,7 @@
       .add-to-cart-btn {
         padding: 0 200px 0 0;
         button {
-          font-size: 15px;
+          font-size: 14px;
           padding: 3px 26px;
           text-transform: uppercase;
           span {

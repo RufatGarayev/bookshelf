@@ -21,20 +21,23 @@ const CartTable = (props) => {
                         cart.map(book => (
                             <tr key={book.id}>
                                 <td>
-                                    <button
-                                        className="btnClose"
-                                        type="button"
-                                        onClick={() => {
-                                            props.DeleteBook(book.id);
-                                            props.MakeIsInCartFalse(book.id);
-                                            props.WishlistBookIsInCartFalse(book.id);
-                                            props.CompareBookIsInCartFalse(book.id);
-                                        }}
-                                    >
-                                        <span className="delete-btn"><RiDeleteBinLine /></span>
-                                    </button>
+                                    {/* ======= Remove button ======= */}
+                                    <div className="remove-btn">
+                                        <button
+                                            type="button"
+                                            onClick={() => {
+                                                props.DeleteBook(book.id);
+                                                props.MakeIsInCartFalse(book.id);
+                                                props.WishlistBookIsInCartFalse(book.id);
+                                                props.CompareBookIsInCartFalse(book.id);
+                                            }}
+                                        >
+                                            <span><RiDeleteBinLine /></span>
+                                        </button>
+                                    </div>
                                 </td>
                                 <td>
+                                    {/* ======= Image ======= */}
                                     <div className="book-img">
                                         <Link
                                             to={`/book-details/${book.id}`}
@@ -47,6 +50,7 @@ const CartTable = (props) => {
                                     </div>
                                 </td>
                                 <td>
+                                    {/* ======= Title ======= */}
                                     <h6 className="book-title">
                                         <Link
                                             to={`/book-details/${book.id}`}
@@ -57,9 +61,11 @@ const CartTable = (props) => {
                                     </h6>
                                 </td>
                                 <td>
+                                    {/* ======= Price ======= */}
                                     <p className="book-price price"><span>$</span>{book.price.toFixed(2)}</p>
                                 </td>
                                 <td>
+                                    {/* ======= Quantity ======= */}
                                     <div className="quantity-wrapper">
                                         <Quantity
                                             book={book}
@@ -69,6 +75,7 @@ const CartTable = (props) => {
                                     </div>
                                 </td>
                                 <td>
+                                    {/* ======= Total price ======= */}
                                     <p className="total-price price d-flex align-items-center">
                                         <span>$</span> {(book.price * book.count).toFixed(2)}
                                     </p>

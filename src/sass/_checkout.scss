@@ -134,6 +134,7 @@
 
           a {
             text-decoration: none;
+            font-weight: 500;
           }
         }
       }
@@ -219,6 +220,7 @@
 
           .back-to {
             color: #2878fd;
+            font-weight: 500;
             &:hover {
               color: #3063b6;
             }
@@ -254,6 +256,7 @@
       }
 
       .middle-content {
+        padding: 10px 0;
         .title {
           h6 {
             font-weight: 400;
@@ -266,6 +269,7 @@
 
         a {
           text-decoration: none;
+          font-weight: 500;
         }
       }
     }

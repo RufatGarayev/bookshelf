@@ -8,22 +8,12 @@ import { AiOutlineShopping } from 'react-icons/ai';
 import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import { ClearCart } from '../../redux/actions/cartActions';
+import { MakeIsInCartFalse } from '../../redux/actions/bookActions';
+import { CompareBookIsInCartFalse } from '../../redux/actions/compareActions';
+import { WishlistBookIsInCartFalse } from '../../redux/actions/wishlistActions';
 
 const ShoppingCart = (props) => {
     const { cart } = props.cart;
-    const { books } = props.books;
-
-    console.log(books)
-
-    const makeIsInCartFalse = () => {
-        cart.forEach(cartBook => {
-            books.forEach(book => {
-                if (cartBook.id !== book.id) {
-                    book.isInCart = false;
-                }
-            })
-        });
-    };
 
     return (
         <section id="shopping-cart">
@@ -33,6 +23,7 @@ const ShoppingCart = (props) => {
                         <>
                             <div className="row">
                                 <div className="col-12">
+                                    {/* ======= Title ======= */}
                                     <Title
                                         title="Shopping Cart"
                                     />
@@ -41,20 +32,28 @@ const ShoppingCart = (props) => {
                             <div className="row">
                                 <div className="col-lg-8">
                                     <div className="wrapper">
+                                        {/* ======= Cart Table ======= */}
                                         <div className="cart-table-wrapper">
                                             <CartTable />
                                         </div>
                                         <div className="bottom-elements d-flex">
+                                            {/* ======= Continue Shopping Link ======= */}
                                             <div className="continue-shopping-link">
                                                 <Link to="/shop" className="d-flex align-items-center">
                                                     <span><HiArrowNarrowLeft /></span>
                                                     <p>CONTINUE SHOPPING</p>
                                                 </Link>
                                             </div>
+                                            {/* ======= Clear Button ======= */}
                                             <div className="clear-btn">
                                                 <button
                                                     className="d-flex align-items-center"
-                                                    onClick={() => {props.ClearCart(); makeIsInCartFalse()}}
+                                                    onClick={() => {
+                                                        props.ClearCart();
+                                                        cart.forEach(cartBook => props.MakeIsInCartFalse(cartBook.id));
+                                                        cart.forEach(cartBook => props.CompareBookIsInCartFalse(cartBook.id));
+                                                        cart.forEach(cartBook => props.WishlistBookIsInCartFalse(cartBook.id));
+                                                    }}
                                                 >
                                                     <span><RiDeleteBinLine /></span>
                                                     <p>CLEAR SHOPPING CART</p>
@@ -64,6 +63,7 @@ const ShoppingCart = (props) => {
                                     </div>
                                 </div>
                                 <div className="col-lg-4">
+                                    {/* ======= Cart Totals ======= */}
                                     <div className="cart-totals-wrapper">
                                         <CartTotals />
                                     </div>
@@ -71,6 +71,7 @@ const ShoppingCart = (props) => {
                             </div>
                         </>
                     ) : (
+                        // ======= Empty Alert ======= //
                         <div className="empty-alert-wrapper">
                             <EmptyAlert
                                 icon={<AiOutlineShopping />}
@@ -88,8 +89,15 @@ const ShoppingCart = (props) => {
 const mapStateToProps = (state) => {
     return {
         cart: state.cart,
-        books: state.books
+        books: state.books,
+        wishlist: state.wishlist,
+        compare: state.compare
     }
 };
 
-export default connect(mapStateToProps, { ClearCart })(ShoppingCart);
+export default connect(mapStateToProps,
+    {
+        ClearCart, MakeIsInCartFalse,
+        CompareBookIsInCartFalse, WishlistBookIsInCartFalse
+    }
+)(ShoppingCart);

@@ -13,14 +13,16 @@ import '../../sass/_header.scss';
 const Header = (props) => {
     const { cart } = props.cart;
     const { books } = props.books;
+    const { wishlist } = props.wishlist;
+    const { compare } = props.compare;
     const [shadow, setShadow] = useState(false);
     const [clickedBtnId, setClickedBtnId] = useState("");
 
     window.addEventListener("scroll", () => {
         if (window.scrollY > 40) {
-            setShadow(true)
+            setShadow(true);
         } else {
-            setShadow(false)
+            setShadow(false);
         }
     });
 
@@ -38,11 +40,12 @@ const Header = (props) => {
                                     NavMenuData.map(item => (
                                         <li key={item.id} className={item.class}>
                                             {
-                                                item.id === 1 ? (
-                                                    <Link onClick={() => window.location.href="/"} to={item.href}>{item.title}</Link>
-                                                ) : (
-                                                    <Link to={item.href}>{item.title}</Link>
-                                                )
+                                                <Link
+                                                    to={item.href}
+                                                    onClick={() => window.location.href = item.href}
+                                                >
+                                                    {item.title}
+                                                </Link>
                                             }
                                         </li>
                                     ))
@@ -72,6 +75,24 @@ const Header = (props) => {
                                                 makeIsInCartFalse={props.MakeIsInCartFalse}
                                             />
                                         </li>
+                                    ) : item.id === 3 ? (
+                                        <li
+                                            key={item.id}
+                                            onClick={() => clickedBtnId !== item.id ? setClickedBtnId(item.id) : setClickedBtnId("")}
+                                            className={clickedBtnId === item.id ? "showDropdown" : ""}
+                                        >
+                                            {item.content}
+                                            <sup className="wishlist-sup">{wishlist.length}</sup>
+                                        </li>
+                                    ) : item.id === 4 ? (
+                                        <li
+                                            key={item.id}
+                                            onClick={() => clickedBtnId !== item.id ? setClickedBtnId(item.id) : setClickedBtnId("")}
+                                            className={clickedBtnId === item.id ? "showDropdown" : ""}
+                                        >
+                                            {item.content}
+                                            <sup className="compare-sup">{compare.length}</sup>
+                                        </li>
                                     ) : (
                                         <li
                                             key={item.id}
@@ -94,7 +115,9 @@ const Header = (props) => {
 const mapStateToProps = (state) => {
     return {
         cart: state.cart,
-        books: state.books
+        books: state.books,
+        compare: state.compare,
+        wishlist: state.wishlist
     }
 };
 

@@ -3,9 +3,13 @@ import Breadcrumb from '../components/Other/Breadcrumb';
 import FilterPanel from '../components/Shop/FilterPanel/FilterPanel';
 import BookCards from '../components/BookCard/BookCards';
 import Spinner from '../components/Other/Spinner';
+import { connect } from 'react-redux';
+import NoBooks from '../components/Shop/NoBooks';
+
 import '../sass/_shop.scss';
 
-const Shop = () => {
+const Shop = (props) => {
+    const { books } = props.books;
     const [loading, setLoading] = useState(false);
 
     useEffect(() => {
@@ -23,11 +27,17 @@ const Shop = () => {
                 <Breadcrumb currentPage={"Shop"} />
                 <FilterPanel />
                 {
-                    loading ? (<Spinner />) : (<BookCards />)
+                    loading ? (<Spinner />) : (books.length === 0 ? <NoBooks /> : <BookCards />)
                 }
             </div>
         </div>
     )
 }
 
-export default Shop;
+const mapStateToProps = (state) => {
+    return {
+        books: state.books
+    }
+};
+
+export default connect(mapStateToProps)(Shop);

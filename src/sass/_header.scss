@@ -30,7 +30,7 @@ header {
               text-transform: uppercase;
               transition: 0.3s ease;
               &:hover {
-                color: #2878FD;
+                color: #2878fd;
                 transition: 0.3s ease;
               }
             }
@@ -42,16 +42,17 @@ header {
         position: relative;
         ul {
           padding: 17px 0 0;
-          width: 120px;
+          width: 230px;
           justify-content: space-between;
           li {
             position: relative;
-            button {
+            button,
+            a {
               color: #212529;
               transition: 0.3s ease;
               text-decoration: none;
               &:hover {
-                color: #2878FD;
+                color: #2878fd;
                 transition: 0.3s ease;
               }
               span {
@@ -62,17 +63,23 @@ header {
                 font-size: 20px;
               }
             }
+
             sup {
               height: 17px;
               width: 17px;
               border-radius: 50%;
-              background-color: #2878FD;
+              background-color: #2878fd;
               position: absolute;
               top: -3px;
               left: 17px;
               line-height: 19px;
               text-align: center;
               color: white;
+            }
+
+            .wishlist-sup,
+            .compare-sup {
+              left: 20px;
             }
 
             .dropdownMenu,
@@ -101,7 +108,7 @@ header {
                     transition: 0.3s ease;
                     &:hover {
                       transition: 0.3s ease;
-                      color: #2878FD;
+                      color: #2878fd;
                     }
                   }
 
@@ -152,7 +159,7 @@ header {
                     ul {
                       padding: 0 10px 0 13px;
                       .count-and-price {
-                        .multiplication{
+                        .multiplication {
                           margin: 0 5px;
                         }
 
@@ -211,6 +218,10 @@ header {
                   }
                 }
               }
+            }
+
+            .account {
+              padding: 22px;
             }
           }
 

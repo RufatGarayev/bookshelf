@@ -5,10 +5,12 @@ const PaymentDetails = (props) => {
 
     return (
         <div className="payment-details">
+            {/* ======= Top content ======= */}
             <div className="top-content d-flex">
                 <h6 className="address">Shipping Address</h6>
                 <h6 className="payment">Payment Details</h6>
             </div>
+            {/* ======= Order summary ======= */}
             <div className="order-summary-area">
                 <h5>Order Summary</h5>
                 {
@@ -17,10 +19,12 @@ const PaymentDetails = (props) => {
                             key={book.id}
                             className="order-summary-item d-flex justify-content-between align-items-center"
                         >
+                            {/* ===== Title and Quantity ===== */}
                             <div className="title-and-quantity">
                                 <h6 className="book-title">{book.title}</h6>
                                 <p className="book-quantity">Quantity: {book.count}</p>
                             </div>
+                            {/* ===== Price ===== */}
                             <div className="price">
                                 <p>
                                     <span>$</span>{(book.price * book.count).toFixed(2)}
@@ -29,6 +33,7 @@ const PaymentDetails = (props) => {
                         </div>
                     ))
                 }
+                {/* ===== Total Price ===== */}
                 <div className="total d-flex justify-content-between align-items-center">
                     <h6>Total</h6>
                     <p>
@@ -36,14 +41,20 @@ const PaymentDetails = (props) => {
                     </p>
                 </div>
             </div>
+            {/* ======= Bottom content ======= */}
             <div className="bottom-content">
-                <form onSubmit={(e) => { props.handlePaymentSubmit(); e.preventDefault(); }}>
+                <form onSubmit={(e) => {
+                    props.handlePaymentSubmit();
+                    e.preventDefault();
+                }}>
                     <div className="payment-method">
                         <h5>Payment Method</h5>
                         <div className="d-flex">
+                            {/* ===== Visa img ===== */}
                             <div className="visa-img">
                                 <img className="img-fluid" src={VisaImg} alt="visa" />
                             </div>
+                            {/* ===== Card number input ===== */}
                             <div className="input-wrapper">
                                 <input
                                     type="tel"
@@ -59,6 +70,7 @@ const PaymentDetails = (props) => {
                         </div>
                     </div>
                     <div className="btns d-flex justify-content-between align-items-center">
+                        {/* ===== Back button ===== */}
                         <button
                             type="button"
                             className="back-to"
@@ -66,6 +78,7 @@ const PaymentDetails = (props) => {
                         >
                             BACK
                         </button>
+                        {/* ===== Pay button ===== */}
                         <button
                             type="submit"
                             className="btn-style-2"

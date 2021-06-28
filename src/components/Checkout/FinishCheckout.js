@@ -13,7 +13,12 @@ const FinishCheckout = () => {
                 </div>
             </div>
             <div className="back-to-home">
-                <Link to="/">BACK TO HOME</Link>
+                <Link
+                    to="/"
+                    onClick={() => window.location.href = "/"}
+                >
+                    BACK TO HOME
+                </Link>
             </div>
         </div>
     )

@@ -25,14 +25,8 @@
               border: none;
               background-color: transparent;
               outline: none;
-
-              .delete-btn {
+              svg {
                 font-size: 18px;
-                transition: 0.3s ease;
-                &:hover {
-                  color: rgb(40, 120, 253);
-                  transition: 0.3s ease;
-                }
               }
             }
 
@@ -172,8 +166,8 @@
       }
     }
 
-    .checkout-btn{
-      a{
+    .checkout-btn {
+      a {
         display: inline-block;
         text-decoration: none;
       }
