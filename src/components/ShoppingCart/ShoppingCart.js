@@ -11,6 +11,19 @@ import { ClearCart } from '../../redux/actions/cartActions';
 
 const ShoppingCart = (props) => {
     const { cart } = props.cart;
+    const { books } = props.books;
+
+    console.log(books)
+
+    const makeIsInCartFalse = () => {
+        cart.forEach(cartBook => {
+            books.forEach(book => {
+                if (cartBook.id !== book.id) {
+                    book.isInCart = false;
+                }
+            })
+        });
+    };
 
     return (
         <section id="shopping-cart">
@@ -39,7 +52,10 @@ const ShoppingCart = (props) => {
                                                 </Link>
                                             </div>
                                             <div className="clear-btn">
-                                                <button className="d-flex align-items-center" onClick={() => props.ClearCart()}>
+                                                <button
+                                                    className="d-flex align-items-center"
+                                                    onClick={() => {props.ClearCart(); makeIsInCartFalse()}}
+                                                >
                                                     <span><RiDeleteBinLine /></span>
                                                     <p>CLEAR SHOPPING CART</p>
                                                 </button>
@@ -71,7 +87,8 @@ const ShoppingCart = (props) => {
 
 const mapStateToProps = (state) => {
     return {
-        cart: state.cart
+        cart: state.cart,
+        books: state.books
     }
 };
 

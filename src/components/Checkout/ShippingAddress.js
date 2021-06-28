@@ -1,15 +1,15 @@
 import Input from '../Other/Input';
 import { Link } from "react-router-dom";
 
-const ShippingAddress = () => {
+const ShippingAddress = (props) => {
     return (
-        <div className="shipping-address">
+        <div className="shipping-address ">
             <div className="top-content d-flex">
                 <h6 className="address">Shipping Address</h6>
                 <h6 className="payment">Payment Details</h6>
             </div>
             <div className="form-area">
-                <form>
+                <form onSubmit={(e) => { props.handleShippingSubmit(); e.preventDefault(); }}>
                     <h5>Shipping Address</h5>
                     <div className="row">
                         <div className="col-12">
@@ -37,6 +37,8 @@ const ShippingAddress = () => {
                                     <option value="il">Israel</option>
                                     <option value="uk">United Kingdom</option>
                                     <option value="ukr">Ukraine</option>
+                                    <option value="it">Italy</option>
+                                    <option value="eg">Egypt</option>
                                 </select>
                             </div>
                         </div>
@@ -51,7 +53,12 @@ const ShippingAddress = () => {
                         <div className="col-12">
                             <div className="bottom-content d-flex">
                                 <Link to="/cart" className="back-to-cart">BACK TO CART</Link>
-                                <input type="submit" className="btn-style-2" value="NEXT" />
+                                <button
+                                    type="submit"
+                                    className="btn-style-2"
+                                >
+                                    NEXT
+                                </button>
                             </div>
                         </div>
                     </div>

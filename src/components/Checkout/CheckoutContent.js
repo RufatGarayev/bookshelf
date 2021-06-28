@@ -1,7 +1,19 @@
+import { useState } from 'react';
 import Title from '../Other/Title';
 import ShippingAddress from './ShippingAddress';
+import PaymentDetails from './PaymentDetails';
+import FinishCheckout from './FinishCheckout';
+import { ClearCart } from '../../redux/actions/cartActions';
+import { connect } from 'react-redux';
 
-const CheckoutContent = () => {
+const CheckoutContent = (props) => {
+    const { cart } = props.cart;
+    const [showCheckoutPages, setShowCheckoutPages] = useState(true);
+
+    const handleShippingAddressSubmit = () => setShowCheckoutPages(false);
+    const backToShippingAddress = () => setShowCheckoutPages(true);
+    const handlePaymentDetailsSubmit = () => setShowCheckoutPages(null);
+
     return (
         <section id="checkout">
             <div className="container">
@@ -13,12 +25,28 @@ const CheckoutContent = () => {
                                     <Title title="Checkout" />
                                 </div>
                             </div>
-                            <div className="shipping-address-wrapper">
-                                <ShippingAddress />
-                            </div>
-                            <div className="payment-details-wrapper">
-
-                            </div>
+                            {
+                                showCheckoutPages ? (
+                                    <div className="shipping-address-wrapper">
+                                        <ShippingAddress
+                                            handleShippingSubmit={handleShippingAddressSubmit}
+                                        />
+                                    </div>
+                                ) : showCheckoutPages === false ? (
+                                    <div className="payment-details-wrapper">
+                                        <PaymentDetails
+                                            cart={cart}
+                                            back={backToShippingAddress}
+                                            clearCart={props.ClearCart}
+                                            handlePaymentSubmit={handlePaymentDetailsSubmit}
+                                        />
+                                    </div>
+                                ) : (
+                                    <div className="finish-checkout">
+                                        <FinishCheckout cart={cart} />
+                                    </div>
+                                )
+                            }
                         </div>
                     </div>
                 </div>
@@ -28,4 +56,10 @@ const CheckoutContent = () => {
     )
 }
 
-export default CheckoutContent;
+const mapStateToProps = (state) => {
+    return {
+        cart: state.cart
+    }
+};
+
+export default connect(mapStateToProps, { ClearCart })(CheckoutContent);

@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 
 const CartTotals = (props) => {
-    const {cart} = props.cart;
+    const { cart } = props.cart;
     const totalPrice = cart.reduce((total, book) => (total += book.price * book.count), 0);
 
     return (
@@ -24,7 +25,11 @@ const CartTotals = (props) => {
                 </p>
             </div>
             <div className="checkout-btn">
-                <button className="btn-style btn-style-2">PROCEED TO CHECKOUT</button>
+                <Link
+                    to="/checkout"
+                    className="btn-style btn-style-2 text-center w-100">
+                    PROCEED TO CHECKOUT
+                </Link>
             </div>
         </div>
     )

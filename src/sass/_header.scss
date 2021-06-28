@@ -179,7 +179,8 @@ header {
                   }
                 }
                 .checkout-btn {
-                  button {
+                  a {
+                    text-decoration: none;
                     font-size: 13px;
                     letter-spacing: 0.5px;
                   }
