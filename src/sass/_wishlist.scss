@@ -46,3 +46,31 @@
     }
   }
 }
+
+
+// ======= Responsive Design ======= //
+@media (min-width: 768px) and (max-width: 997.98px) {
+  #wishlist {
+    .book-item {
+      height: 418px !important;
+    }
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #wishlist {
+    .book-item {
+      height: 496px !important;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  #wishlist {
+    .book-item {
+      .bottom-content {
+        padding: 0 5px 30px !important;
+      }
+    }
+  }
+}

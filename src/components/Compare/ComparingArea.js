@@ -19,30 +19,7 @@ const ComparingArea = (props) => {
                                 </div>
                             </div>
                             <div className="row">
-                                <div className="col-lg-2">
-                                    <div className="wrapper">
-                                        <div className="books"></div>
-                                        <div className="properties">
-                                            <div className="title">
-                                                <p>Title</p>
-                                            </div>
-                                            <div className="price">
-                                                <p>Price</p>
-                                            </div>
-                                            <div className="description box">
-                                                <p>Description</p>
-                                            </div>
-                                            <div className="genre box">
-                                                <p>Genre</p>
-                                            </div>
-                                            <div className="rating box">
-                                                <p>Rating</p>
-                                            </div>
-                                            <div className="addToCartBtn box"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-lg-10">
+                                <div className="col-12">
                                     <div className="compare-slider-wrapper">
                                         <CompareSlider compare={compare} />
                                     </div>

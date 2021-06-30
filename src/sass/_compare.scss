@@ -10,61 +10,6 @@
     }
   }
 
-  .top-part,
-  .books {
-    min-height: 200px;
-  }
-
-  .description {
-    min-height: 120px;
-  }
-
-  .genre,
-  .rating,
-  .title,
-  .price {
-    min-height: 55px;
-  }
-
-  .addToCartBtn,
-  .bottom-part {
-    min-height: 70px;
-  }
-
-  .description,
-  .rating,
-  .genre,
-  .title,
-  .price {
-    display: flex;
-    align-items: center;
-  }
-
-  p,
-  h6 {
-    margin-bottom: 0;
-  }
-
-  .wrapper {
-    padding-top: 50px;
-    .properties {
-      .description,
-      .rating,
-      .genre,
-      .title,
-      .price {
-        justify-content: flex-end;
-        font-size: 14px;
-        font-weight: 400;
-      }
-
-      .description {
-        align-items: flex-start;
-        padding-top: 18px;
-      }
-    }
-  }
-
   .swiper-container {
     padding-top: 50px;
 
@@ -100,6 +45,11 @@
       border-right: 1px solid #e9e7e7 !important;
       position: relative;
 
+      p,
+      h6 {
+        margin-bottom: 0;
+      }
+
       .top-part,
       .title,
       .price,
@@ -111,6 +61,7 @@
       }
 
       .top-part {
+        min-height: 200px;
         padding-top: 20px;
 
         .book-img {
@@ -131,6 +82,22 @@
       }
 
       .middle-part {
+        .description,
+        .rating,
+        .genre,
+        .title,
+        .price {
+          display: flex;
+          align-items: center;
+        }
+
+        .genre,
+        .rating,
+        .title,
+        .price {
+          min-height: 55px;
+        }
+
         .description,
         .rating,
         .title {
@@ -163,6 +130,10 @@
           }
         }
 
+        .description {
+          min-height: 120px;
+        }
+
         .genre,
         .rating {
           p,
@@ -179,6 +150,8 @@
       }
 
       .bottom-part {
+        min-height: 70px;
+
         button {
           padding: 2px 26px;
           span {

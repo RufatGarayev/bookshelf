@@ -13,18 +13,19 @@ const CompareSlider = (props) => {
     return (
         <div className="compare-slider">
             <Swiper
+                slidesPerView={1}
                 navigation
                 breakpoints={{
                     "320": {
                         "slidesPerView": 1,
                         "spaceBetween": 0
                     },
-                    "640": {
-                        "slidesPerView": 1,
+                    "576": {
+                        "slidesPerView": 2,
                         "spaceBetween": 0
                     },
                     "768": {
-                        "slidesPerView": 1,
+                        "slidesPerView": 3,
                         "spaceBetween": 0
                     },
                     "992": {
@@ -32,7 +33,7 @@ const CompareSlider = (props) => {
                         "spaceBetween": 0
                     },
                     "1200": {
-                        "slidesPerView": 3,
+                        "slidesPerView": 4,
                         "spaceBetween": 0
                     }
                 }}
