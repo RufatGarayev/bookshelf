@@ -21,7 +21,7 @@ export const ButtonsData = [
         content:
             <div className="li-content">
                 <button>
-                    <span><CgSearch /></span>
+                    <span className="search-icon"><CgSearch /></span>
                 </button>
             </div>
     },
@@ -30,7 +30,7 @@ export const ButtonsData = [
         content:
             <div className="li-content">
                 <button>
-                    <span><AiOutlineShopping /></span>
+                    <span className="shopping-icon"><AiOutlineShopping /></span>
                 </button>
             </div>
     },

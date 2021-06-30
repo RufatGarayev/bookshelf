@@ -1,4 +1,4 @@
-import booksData from '../../books.json';
+import booksData from '../../data/books.json';
 import {
     SORT_BOOKS_BY_NAME_AND_PRICE, SORT_BOOKS_BY_GENRE, MAKE_ISINCART_FALSE,
     MAKE_IS_IN_WISHLIST_FALSE, MAKE_IS_IN_COMPARE_FALSE, SEARCH_BOOK

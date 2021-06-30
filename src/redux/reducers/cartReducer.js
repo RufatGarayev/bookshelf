@@ -32,7 +32,8 @@ const cartReducer = (state = initialState, action) => {
         case MAKE_ISINCART_TRUE:
             return {
                 ...state,
-                cart: state.cart.map(book => book.id === action.payload ? { ...book, isInCart: book.isInCart = true } : book)
+                cart: state.cart.map(book => book.id === action.payload ?
+                    { ...book, isInCart: book.isInCart = true } : book)
             }
 
         // Deleting book from cart
@@ -53,14 +54,16 @@ const cartReducer = (state = initialState, action) => {
         case INCREASE_BOOK_COUNT:
             return {
                 ...state,
-                cart: state.cart.map(book => book.id === action.payload ? { ...book, count: book.count + 1 } : book)
+                cart: state.cart.map(book => book.id === action.payload ?
+                    { ...book, count: book.count + 1 } : book)
             }
 
         // Decreasing book count
         case DECREASE_BOOK_COUNT:
             return {
                 ...state,
-                cart: state.cart.map(book => book.id === action.payload ? { ...book, count: book.count - 1 } : book)
+                cart: state.cart.map(book => book.id === action.payload ?
+                    { ...book, count: book.count - 1 } : book)
             }
 
         default:

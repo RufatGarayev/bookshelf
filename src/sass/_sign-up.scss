@@ -21,14 +21,14 @@
       &:focus {
         outline: 0;
         transition: 0.3s ease;
-        border: 1px solid #2878FD;
+        border: 1px solid #2878fd;
       }
     }
 
     input[type="submit"] {
       width: 20%;
       border-radius: 0 6px 6px 0;
-      background-color: #2878FD;
+      background-color: #2878fd;
       color: white;
       border: 0;
       font-size: 14px;
@@ -37,6 +37,17 @@
         background-color: black;
         transition: 0.3s ease;
       }
+    }
+  }
+}
+
+
+// ======= Responsive Design ======= //
+@media (max-width: 575.98px) {
+  #sign-up {
+    input[type="submit"] {
+      width: 30% !important;
+      font-size: 13px !important;
     }
   }
 }

@@ -7,9 +7,11 @@ const CartTotals = (props) => {
 
     return (
         <div className="cart-totals">
+            {/* ======= Title ======= */}
             <div className="cart-totals-title">
                 <h3>CART TOTALS</h3>
             </div>
+            {/* ======= Subtotal ======= */}
             <div className="subtotal price pb-2 d-flex justify-content-between align-items-center">
                 <h5>SUBTOTAL</h5>
                 <p>
@@ -17,6 +19,7 @@ const CartTotals = (props) => {
                     {totalPrice.toFixed(2)}
                 </p>
             </div>
+            {/* ======= Grand total ======= */}
             <div className="grand-total price d-flex justify-content-between">
                 <h4>GRAND TOTAL</h4>
                 <p>
@@ -24,6 +27,7 @@ const CartTotals = (props) => {
                     {totalPrice.toFixed(2)}
                 </p>
             </div>
+            {/* ======= Checkout button ======= */}
             <div className="checkout-btn">
                 <Link
                     to="/checkout"

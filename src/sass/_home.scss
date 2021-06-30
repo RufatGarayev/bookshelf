@@ -71,6 +71,7 @@
         }
       }
     }
+
     .right-content {
       justify-content: flex-end;
     }
@@ -81,7 +82,7 @@
   padding: 60px 0 45px;
 
   .swiper-container {
-    padding: 0 0 40px;
+    padding: 0 0 45px;
 
     .swiper-pagination {
       bottom: 10px;
@@ -90,5 +91,144 @@
 
   .new-releases-wrapper {
     padding-top: 30px;
+  }
+}
+
+
+// ======= Responsive Design ======= //
+@media (min-width: 768px) and (max-width: 997.98px) {
+  #entry {
+    padding: 50px 0 35px;
+
+    .slide-content {
+      .left-content {
+        padding-right: 40px;
+
+        h1,
+        h3 {
+          margin: 0;
+        }
+
+        h3 {
+          font-size: 32px;
+        }
+
+        h1 {
+          font-size: 50px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  #entry {
+    padding: 50px 0 25px;
+
+    .swiper-container {
+      padding-bottom: 45px;
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        display: none;
+      }
+    }
+
+    .slide-content {
+      display: flex;
+
+      .first {
+        order: 1 !important;
+        .right-content {
+          height: 756px;
+          justify-content: center;
+        }
+      }
+
+      .second {
+        order: 2 !important;
+        .left-content {
+          padding: 20px 0;
+
+          h3,
+          h1 {
+            margin: 0 !important;
+          }
+
+          h3 {
+            font-size: 26px;
+          }
+
+          h1 {
+            font-size: 42px;
+          }
+
+          .link {
+            a {
+              padding: 9px 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  #entry {
+    .slide-content {
+      .right-content {
+        height: auto !important;
+        width: 100%;
+        justify-content: center;
+        img {
+          height: 100%;
+          width: 100%;
+        }
+      }
+
+      .left-content {
+        h3 {
+          font-size: 18px !important;
+        }
+
+        h1 {
+          font-size: 30px !important;
+          line-height: 46px !important;
+        }
+
+        p {
+          font-size: 12px !important;
+          margin: 0;
+        }
+
+        .link {
+          a {
+            padding: 6px 20px !important;
+            font-size: 13px !important;
+          }
+        }
+      }
+    }
+  }
+
+  #categories {
+    .swiper-pagination {
+      bottom: 10px !important;
+    }
+  }
+}
+
+@media (max-width: 385px) {
+  #entry {
+    .swiper-container {
+      padding-bottom: 18px !important;
+    }
+
+    .slide-content {
+      .left-content {
+        padding: 20px 0 40px !important;
+      }
+    }
   }
 }

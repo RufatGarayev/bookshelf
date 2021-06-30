@@ -20,7 +20,7 @@ const BookCards = (props) => {
                 <div className="row">
                     {
                         currentBooks.map(book => (
-                            <div key={book.id} className="col-lg-3">
+                            <div key={book.id} className="col-xl-3 col-lg-4 col-md-4 col-sm-6">
                                 <BookCard book={book} cart={cart} />
                             </div>
                         ))

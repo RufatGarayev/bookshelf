@@ -10,7 +10,7 @@
         padding-bottom: 20px;
         span {
           font-size: 48px;
-          color: #2878FD;
+          color: #2878fd;
         }
       }
       .content {
@@ -36,14 +36,14 @@
       &:focus {
         outline: 0;
         transition: 0.3s ease;
-        border: 1px solid #2878FD;
+        border: 1px solid #2878fd;
       }
     }
 
     .send-msg-btn-wrapper {
       padding-top: 16px;
       .send-msg-btn {
-        background-color: #2878FD;
+        background-color: #2878fd;
         border: none;
         color: rgb(253, 253, 253);
         font-size: 14px;
@@ -59,6 +59,19 @@
         &:hover {
           background-color: #000000;
           transition: 0.3s ease;
+        }
+      }
+    }
+  }
+}
+
+// ======= Responsive Design ======= //
+@media (max-width: 997.98px) {
+  .contact-content {
+    .contact-item {
+      .content {
+        p {
+          padding: 0 !important;
         }
       }
     }

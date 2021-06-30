@@ -1,6 +1,6 @@
 .footer {
   // background-color: #ffffff;
-  background-color: #2878FD;
+  background-color: #2878fd;
 
   .brand {
     h4 {
@@ -30,5 +30,54 @@
 
   .footer-right {
     justify-content: flex-end;
+  }
+}
+
+
+// ======= Responsive Design ======= //
+@media (max-width: 997.98px) {
+  .footer {
+    padding: 25px 0;
+
+    .footer-left {
+      flex-direction: column;
+
+      .brand {
+        padding-bottom: 6px;
+
+        h4 {
+          font-size: 22px;
+        }
+      }
+    }
+
+    .footer-right {
+      justify-content: center !important;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .footer {
+    .brand {
+      h4 {
+        font-size: 24px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 375.98px) {
+  .footer {
+    .footer-left {
+      p {
+        text-align: center;
+        font-size: 14px;
+      }
+    }
+
+    .footer-right {
+      padding-top: 15px;
+    }
   }
 }

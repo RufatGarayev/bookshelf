@@ -24,20 +24,20 @@ const NewReleases = (props) => {
                 pagination={{ clickable: true }}
                 breakpoints={{
                     "320": {
-                        "slidesPerView": 2,
+                        "slidesPerView": 1,
                         "spaceBetween": 20
                     },
-                    "640": {
+                    "576": {
                         "slidesPerView": 2,
                         "spaceBetween": 20
                     },
                     "768": {
-                        "slidesPerView": 2,
-                        "spaceBetween": 40
+                        "slidesPerView": 3,
+                        "spaceBetween": 25
                     },
                     "992": {
-                        "slidesPerView": 4,
-                        "spaceBetween": 25
+                        "slidesPerView": 3,
+                        "spaceBetween": 30
                     },
                     "1200": {
                         "slidesPerView": 4,

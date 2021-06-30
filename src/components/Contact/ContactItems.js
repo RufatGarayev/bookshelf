@@ -8,7 +8,7 @@ const ContactItems = () => {
                     {
                         ContactItemsData.map((item) => {
                             return (
-                                <div key={item.id} className="col-lg-4">
+                                <div key={item.id} className="col-lg-4 col-md-4">
                                     <div className="contact-item">
                                         <div className="icon d-flex justify-content-center">
                                             {item.icon}

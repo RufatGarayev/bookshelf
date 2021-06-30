@@ -13,7 +13,7 @@ const AddedToCartWindow = (props) => {
                             <h5><span>✓</span> Added to cart successfully!</h5>
                         </div>
                         {/* ======= Image ======= */}
-                        <div className="igm-holder d-flex justify-content-center">
+                        <div className="img-holder d-flex justify-content-center">
                             <img className="img-fluid" src={book.img} alt={book.title} />
                         </div>
                         {/* ======= Book title and price ======= */}
@@ -45,7 +45,12 @@ const AddedToCartWindow = (props) => {
                             <div className="btns d-flex flex-column align-items-between justify-content-evenly">
                                 <Link to="/shop" className="btn-style">Continue Shopping</Link>
                                 <Link to="/cart" className="btn-style">View Cart</Link>
-                                <a href="/#" onClick={e => e.preventDefault()} className="btn-style checkout-btn">Proceed To Checkout</a>
+                                <Link
+                                    to="/checkout"
+                                    className="btn-style checkout-btn"
+                                >
+                                    Proceed To Checkout
+                                </Link>
                             </div>
                         </div>
                     </div>

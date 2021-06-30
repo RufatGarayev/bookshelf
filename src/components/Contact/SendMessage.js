@@ -6,14 +6,14 @@ const SendMessage = () => {
             <form>
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 col-md-6">
                             <div className="inputs-wrapper w-100">
                                 <Input placeholder="Name" type="text" />
                                 <Input placeholder="Email" type="email" />
                                 <Input placeholder="Subject" type="text" />
                             </div>
                         </div>
-                        <div className="col-lg-6">
+                        <div className="col-lg-6 col-md-6">
                             <div className="textarea-wrapper">
                                 <textarea
                                     name="message"

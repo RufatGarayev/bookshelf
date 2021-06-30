@@ -2,7 +2,7 @@ const Sorting = (props) => {
     return (
         <div className="sorting">
             <div className="row">
-                <div className="col-lg-6">
+                <div className="col-lg-6 col-md-6 col-sm-6">
                     {/* ======= Sorting by Name and Price ======= */}
                     <div className="sorting-area name-price d-flex">
                         <label className="m-0">SORT BY:</label>
@@ -17,7 +17,7 @@ const Sorting = (props) => {
                         </select>
                     </div>
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 col-md-6 col-sm-6">
                     {/* ======= Sorting by Genre ======= */}
                     <div className="sorting-area genre d-flex">
                         <label className="m-0">GENRE:</label>

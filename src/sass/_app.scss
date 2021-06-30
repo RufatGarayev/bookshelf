@@ -30,6 +30,7 @@ button {
     }
     h4 {
       margin-bottom: 1px;
+      font-weight: 600;
     }
   }
 }
@@ -148,9 +149,11 @@ button {
   border-radius: 6px;
   background-color: #2878fd;
   border: 2px solid #2878fd;
+  transition: 0.3s ease;
   &:hover {
     border: 2px solid rgb(16, 96, 224);
     background-color: rgb(16, 96, 224);
+    transition: 0.3s ease;
   }
 }
 
@@ -271,7 +274,7 @@ button {
   .modal-dialog {
     width: 736px !important;
     max-width: none;
-    margin: 11% auto !important;
+    margin: 10% auto !important;
     .modal-content {
       border-radius: 0;
       .modal-body {
@@ -363,6 +366,58 @@ button {
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+
+
+// ======= Responsive Design ======= //
+@media (max-width: 1199.98px) {
+  .modal {
+    .modal-dialog {
+      margin: 30% auto !important;
+    }
+  }
+}
+
+@media (max-width: 997.98px) {
+  .modal {
+    .modal-dialog {
+      width: 374px !important;
+      margin: 30% auto !important;
+
+      .img-holder {
+        display: none !important;
+      }
+
+      .right-content {
+        border-left: 0 !important;
+
+        .wrapper {
+          padding: 0 !important;
+
+          .info {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px){
+  .modal {
+    .modal-dialog {
+      width: 90% !important;
+
+      .btns{
+        height: 170px !important;
+
+        a{
+          padding: 6px 26px !important;
+          font-size: 12px !important;
         }
       }
     }

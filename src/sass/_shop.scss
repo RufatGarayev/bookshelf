@@ -106,3 +106,39 @@
     }
   }
 }
+
+
+// ======= Responsive Design ======= //
+@media (max-width: 1199.98px) {
+  #filter-panel {
+    .search-box {
+      padding-bottom: 15px;
+    }
+
+    .sorting {
+      padding-left: 8px !important;
+
+      .name-price {
+        justify-content: flex-start !important;
+      }
+
+      .genre {
+        justify-content: flex-end !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  #filter-panel {
+    .sorting {
+      .name-price {
+        padding-bottom: 15px;
+      }
+
+      .genre {
+        justify-content: flex-start !important;
+      }
+    }
+  }
+}

@@ -25,7 +25,7 @@ const Slider = () => {
                         <div className="container">
                             <div className="slide-content">
                                 <div className="row">
-                                    <div className="col-lg-6">
+                                    <div className="col-lg-6 col-md-6 second">
                                         <div className="left-content">
                                             <h3>{book.author}</h3>
                                             <h1>{book.title}</h1>
@@ -35,7 +35,7 @@ const Slider = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="col-lg-6">
+                                    <div className="col-lg-6 col-md-6 first">
                                         <div className="right-content d-flex">
                                             <img className="img-fluid" src={book.img} alt={book.title} />
                                         </div>

@@ -26,7 +26,7 @@
     }
   }
 
-  .remove-from-wishlist-btn{
+  .remove-from-wishlist-btn {
     display: none;
   }
 
@@ -65,9 +65,9 @@
         text-decoration: none;
         color: black;
         transition: 0.3s ease;
-        &:hover{
+        &:hover {
           transition: 0.3s ease;
-          color: #2878FD;
+          color: #2878fd;
         }
         h6 {
           margin-top: 2px;
@@ -98,7 +98,7 @@
 
     .add-to-cart-btn {
       button {
-        background-color: #2878FD;
+        background-color: #2878fd;
         color: white;
         padding: 2px 22px;
         &:hover {
@@ -146,8 +146,8 @@
 
           button {
             transition: 0.3s ease;
-            background-color: #2878FD;
-            border: solid 1px #2878FD;
+            background-color: #2878fd;
+            border: solid 1px #2878fd;
             color: white;
           }
         }
@@ -163,6 +163,7 @@
           visibility: hidden;
 
           p {
+            min-width: 130px;
             font-size: 12px;
             font-weight: 300;
             padding: 4px 0;
@@ -208,10 +209,98 @@
         }
 
         .activeBtn {
-          background-color: #2878FD;
-          border: solid 1px #2878FD;
+          background-color: #2878fd;
+          border: solid 1px #2878fd;
           color: white;
         }
+      }
+    }
+  }
+}
+
+
+// ======= Responsive Design ======= //
+@media (max-width: 997.98px) {
+  .book-item {
+    height: 494px;
+    justify-content: flex-start !important;
+
+    &:hover {
+      .bottom-content {
+        transform: translateY(200px) !important;
+      }
+    }
+
+    .img-wrapper {
+      height: 216px !important;
+    }
+
+    .bottom-content {
+      transform: translateY(200px) !important;
+
+      .add-to-cart-btn {
+        button {
+          padding: 2px 14px !important;
+          p {
+            font-size: 13px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .book-item {
+    height: 564px !important;
+
+    &:hover {
+      .bottom-content {
+        transform: translateY(272px) !important;
+      }
+    }
+
+    .img-wrapper {
+      height: 290px !important;
+    }
+
+    .bottom-content {
+      transform: translateY(272px) !important;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .book-item {
+    height: auto !important;
+    padding-bottom: 0 !important;
+
+    &:hover {
+      .bottom-content {
+        position: static;
+        transform: none !important;
+      }
+    }
+
+    .img-wrapper {
+      height: 100% !important;
+    }
+
+    .bottom-content {
+      position: static;
+      transform: none !important;
+
+      .price {
+        span {
+          font-size: 19px !important;
+        }
+        p {
+          font-size: 18px !important;
+        }
+      }
+
+      .btns {
+        padding: 25px 0 15px !important;
       }
     }
   }
