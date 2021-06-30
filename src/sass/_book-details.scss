@@ -174,3 +174,125 @@
     }
   }
 }
+
+
+// ======= Responsive Design ======= //
+@media (max-width: 1199.98px) {
+  #book-content {
+    .book-details-slider-wrapper {
+      padding: 10px 0 0 !important;
+    }
+
+    .book-info {
+      padding-right: 0 !important;
+    }
+  }
+}
+
+@media (max-width: 997.98px) {
+  #book-content {
+    .book-details-slider-wrapper {
+      padding: 0 0 40px !important;
+
+      .big-img-wrapper {
+        display: flex;
+        justify-content: center;
+
+        .img-wrapper {
+          height: 510px !important;
+          width: 82% !important;
+        }
+      }
+
+      .little-img-wrapper {
+        height: 100% !important;
+        padding: 50px 0;
+
+        .img-wrapper {
+          display: flex;
+          justify-content: center;
+
+          button {
+            height: 100px !important;
+            width: 77px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  #book-content {
+    .book-details-slider-wrapper {
+      .big-img-wrapper {
+        .img-wrapper {
+          height: 495px !important;
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  #book-content {
+    padding: 20px 0 60px !important;
+
+    .book-details-slider-wrapper {
+      .big-img-wrapper {
+        display: flex;
+        align-items: center;
+
+        .img-wrapper {
+          padding-right: 10px;
+          height: 84% !important;
+          width: 100% !important;
+        }
+      }
+
+      .little-img-wrapper {
+        .img-wrapper {
+          padding: 15px !important;
+          button {
+            height: 100% !important;
+            width: 80% !important;
+          }
+        }
+      }
+    }
+
+    .book-info {
+      .add-to-cart-btn {
+        padding: 0 !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  #book-content {
+    padding: 0 0 60px !important;
+
+    .book-details-slider-wrapper {
+      padding: 0 !important;
+
+      .big-img-wrapper {
+        .img-wrapper {
+          height: 75% !important;
+          width: 100% !important;
+        }
+      }
+
+      .little-img-wrapper {
+        .img-wrapper {
+          padding: 10px !important;
+          button {
+            height: 100% !important;
+            width: 100% !important;
+          }
+        }
+      }
+    }
+  }
+}

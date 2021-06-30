@@ -40,7 +40,7 @@ const Slider = (props) => {
     return (
         <div className="book-details-slider-wrapper">
             <div className="row">
-                <div className="col-3">
+                <div className="col-4">
                     {/* ======= Little images ======= */}
                     <div className="little-img-wrapper d-flex flex-column justify-content-between">
                         {
@@ -62,7 +62,7 @@ const Slider = (props) => {
                         }
                     </div>
                 </div>
-                <div className="col-9">
+                <div className="col-8">
                     {/* ======= Big images ======= */}
                     <div className="big-img-wrapper">
                         {

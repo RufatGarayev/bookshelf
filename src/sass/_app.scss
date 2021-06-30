@@ -407,19 +407,37 @@ button {
   }
 }
 
-@media (max-width: 575.98px){
+@media (max-width: 575.98px) {
   .modal {
     .modal-dialog {
       width: 90% !important;
 
-      .btns{
+      .btns {
         height: 170px !important;
 
-        a{
+        a {
           padding: 6px 26px !important;
           font-size: 12px !important;
         }
       }
+    }
+  }
+
+  .empty-alert-wrapper {
+    .icon-area {
+      span {
+        font-size: 110px;
+      }
+    }
+
+    .title-and-paragraph{
+      h1 {
+        font-size: 25px !important;
+      }
+    }
+
+    .continue-btn {
+      padding: 0 !important;
     }
   }
 }
