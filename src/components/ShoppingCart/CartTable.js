@@ -50,35 +50,41 @@ const CartTable = (props) => {
                                     </div>
                                 </td>
                                 <td>
-                                    {/* ======= Title ======= */}
-                                    <h6 className="book-title">
-                                        <Link
-                                            to={`/book-details/${book.id}`}
-                                            onClick={() => window.location.href = `/book-details/${book.id}`}
-                                        >
-                                            {book.title}
-                                        </Link>
-                                    </h6>
-                                </td>
-                                <td>
-                                    {/* ======= Price ======= */}
-                                    <p className="book-price price"><span>$</span>{book.price.toFixed(2)}</p>
-                                </td>
-                                <td>
-                                    {/* ======= Quantity ======= */}
-                                    <div className="quantity-wrapper">
-                                        <Quantity
-                                            book={book}
-                                            increaseBook={props.IncreaseBookCount}
-                                            decreaseBook={props.DecreaseBookCount}
-                                        />
+                                    <div className="table-right d-flex align-items-center">
+                                        {/* ======= Title ======= */}
+                                        <div className="book-title">
+                                            <h6>
+                                                <Link
+                                                    to={`/book-details/${book.id}`}
+                                                    onClick={() => window.location.href = `/book-details/${book.id}`}
+                                                >
+                                                    {book.title}
+                                                </Link>
+                                            </h6>
+                                        </div>
+                                        <ul className="d-flex align-items-center price-and-quantity">
+                                            <li>
+                                                {/* ======= Price ======= */}
+                                                <p className="book-price price"><span>$</span>{book.price.toFixed(2)}</p>
+                                            </li>
+                                            <li>
+                                                {/* ======= Quantity ======= */}
+                                                <div className="quantity-wrapper">
+                                                    <Quantity
+                                                        book={book}
+                                                        increaseBook={props.IncreaseBookCount}
+                                                        decreaseBook={props.DecreaseBookCount}
+                                                    />
+                                                </div>
+                                            </li>
+                                            <li>
+                                                {/* ======= Total price ======= */}
+                                                <p className="total-price price d-flex align-items-center">
+                                                    <span>$</span> {(book.price * book.count).toFixed(2)}
+                                                </p>
+                                            </li>
+                                        </ul>
                                     </div>
-                                </td>
-                                <td>
-                                    {/* ======= Total price ======= */}
-                                    <p className="total-price price d-flex align-items-center">
-                                        <span>$</span> {(book.price * book.count).toFixed(2)}
-                                    </p>
                                 </td>
                             </tr>
                         ))

@@ -37,47 +37,87 @@
               }
             }
 
-            .book-title {
-              a {
-                color: #000000;
-                font-size: 14px;
-                font-weight: 400;
-                transition: 0.3s ease;
-                text-decoration: none;
-                &:hover {
-                  color: rgb(40, 120, 253);
+            .table-right {
+              justify-content: space-between;
+
+              .book-title {
+                a {
+                  color: #000000;
+                  font-size: 14px;
+                  font-weight: 400;
                   transition: 0.3s ease;
+                  text-decoration: none;
+                  &:hover {
+                    color: rgb(40, 120, 253);
+                    transition: 0.3s ease;
+                  }
                 }
               }
-            }
 
-            h6,
-            p {
-              margin-bottom: 0;
-            }
-
-            .price {
-              padding-bottom: 3px;
-              span {
-                font-family: "Times New Roman", Times, serif;
-                font-size: 16px;
-                margin-right: 2px;
+              h6,
+              p {
+                margin-bottom: 0;
               }
-            }
 
-            .total-price {
-              justify-content: flex-end;
-              span {
-                margin-right: 2px;
-                padding-bottom: 3px;
-              }
-            }
+              .price-and-quantity {
+                margin: 0 !important;
+                padding: 0 !important;
+                width: 43%;
+                justify-content: space-between;
 
-            .price,
-            .total-price {
-              font-weight: 500;
-              span {
-                font-weight: 600;
+                .price {
+                  padding-bottom: 3px;
+                  span {
+                    font-family: "Times New Roman", Times, serif;
+                    font-size: 16px;
+                    margin-right: 2px;
+                  }
+                }
+
+                .quantity-area {
+                  position: relative;
+                  button {
+                    position: absolute;
+                    font-size: 20px;
+                    font-weight: 300;
+                    color: #777;
+                  }
+                  .minus-btn {
+                    left: 16%;
+                  }
+                  .plus-btn {
+                    right: 16%;
+                  }
+                  input {
+                    background-color: #f7f8fa;
+                    width: 95px;
+                    height: 50px;
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 1em;
+                    text-align: center;
+                    border: none;
+                    border-radius: 6px;
+                    outline: none;
+                    color: #191919;
+                  }
+                }
+
+                .total-price {
+                  justify-content: flex-end;
+                  span {
+                    margin-right: 2px;
+                    padding-bottom: 3px;
+                  }
+                }
+
+                .price,
+                .total-price {
+                  font-weight: 500;
+                  span {
+                    font-weight: 600;
+                  }
+                }
               }
             }
           }
@@ -170,6 +210,105 @@
       a {
         display: inline-block;
         text-decoration: none;
+      }
+    }
+  }
+}
+
+
+// ======= Responsive Design ======= //
+@media (max-width: 997.98px) {
+  #shopping-cart {
+    .wrapper {
+      padding-right: 0 !important;
+
+      .bottom-elements {
+        padding: 30px 0 40px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  #shopping-cart {
+    table {
+      .remove-btn {
+        padding-right: 10px;
+      }
+
+      .table-right {
+        height: 85px;
+        flex-direction: column;
+
+        .price-and-quantity {
+          justify-content: center !important;
+
+          .quantity-area {
+            margin: 0 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  #shopping-cart {
+    .section-title {
+      h1 {
+        font-size: 24px;
+      }
+    }
+
+    table {
+      .book-img {
+        .img-wrapper {
+          width: 66px;
+        }
+      }
+
+      .table-right {
+        height: auto !important;
+        flex-direction: column;
+
+        .book-title {
+          padding-bottom: 13px;
+
+          h6 {
+            text-align: center;
+          }
+        }
+
+        .price-and-quantity {
+          flex-direction: column;
+
+          .quantity-area {
+            margin: 5px 0 10px !important;
+          }
+        }
+      }
+    }
+
+    .bottom-elements {
+      flex-direction: column;
+      align-items: center;
+
+      .clear-btn{
+        order: 1;
+      }
+
+      .continue-shopping-link{
+        order: 2;
+      }
+    }
+
+    .cart-totals-wrapper {
+      padding: 20px 25px 25px !important;
+
+      .checkout-btn{
+        a{
+          font-size: 12px !important;
+        }
       }
     }
   }

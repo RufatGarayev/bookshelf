@@ -14,7 +14,7 @@
     }
   }
 
-  .account-inputs {
+  .wrapper {
     border: 1px solid #e9e7e7;
     padding: 32px 39px 40px;
     h4 {
@@ -63,9 +63,50 @@
     .bottom-contents {
       padding-right: 222px;
 
-      .paragraph{
+      .paragraph {
         margin-right: 5px;
       }
+    }
+  }
+}
+
+
+// ======= Responsive Design ======= //
+@media (max-width: 767.98px) {
+  #login {
+    .login-area {
+      margin-top: 20px;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  #login,
+  #register {
+    .wrapper {
+      padding: 20px 20px 35px !important;
+
+      .bottom-contents {
+        padding-right: 0 !important;
+        flex-direction: column;
+        align-items: flex-start !important;
+
+        input {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+
+  #login {
+    .login-area {
+      padding-bottom: 25px !important;
+    }
+  }
+
+  #register {
+    .register-area {
+      padding-bottom: 28px !important;
     }
   }
 }

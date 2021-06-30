@@ -39,17 +39,20 @@ const CheckoutContent = (props) => {
                         <div className="checkout-content">
                             <div className="row">
                                 <div className="col-12">
+                                    {/* ======= Title ======= */}
                                     <Title title="Checkout" />
                                 </div>
                             </div>
                             {
                                 showCheckoutPages ? (
+                                    // ======= Shipping Address ======= //
                                     <div className="shipping-address-wrapper">
                                         <ShippingAddress
                                             handleShippingSubmit={handleShippingAddressSubmit}
                                         />
                                     </div>
                                 ) : showCheckoutPages === false ? (
+                                    // ======= Payment Details ======= //
                                     <div className="payment-details-wrapper">
                                         <PaymentDetails
                                             cart={cart}
@@ -61,6 +64,7 @@ const CheckoutContent = (props) => {
                                     loading ? (
                                         <Spinner />
                                     ) : (
+                                        // ======= Checkout - End ======= //
                                         <div className="finish-checkout">
                                             <FinishCheckout cart={cart} />
                                         </div>

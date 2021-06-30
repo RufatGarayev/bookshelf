@@ -8,11 +8,13 @@ const RegisterSection = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
+                        {/* ======= Title ======= */}
                         <Title title="CREATE AN ACCOUNT" />
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-lg-6 offset-lg-3">
+                        {/* ======= Register area ======= */}
                         <div className="register-area account-inputs wrapper">
                             <form>
                                 <div className="top-elements">

@@ -50,7 +50,7 @@
         &::after {
           content: "";
           height: 0.1rem;
-          width: 191px;
+          width: 280px;
           background-color: #a3a8ad;
           position: absolute;
           top: 7px;
@@ -61,7 +61,7 @@
       .payment {
         &::before {
           content: "2";
-          left: -27px !important;
+          left: -27px;
         }
       }
     }
@@ -270,6 +270,100 @@
         a {
           text-decoration: none;
           font-weight: 500;
+        }
+      }
+    }
+  }
+}
+
+// ======= Responsive Design ======= //
+@media (min-width: 1200px) and (max-width: 1399.98px) {
+  #checkout {
+    .top-content {
+      h6 {
+        &::after {
+          width: 192px !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  #checkout {
+    .top-content {
+      h6 {
+        &::after {
+          width: 102px !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 997.98px) {
+  #checkout {
+    .top-content {
+      h6 {
+        &::after {
+          width: 340px !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  #checkout {
+    .top-content {
+      h6 {
+        &::after {
+          width: 161px !important;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  #checkout {
+    .checkout-content {
+      padding: 25px 20px 35px !important;
+      .top-content {
+        h6 {
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      .shipping-address {
+        .form-area {
+          .country {
+            padding-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  #checkout {
+    .checkout-content {
+      .top-content {
+        flex-direction: column;
+
+        .address {
+          margin-bottom: 14px !important;
+        }
+
+        .payment {
+          padding-left: 28px;
+
+          &::before {
+            left: 0 !important;
+          }
         }
       }
     }

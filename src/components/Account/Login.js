@@ -8,11 +8,13 @@ const LoginSection = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-12">
+                        {/* ======= Title ======= */}
                         <Title title="ALREADY REGISTERED?" />
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 col-md-6">
+                        {/* ======= New customer area ======= */}
                         <div className="new-customer-wrapper wrapper">
                             <h4>New Customer</h4>
                             <p className="paragraph">
@@ -22,7 +24,8 @@ const LoginSection = () => {
                             <Link className="btn-style" to="/register">Create an Account</Link>
                         </div>
                     </div>
-                    <div className="col-lg-6">
+                    <div className="col-lg-6 col-md-6">
+                        {/* ======= Login area ======= */}
                         <div className="login-area account-inputs wrapper">
                             <form>
                                 <div className="top-elements">
