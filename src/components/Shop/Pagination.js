@@ -11,7 +11,8 @@ const Pagination = ({ pages, setCurrentPage }) => {
 
     // changing current page when click the button
     useEffect(() => {
-        setCurrentPage(currentButton)
+        setCurrentPage(currentButton);
+        window.scrollTo(0, 0);
     }, [currentButton, setCurrentPage]);
 
     return (

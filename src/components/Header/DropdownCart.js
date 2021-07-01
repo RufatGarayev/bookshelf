@@ -35,10 +35,7 @@ const DropdownCart = (props) => {
                                             <td>
                                                 {/* ======= Image ======= */}
                                                 <div className="book-img">
-                                                    <Link
-                                                        to={`/book-details/${book.id}`}
-                                                        onClick={() => window.location.href = `/book-details/${book.id}`}
-                                                    >
+                                                    <Link to={`/book-details/${book.id}`}>
                                                         <div className="img-wrapper">
                                                             <img className="img-fluid" src={book.img} alt="book" />
                                                         </div>
@@ -50,10 +47,7 @@ const DropdownCart = (props) => {
                                                     <li>
                                                         {/* ======= Title ======= */}
                                                         <h6 className="book-title">
-                                                            <Link
-                                                                to={`/book-details/${book.id}`}
-                                                                onClick={() => window.location.href = `/book-details/${book.id}`}
-                                                            >
+                                                            <Link to={`/book-details/${book.id}`}>
                                                                 {book.title}
                                                             </Link>
                                                         </h6>

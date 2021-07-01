@@ -31,7 +31,8 @@ const CartTotals = (props) => {
             <div className="checkout-btn">
                 <Link
                     to="/checkout"
-                    className="btn-style btn-style-2 text-center w-100">
+                    className="btn-style btn-style-2 text-center w-100"
+                >
                     PROCEED TO CHECKOUT
                 </Link>
             </div>

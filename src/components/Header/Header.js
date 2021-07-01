@@ -52,16 +52,26 @@ const Header = (props) => {
                                     <ul className="d-flex nav-menu">
                                         {
                                             NavMenuData.map(item => (
-                                                <li key={item.id} className={item.class}>
-                                                    {
-                                                        <Link
-                                                            to={item.href}
-                                                            onClick={() => window.location.href = item.href}
-                                                        >
-                                                            {item.title}
-                                                        </Link>
-                                                    }
-                                                </li>
+                                                item.id === 1 ? (
+                                                    <li key={item.id} className={item.class}>
+                                                        {
+                                                            <Link
+                                                                to={item.href}
+                                                                onClick={() => window.location.href = "/"}
+                                                            >
+                                                                {item.title}
+                                                            </Link>
+                                                        }
+                                                    </li>
+                                                ) : (
+                                                    <li key={item.id} className={item.class}>
+                                                        {
+                                                            <Link to={item.href}>
+                                                                {item.title}
+                                                            </Link>
+                                                        }
+                                                    </li>
+                                                )
                                             ))
                                         }
                                     </ul>

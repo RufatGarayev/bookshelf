@@ -254,12 +254,6 @@
 
 @media (max-width: 575.98px) {
   #shopping-cart {
-    .section-title {
-      h1 {
-        font-size: 24px;
-      }
-    }
-
     table {
       .book-img {
         .img-wrapper {
@@ -293,11 +287,11 @@
       flex-direction: column;
       align-items: center;
 
-      .clear-btn{
+      .clear-btn {
         order: 1;
       }
 
-      .continue-shopping-link{
+      .continue-shopping-link {
         order: 2;
       }
     }
@@ -305,8 +299,8 @@
     .cart-totals-wrapper {
       padding: 20px 25px 25px !important;
 
-      .checkout-btn{
-        a{
+      .checkout-btn {
+        a {
           font-size: 12px !important;
         }
       }
