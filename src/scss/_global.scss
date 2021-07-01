@@ -343,6 +343,32 @@ button {
   }
 }
 
+#back-to-top-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  z-index: 99;
+  display: none;
+
+  button {
+    background-color: #fff;
+    border: 2px solid #2878FD;
+    color: #2878FD;
+    height: 45px;
+    width: 50px;
+    transition: 0.3s ease;
+
+    &:hover{
+      color: #fff;
+      background-color: #2878FD;
+      transition: 0.3s ease;
+    }
+  }
+}
+.show-back-to-top-btn{
+    display: block !important;
+}
+
 
 // ======= Responsive Design ======= //
 @media (max-width: 1199.98px) {
@@ -410,5 +436,9 @@ button {
     .continue-btn {
       padding: 0 !important;
     }
+  }
+
+  #back-to-top-btn {
+    bottom: 25px !important;
   }
 }

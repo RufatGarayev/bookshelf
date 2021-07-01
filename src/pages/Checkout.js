@@ -1,6 +1,6 @@
 import Breadcrumb from '../components/Other/Breadcrumb';
 import CheckoutContent from '../components/Checkout/CheckoutContent';
-import '../sass/_checkout.scss';
+import '../scss/_checkout.scss';
 
 const Checkout = () => {
     return (

@@ -5,8 +5,7 @@ import BookCards from '../components/BookCard/BookCards';
 import Spinner from '../components/Other/Spinner';
 import { connect } from 'react-redux';
 import NoBooks from '../components/Shop/NoBooks';
-
-import '../sass/_shop.scss';
+import '../scss/_shop.scss';
 
 const Shop = (props) => {
     const { books } = props.books;

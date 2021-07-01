@@ -12,10 +12,11 @@ import Compare from './pages/Compare';
 import Checkout from './pages/Checkout';
 import SignUp from './components/SignUp/SignUp';
 import Footer from './components/Footer/Footer';
+import BackToTopBtn from './components/Other/BackToTopBtn';
 import configureStore from './redux/store/configureStore';
 import { Provider } from "react-redux";
 import { BrowserRouter, Route } from "react-router-dom";
-import '../src/sass/_app.scss';
+import '../src/scss/_global.scss';
 
 function App() {
   const store = configureStore();
@@ -44,6 +45,7 @@ function App() {
           <footer>
             <Footer />
           </footer>
+          <BackToTopBtn />
         </div>
       </BrowserRouter>
     </Provider>

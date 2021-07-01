@@ -240,6 +240,41 @@
             "isInCart": false,
             "isInWishlist": false,
             "isInCompare": false
+        },
+        {
+            "id": 15,
+            "img": "/all-books/metamorphosis.jpg",
+            "author": "Franz Kafka",
+            "title": "Metamorphosis",
+            "genre": "Classic",
+            "previousPrice": 13.00,
+            "price": 11.00,
+            "label": "Sale 15.3%",
+            "rating": "★★★★★",
+            "category": "Other",
+            "hasDiscount": true,
+            "isNew": false,
+            "count": 1,
+            "isInCart": false,
+            "isInWishlist": false,
+            "isInCompare": false
+        },
+        {
+            "id": 16,
+            "img": "/all-books/war-and-peace.jpg",
+            "author": "Leo Tolstoy",
+            "title": "War and Peace",
+            "genre": "Historical",
+            "price": 18.00,
+            "label": "",
+            "rating": "★★★★★",
+            "category": "Other",
+            "hasDiscount": false,
+            "isNew": false,
+            "count": 1,
+            "isInCart": false,
+            "isInWishlist": false,
+            "isInCompare": false
         }
     ]
 }

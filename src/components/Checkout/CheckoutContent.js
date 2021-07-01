@@ -75,7 +75,6 @@ const CheckoutContent = (props) => {
                     </div>
                 </div>
             </div>
-
         </section>
     )
 }

@@ -1,6 +1,6 @@
 import Breadcrumb from '../components/Other/Breadcrumb';
 import AboutUs from '../components/About/AboutUs';
-import '../sass/_about.scss';
+import '../scss/_about.scss';
 
 const About = () => {
     return (

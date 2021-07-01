@@ -1,7 +1,12 @@
 const Copywriter = () => {
     return (
         <div className="copywriter">
-            <p>© BookStore 2021. Made by <a href="#/">Rufat Garayev</a></p>
+            <p>
+                © BookStore 2021. Made by 
+                <a style={{marginLeft: "5px"}} href="https://rufatgarayev.netlify.app/" target="__blank">
+                    Rufat Garayev
+                </a>
+            </p>
         </div>
     )
 }
