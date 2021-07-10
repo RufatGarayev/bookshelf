@@ -7,11 +7,8 @@
   }
 
   .section-title {
-    h1 {
-      font-weight: 500;
-      font-family: Hind, sans-serif;
-      font-size: 24px;
-    }
+    @extend %section-title2;
+    padding-bottom: 20px;
   }
 
   .wrapper {
@@ -23,6 +20,7 @@
       margin-bottom: 18px;
       text-transform: uppercase;
     }
+
     label {
       font-size: 14px;
       color: #191919;
@@ -31,11 +29,16 @@
       letter-spacing: 0.02em;
     }
 
+    .input-wrapper {
+      @extend %input;
+    }
+
     .bottom-contents {
       padding-top: 10px;
       height: 100%;
 
       input[type="submit"] {
+        @extend %btn-style;
         line-height: 21px;
       }
 
@@ -52,7 +55,12 @@
     height: 100%;
 
     p {
+      @extend %paragraph;
       padding-bottom: 16px;
+    }
+
+    a{
+      @extend %btn-style;
     }
   }
 }
@@ -64,12 +72,12 @@
       padding-right: 222px;
 
       .paragraph {
+        @extend %paragraph;
         margin-right: 5px;
       }
     }
   }
 }
-
 
 // ======= Responsive Design ======= //
 @media (max-width: 767.98px) {

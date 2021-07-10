@@ -4,7 +4,6 @@ import BookContent from '../components/BookDetails/BookContent';
 import RelatedBooks from '../components/BookDetails/RelatedBooks';
 import Spinner from '../components/Other/Spinner';
 import { connect } from 'react-redux';
-import '../scss/_book-details.scss';
 
 const BookDetails = (props) => {
     const propsId = props.match.params.id;

@@ -1,7 +1,6 @@
 import Title from '../Other/Title';
 import Input from '../SignUp/Input';
 import { SocialMediaData } from '../Other/SocialMedia';
-import '../../scss/_sign-up.scss';
 
 const SignUp = () => {
     return (

@@ -1,7 +1,6 @@
 import Brand from '../Other/Brand';
 import Copywriter from './Copywriter';
 import Payment from './Payment';
-import '../../scss/_footer.scss';
 
 const Footer = () => {
     return (

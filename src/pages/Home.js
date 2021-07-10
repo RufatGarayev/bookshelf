@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import HomeEntry from '../components/Home/HomeEntry/HomeEntry';
 import Categories from '../components/Home/Categories/Categories';
-import '../scss/_home.scss';
 
 const Home = () => {
 

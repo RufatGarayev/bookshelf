@@ -1,6 +1,5 @@
 import Breadcrumb from '../components/Other/Breadcrumb';
 import ComparingArea from '../components/Compare/ComparingArea';
-import '../scss/_compare.scss';
 
 const Compare = () => {
     return (

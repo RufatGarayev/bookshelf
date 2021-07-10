@@ -19,6 +19,8 @@
   }
 
   .label {
+    @extend %label;
+    
     span {
       position: absolute;
       top: 1px;
@@ -98,7 +100,8 @@
 
     .add-to-cart-btn {
       button {
-        background-color: #2878fd;
+        @extend %btn-style;
+        background-color: $primary-color;
         color: white;
         padding: 2px 22px;
         &:hover {
@@ -146,8 +149,8 @@
 
           button {
             transition: 0.3s ease;
-            background-color: #2878fd;
-            border: solid 1px #2878fd;
+            background-color: $primary-color;
+            border: solid 1px $primary-color;
             color: white;
           }
         }
@@ -209,15 +212,14 @@
         }
 
         .activeBtn {
-          background-color: #2878fd;
-          border: solid 1px #2878fd;
+          background-color: $primary-color;
+          border: solid 1px $primary-color;
           color: white;
         }
       }
     }
   }
 }
-
 
 // ======= Responsive Design ======= //
 @media (max-width: 997.98px) {

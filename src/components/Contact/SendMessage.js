@@ -7,6 +7,7 @@ const SendMessage = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6 col-md-6">
+                            {/* ======= Inputs ======= */}
                             <div className="inputs-wrapper w-100">
                                 <Input placeholder="Name" type="text" />
                                 <Input placeholder="Email" type="email" />
@@ -14,6 +15,7 @@ const SendMessage = () => {
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-6">
+                            {/* ======= Textarea ======= */}
                             <div className="textarea-wrapper">
                                 <textarea
                                     name="message"
@@ -26,8 +28,9 @@ const SendMessage = () => {
                             </div>
                         </div>
                         <div className="col-12">
+                            {/* ======= Button ======= */}
                             <div className="send-msg-btn-wrapper d-flex justify-content-center">
-                                <button type="submit" className="send-msg-btn">Send Message</button>
+                                <button type="submit" className="send-msg-btn btn-style">Send Message</button>
                             </div>
                         </div>
                     </div>

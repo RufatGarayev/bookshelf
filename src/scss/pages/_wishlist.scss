@@ -2,12 +2,8 @@
   padding: 50px 0 40px;
 
   .section-title {
+    @extend %section-title2;
     padding-bottom: 30px;
-    h1 {
-      font-weight: 500;
-      font-family: Hind, sans-serif;
-      font-size: 28px;
-    }
   }
 
   .book-item {
@@ -26,14 +22,9 @@
       right: 10px;
 
       button {
+        @extend %remove-btn;
         svg {
           font-size: 19px;
-          color: red;
-          transition: 0.3s ease;
-          &:hover {
-            color: #2878fd;
-            transition: 0.3s ease;
-          }
         }
       }
     }
@@ -45,8 +36,11 @@
       }
     }
   }
-}
 
+  .empty-alert-wrapper {
+    @extend %empty-alert;
+  }
+}
 
 // ======= Responsive Design ======= //
 @media (min-width: 768px) and (max-width: 997.98px) {

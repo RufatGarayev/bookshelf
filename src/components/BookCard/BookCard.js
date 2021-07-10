@@ -22,7 +22,6 @@ import { Modal } from 'react-bootstrap';
 import { FaBalanceScale, FaRegHeart } from 'react-icons/fa';
 import { AiOutlineShopping } from 'react-icons/ai';
 import { RiDeleteBinLine } from 'react-icons/ri';
-import '../../scss/_book-card.scss';
 
 
 const BookCard = (props) => {

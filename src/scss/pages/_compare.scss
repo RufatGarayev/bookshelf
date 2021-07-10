@@ -2,12 +2,8 @@
   padding: 50px 0 60px;
 
   .section-title {
+    @extend %section-title2;
     padding-bottom: 0;
-    h1 {
-      font-size: 28px;
-      font-weight: 500;
-      font-family: Hind, sans-serif;
-    }
   }
 
   .swiper-container {
@@ -18,7 +14,7 @@
       width: 35px;
       height: 35px;
       border-radius: 50%;
-      background-color: #f7f8fa;
+      background-color: $secondary-color;
       top: 23px;
       transition: 0.3s ease;
       &::after {
@@ -27,7 +23,7 @@
       }
 
       &:hover {
-        background-color: #2878fd;
+        background-color: $primary-color;
         transition: 0.3s ease;
         &::after {
           color: #ffff;
@@ -76,6 +72,7 @@
           right: 20px;
           top: 10px;
           button {
+            @extend %remove-btn;
             font-size: 20px;
           }
         }
@@ -101,7 +98,7 @@
         .description,
         .rating,
         .title {
-          background-color: #f7f8fa;
+          background-color: $secondary-color;
           border-top: 1px solid #e9e7e7;
           border-bottom: 1px solid #e9e7e7;
         }
@@ -132,6 +129,10 @@
 
         .description {
           min-height: 120px;
+
+          p{
+            @extend %paragraph;
+          }
         }
 
         .genre,
@@ -153,6 +154,7 @@
         min-height: 70px;
 
         button {
+          @extend %btn-style2;
           padding: 2px 26px;
           span {
             font-size: 20px;
@@ -169,5 +171,9 @@
         }
       }
     }
+  }
+
+  .empty-alert-wrapper {
+    @extend %empty-alert;
   }
 }

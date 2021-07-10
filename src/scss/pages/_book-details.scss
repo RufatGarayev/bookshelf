@@ -49,6 +49,7 @@
       padding-right: 100px;
 
       .label {
+        @extend %label;
         padding-bottom: 25px;
         span {
           padding: 1px 8px;
@@ -61,7 +62,7 @@
         }
 
         .book-price {
-          color: #2879fe;
+          color: $primary-color;
           font-size: 24px;
           font-weight: 500;
           margin-bottom: 5px;
@@ -77,6 +78,8 @@
         }
 
         .paragraph {
+          @extend %paragraph;
+
           margin: 3px 0 25px;
         }
       }
@@ -84,6 +87,7 @@
       .add-to-cart-btn {
         padding: 0 200px 0 0;
         button {
+          @extend %btn-style2;
           font-size: 14px;
           padding: 3px 26px;
           text-transform: uppercase;
@@ -110,7 +114,7 @@
           background-color: transparent;
           font-size: 15px;
           font-weight: 500;
-          color: rgb(40, 120, 253);
+          color: $primary-color;
           text-transform: uppercase;
           transition: 0.3s ease;
           &:hover {
@@ -142,6 +146,10 @@
           }
         }
 
+        p{
+          @extend %paragraph;
+        }
+
         .text {
           overflow: hidden;
           height: 0;
@@ -160,7 +168,8 @@
     .social-media-wrapper {
       padding-top: 60px;
       .social-media {
-        background-color: rgb(247, 248, 250);
+        @extend %social-media;
+        background-color: $secondary-color;
         padding: 12px 0 !important;
       }
     }
@@ -169,12 +178,21 @@
   #related-books-wrapper {
     padding-bottom: 50px;
 
+    .section-title{
+      @extend %section-title;
+    }
+
     .swiper-container {
       padding-bottom: 50px;
+
+      .swiper-pagination{
+        .swiper-pagination-bullet{
+          @extend %swiper-bullet;
+        }
+      }
     }
   }
 }
-
 
 // ======= Responsive Design ======= //
 @media (max-width: 1199.98px) {

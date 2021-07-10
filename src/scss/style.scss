@@ -1,0 +1,22 @@
+// partials
+@import './partials/variables';
+@import './partials/extends';
+@import './partials/global';
+
+// components
+@import './components/book-card';
+@import './components/footer';
+@import './components/header';
+@import './components/sign-up';
+
+// pages
+@import './pages/about';
+@import './pages/book-details';
+@import './pages/checkout';
+@import './pages/compare';
+@import './pages/contact';
+@import './pages/home';
+@import './pages/login-register';
+@import './pages/shop';
+@import './pages/shopping-cart';
+@import './pages/wishlist';

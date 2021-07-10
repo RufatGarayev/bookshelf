@@ -2,12 +2,8 @@
   padding: 50px 0 60px;
 
   .section-title {
+    @extend %section-title2;
     padding-bottom: 30px;
-    h1 {
-      font-weight: 500;
-      font-family: Hind, sans-serif;
-      font-size: 28px;
-    }
   }
 
   .wrapper {
@@ -22,8 +18,7 @@
             padding: 25px 0;
 
             button {
-              border: none;
-              background-color: transparent;
+              @extend %remove-btn;
               outline: none;
               svg {
                 font-size: 18px;
@@ -208,13 +203,18 @@
 
     .checkout-btn {
       a {
+        @extend %btn-style;
+        @extend %btn-style2;
         display: inline-block;
         text-decoration: none;
       }
     }
   }
-}
 
+  .empty-alert-wrapper {
+    @extend %empty-alert;
+  }
+}
 
 // ======= Responsive Design ======= //
 @media (max-width: 997.98px) {

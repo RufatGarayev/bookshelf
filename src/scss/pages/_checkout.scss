@@ -6,12 +6,8 @@
     padding: 32px 39px 40px;
 
     .section-title {
+      @extend %section-title2;
       padding-bottom: 0;
-      h1 {
-        font-weight: 500;
-        font-family: Hind, sans-serif;
-        font-size: 24px;
-      }
     }
 
     .top-content,
@@ -70,7 +66,7 @@
       .top-content {
         .address {
           &::before {
-            background-color: #2878fd;
+            background-color: $primary-color;
           }
         }
 
@@ -87,6 +83,7 @@
         }
 
         .input-wrapper {
+          @extend %input;
           input {
             border-radius: 0;
           }
@@ -111,7 +108,7 @@
             padding: 0 10px;
             transition: 0.3s ease;
             &:focus {
-              border: 1px solid #2878fd;
+              border: 1px solid $primary-color;
               transition: 0.3s ease;
             }
           }
@@ -122,6 +119,7 @@
           align-items: center;
 
           button {
+            @extend %btn-style2;
             width: auto;
             padding: 3px 18px;
             border-radius: 3px;
@@ -145,13 +143,13 @@
         .address {
           &::before {
             content: "✔";
-            background-color: #2878fd;
+            background-color: $primary-color;
           }
         }
 
         .payment {
           &::before {
-            background-color: #2878fd;
+            background-color: $primary-color;
           }
         }
       }
@@ -205,11 +203,15 @@
 
           .input-wrapper {
             width: 100%;
+
             input {
+              padding-left: 15px;
+              font-size: 14px;
               width: 100%;
               height: 29px;
               border: 0;
               border-radius: 0;
+              outline: none;
               background-color: transparent;
             }
           }
@@ -219,7 +221,7 @@
           padding-top: 20px;
 
           .back-to {
-            color: #2878fd;
+            color: $primary-color;
             font-weight: 500;
             &:hover {
               color: #3063b6;
@@ -227,6 +229,7 @@
           }
 
           .btn-style-2 {
+            @extend %btn-style2;
             width: auto;
             padding: 2px 18px;
             border-radius: 3px;
@@ -243,14 +246,14 @@
         .address {
           &::before {
             content: "✔";
-            background-color: #2878fd;
+            background-color: $primary-color;
           }
         }
 
         .payment {
           &::before {
             content: "✔";
-            background-color: #2878fd;
+            background-color: $primary-color;
           }
         }
       }

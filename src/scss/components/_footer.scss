@@ -1,8 +1,8 @@
 .footer {
-  // background-color: #ffffff;
-  background-color: #2878fd;
+  background-color: $primary-color;
 
   .brand {
+    @extend %brand;
     h4 {
       color: white;
     }
@@ -32,7 +32,6 @@
     justify-content: flex-end;
   }
 }
-
 
 // ======= Responsive Design ======= //
 @media (max-width: 997.98px) {

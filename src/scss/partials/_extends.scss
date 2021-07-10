@@ -1,0 +1,227 @@
+// Brand
+%brand {
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    &:hover {
+      color: $primary-color;
+    }
+    h4 {
+      margin-bottom: 1px;
+      font-weight: 600;
+    }
+  }
+}
+
+// Section title
+%section-title {
+  padding-bottom: 20px;
+  h1,
+  h6 {
+    font-family: "Times New Roman", Times, serif;
+  }
+  h1 {
+    font-size: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  h6 {
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}
+
+// Section title2
+%section-title2 {
+  h1 {
+    font-weight: 500;
+    font-family: Hind, sans-serif;
+    font-size: 26px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+}
+
+// Paragraph
+%paragraph {
+  color: #777;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+// Social media
+%social-media {
+  padding: 22px 0 0;
+  ul {
+    width: 135px;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    li {
+      a {
+        color: rgb(216, 216, 216);
+        transition: 0.3s ease;
+        &:hover {
+          color: black;
+          transition: 0.3s ease;
+        }
+      }
+    }
+  }
+}
+
+// Button style
+%btn-style {
+  background: transparent;
+  color: $primary-color;
+  border: 2px solid $primary-color;
+  padding: 7px 22px 6px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  transition: 0.3s ease;
+  &:hover {
+    color: #ffff;
+    background-color: #000000;
+    border: 2px solid #000000;
+    text-decoration: none;
+    transition: 0.3s ease;
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+// Button style2
+%btn-style2 {
+  width: 100%;
+  padding: 8px 26px;
+  color: white !important;
+  border-radius: 6px;
+  background-color: $primary-color;
+  border: 2px solid $primary-color;
+  transition: 0.3s ease;
+  &:hover {
+    border: 2px solid rgb(16, 96, 224);
+    background-color: rgb(16, 96, 224);
+    transition: 0.3s ease;
+  }
+}
+
+// Remove button
+%remove-btn {
+  color: red;
+  transition: 0.3s ease;
+  &:hover {
+    transition: 0.3s ease;
+    color: $primary-color;
+  }
+}
+
+// Input
+%input {
+  padding-bottom: 16px;
+  input {
+    height: 40px;
+    border: 1px solid $secondary-color;
+    background-color: $secondary-color;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 300;
+    padding: 11px 12px 10px 15px;
+    transition: 0.3s ease;
+    &:focus {
+      outline: 0;
+      transition: 0.3s ease;
+      border: 1px solid $primary-color;
+    }
+  }
+}
+
+// Swiper slider bullet
+%swiper-bullet {
+  width: 20px;
+  height: 0.1rem;
+  border-radius: 0;
+}
+
+// Label
+%label {
+  span {
+    padding: 1px 5px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 2px;
+    height: 19px;
+  }
+  .new-background {
+    background-color: $primary-color !important;
+  }
+}
+
+// Empty alert
+%empty-alert {
+  padding: 60px 0 110px;
+
+  .icon-area {
+    span {
+      font-size: 140px;
+      font-weight: 700 !important;
+      color: #ebecee;
+    }
+  }
+
+  .title-and-paragraph {
+    padding-bottom: 30px;
+    h1 {
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+    p {
+      @extend %paragraph;
+      font-size: 15px;
+    }
+  }
+
+  .continue-btn {
+    padding: 0 170px;
+    a {
+      @extend %btn-style;
+      @extend %btn-style2;
+      padding: 8px 32px !important;
+      text-decoration: none;
+    }
+  }
+}
+
+// ======= Responsive Design ======= //
+@media (max-width: 575.98px) {
+  .section-title {
+    h1 {
+      font-size: 20px !important;
+      font-weight: 600 !important;
+    }
+  }
+
+  .empty-alert-wrapper {
+    .icon-area {
+      span {
+        font-size: 110px;
+      }
+    }
+
+    .title-and-paragraph {
+      h1 {
+        font-size: 25px !important;
+      }
+    }
+
+    .continue-btn {
+      padding: 0 !important;
+    }
+  }
+}

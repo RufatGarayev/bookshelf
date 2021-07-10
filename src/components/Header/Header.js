@@ -8,7 +8,6 @@ import { WishlistBookIsInCartFalse } from '../../redux/actions/wishlistActions';
 import { CompareBookIsInCartFalse } from '../../redux/actions/compareActions';
 import { MakeIsInCartFalse } from '../../redux/actions/bookActions';
 import DropdownCart from './DropdownCart';
-import '../../scss/_header.scss';
 
 const Header = (props) => {
     const { cart } = props.cart;

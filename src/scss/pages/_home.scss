@@ -28,6 +28,7 @@
     }
 
     .swiper-pagination-bullet {
+      @extend %swiper-bullet;
       background-color: white;
       opacity: 0.8;
     }
@@ -81,11 +82,19 @@
 #categories {
   padding: 60px 0 45px;
 
+  .section-title {
+    @extend %section-title;
+  }
+
   .swiper-container {
     padding: 0 0 45px;
 
     .swiper-pagination {
       bottom: 10px;
+
+      .swiper-pagination-bullet {
+        @extend %swiper-bullet;
+      }
     }
   }
 
@@ -93,7 +102,6 @@
     padding-top: 30px;
   }
 }
-
 
 // ======= Responsive Design ======= //
 @media (min-width: 768px) and (max-width: 997.98px) {

@@ -58,6 +58,10 @@ header {
           }
         }
 
+        .brand {
+          @extend %brand;
+        }
+
         .nav-menu-wrapper {
           padding: 2px 0 0 35px;
           z-index: 9990;
@@ -121,7 +125,7 @@ header {
                 height: 17px;
                 width: 17px;
                 border-radius: 50%;
-                background-color: #2878fd;
+                background-color: $primary-color;
                 position: absolute;
                 top: -3px;
                 left: 17px;
@@ -195,6 +199,7 @@ header {
                     td {
                       padding: 12px 0;
                       button {
+                        @extend %remove-btn;
                         padding-right: 10px;
                         span {
                           font-size: 16px;
@@ -240,6 +245,7 @@ header {
                   }
                   .checkout-btn {
                     a {
+                      @extend %btn-style2;
                       text-decoration: none;
                       font-size: 13px;
                       letter-spacing: 0.5px;
@@ -249,12 +255,7 @@ header {
                     padding-top: 13px;
                     a {
                       font-size: 14px;
-                      transition: 0.3s ease;
                       text-decoration: none;
-                      &:hover {
-                        color: #000000;
-                        transition: 0.3s ease;
-                      }
                     }
                   }
                 }
@@ -267,6 +268,7 @@ header {
                   .alert-text {
                     padding-top: 10px;
                     p {
+                      @extend %paragraph;
                       margin: 0;
                     }
                   }
@@ -298,6 +300,9 @@ header {
     font-size: 24px !important;
     text-align: center;
     border-top: 1px solid #dde2e6;
+    .brand{
+      @extend %brand;
+    }
   }
 
   .header-shadow {

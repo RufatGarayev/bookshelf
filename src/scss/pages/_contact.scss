@@ -10,11 +10,12 @@
         padding-bottom: 20px;
         span {
           font-size: 48px;
-          color: #2878fd;
+          color: $primary-color;
         }
       }
       .content {
         p {
+          @extend %paragraph;
           padding: 0 90px;
         }
       }
@@ -24,10 +25,14 @@
   #send-message {
     padding-bottom: 55px;
 
+    .input-wrapper{
+      @extend %input;
+    }
+
     .text-area {
       height: 153px;
-      border: 1px solid #f7f8fa;
-      background-color: #f7f8fa;
+      border: 1px solid $secondary-color;
+      background-color: $secondary-color;
       border-radius: 6px;
       font-size: 14px;
       font-weight: 300;
@@ -36,30 +41,16 @@
       &:focus {
         outline: 0;
         transition: 0.3s ease;
-        border: 1px solid #2878fd;
+        border: 1px solid $primary-color;
       }
     }
 
     .send-msg-btn-wrapper {
       padding-top: 16px;
       .send-msg-btn {
-        background-color: #2878fd;
-        border: none;
-        color: rgb(253, 253, 253);
-        font-size: 14px;
-        text-transform: uppercase;
-        line-height: 1px;
-        letter-spacing: 0.03em;
-        position: relative;
-        outline: none;
-        padding: 6px 31px 4px;
-        height: 40px;
-        border-radius: 6px;
-        transition: 0.3s ease;
-        &:hover {
-          background-color: #000000;
-          transition: 0.3s ease;
-        }
+        @extend %btn-style;
+        background-color: $primary-color;
+        color: #fff;
       }
     }
   }

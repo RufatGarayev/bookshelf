@@ -16,7 +16,6 @@ import BackToTopBtn from './components/Other/BackToTopBtn';
 import configureStore from './redux/store/configureStore';
 import { Provider } from "react-redux";
 import { BrowserRouter, Route } from "react-router-dom";
-import '../src/scss/_global.scss';
 
 function App() {
   const store = configureStore();

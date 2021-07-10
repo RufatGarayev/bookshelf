@@ -9,8 +9,6 @@ const Search = (props) => {
         setSearchValue(e.target.value);
     }
 
-    console.log(searchValue)
-
     return (
         <div className="search-box">
             <form onSubmit={(e) => e.preventDefault()}>
