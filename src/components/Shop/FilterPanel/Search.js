@@ -5,7 +5,7 @@ const Search = (props) => {
     const [searchValue, setSearchValue] = useState("");
 
     const handleChange = (e) => {
-        props.searchBook(searchValue);
+        props.searchBook(e.target.value);
         setSearchValue(e.target.value);
     }
 
