@@ -1,6 +1,5 @@
 import Header from './components/Header/Header';
 import Home from './pages/Home';
-import About from './pages/About';
 import Shop from './pages/Shop';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
@@ -29,7 +28,6 @@ function App() {
           </header>
           <main>
             <Route path="/" component={Home} exact />
-            <Route path="/about" component={About} />
             <Route path="/shop" component={Shop} />
             <Route path="/contact" component={Contact} />
             <Route path="/login" component={Login} />
